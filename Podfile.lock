@@ -1,0 +1,52 @@
+PODS:
+  - JioMeetChatUIKit_iOS (2.3.1):
+    - JioMeetCoreSDK_iOS (= 2.3.1)
+  - JioMeetCoreSDK_iOS (2.3.1):
+    - JioMeetRtcEngine_iOS (= 3.7.1.2)
+    - JioMeetRtmKit_iOS (= 1.5.1.0)
+  - JioMeetParticipantPanelSDK_iOS (2.3.1):
+    - JioMeetCoreSDK_iOS (= 2.3.1)
+  - JioMeetRtcEngine_iOS (3.7.1.2):
+    - JioMeetRtcEngine_iOS/Extensions (= 3.7.1.2)
+    - JioMeetRtcEngine_iOS/RtcBasic (= 3.7.1.2)
+  - JioMeetRtcEngine_iOS/Extensions (3.7.1.2)
+  - JioMeetRtcEngine_iOS/RtcBasic (3.7.1.2)
+  - JioMeetRtmKit_iOS (1.5.1.0)
+  - JioMeetUIFoundation_iOS (2.3.1)
+  - JioMeetUIKit_iOS (2.3.1):
+    - JioMeetChatUIKit_iOS (= 2.3.1)
+    - JioMeetCoreSDK_iOS (= 2.3.1)
+    - JioMeetParticipantPanelSDK_iOS (= 2.3.1)
+    - JioMeetUIFoundation_iOS (= 2.3.1)
+    - JioMeetVBGUIKit_iOS (= 2.3.1)
+  - JioMeetVBGUIKit_iOS (2.3.1):
+    - JioMeetCoreSDK_iOS (= 2.3.1)
+    - JioMeetUIFoundation_iOS (= 2.3.1)
+
+DEPENDENCIES:
+  - JioMeetUIKit_iOS (~> 2.0)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - JioMeetChatUIKit_iOS
+    - JioMeetCoreSDK_iOS
+    - JioMeetParticipantPanelSDK_iOS
+    - JioMeetRtcEngine_iOS
+    - JioMeetRtmKit_iOS
+    - JioMeetUIFoundation_iOS
+    - JioMeetUIKit_iOS
+    - JioMeetVBGUIKit_iOS
+
+SPEC CHECKSUMS:
+  JioMeetChatUIKit_iOS: fd99069180a513984489da5686b8c8f7838630b0
+  JioMeetCoreSDK_iOS: 9f66efcee8928144695397d68d2e2b145c200fd2
+  JioMeetParticipantPanelSDK_iOS: 322a35b62ebc95d9872eff1949fa325213d750cd
+  JioMeetRtcEngine_iOS: b26bd2991a55a1f87d96e425e677b5a757b67890
+  JioMeetRtmKit_iOS: 587fbf9279a035023104dd8f170cb445ef4cd56e
+  JioMeetUIFoundation_iOS: 8565b49f6dfc17942bdcb6fa37de66e548624d52
+  JioMeetUIKit_iOS: e23c23fb3da56cff2063bf9f593cf4a710eb4d26
+  JioMeetVBGUIKit_iOS: be9a487c92d67962481a2117f9964a03de24c80e
+
+PODFILE CHECKSUM: 7df984278eec6edd1941454119c5b199b004e205
+
+COCOAPODS: 1.11.2
