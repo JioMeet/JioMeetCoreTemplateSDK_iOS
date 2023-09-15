@@ -1,4 +1,44 @@
-# JioMeetCore UI Demo
+# JioMeet Template UI Quickstart
+
+**Welcome to Jiomeet Template UI**, a SDK that streamlines the integration of Jiomeet's powerful audio and video functionalities, along with an array of features such as the Participant panel, virtual background, and screen sharing/whiteboard sharing, into your iOS application with minimal coding effort. With just a few simple steps, you can enable high-quality real-time communication, allowing users to effortlessly connect, collaborate, and communicate.
+
+## Table of Contents
+
+1. [Introduction](#introduction)
+2. [Features](#features)
+3. [Prerequisites](#prerequisites)
+4. [Project Settings](#project-settings)
+   - Info.plist Changes
+   - Enable Background Mode
+6. [Integration Steps](#integration-steps)
+   - Add SDK
+   - Import SDK
+   - Integrate Meeting View
+7. [Join Meeting](#join-meeting)
+   - Create Meeting Data
+   - Create Meeting Configuration
+   - Join Meeting with data and config
+   - Implement JMMeetingViewDelegate methods
+8. [Run Project](#run-project)
+9. [Reference Classes](#reference-classes)
+10. [Troubleshooting](#troubleshooting)
+
+## Introduction
+
+In this documentation, we'll guide you through the process of installation, enabling you to enhance your iOS app with Jiomeet's real-time communication capabilities swiftly and efficiently.Let's get started on your journey to creating seamless communication experiences with Jiomeet Template UI!
+
+---
+
+## Features
+
+In Jiomeet Template UI, you'll find a range of powerful features designed to enhance your iOS application's communication and collaboration capabilities. These features include:
+
+1. **Voice and Video Calling**:Enjoy high-quality, real-time audio and video calls with your contacts.
+
+2. **Participant Panel**: Manage and monitor participants in real-time meetings or video calls for a seamless user experience.
+
+3. **Group Conversation**: Easily engage in text-based conversations with multiple participants in one chat group.
+
 
 ## Prerequisites
 
@@ -7,6 +47,24 @@ Before getting started with this example app, please ensure you have the followi
 - Xcode 14.2 or later.
 - Swift 5.0 or later.
 - An iOS device or emulator running iOS 13.0 or later.
+
+## Project Settings
+
+### Info.plist Changes
+
+Please add below permissions keys to your `Info.plist` file with proper description.
+
+```swift
+<key>NSCameraUsageDescription</key>
+<string>Allow access to camera for meetings</string>
+<key>NSMicrophoneUsageDescription</key>
+<string>Allow access to mic for meetings</string>
+```
+
+### Enable Background Mode
+
+Please enable `Background Modes` in your project `Signing & Capibilities` tab. After enabling please check box with option `Audio, Airplay, and Pictures in Pictures`. If you don't enables this setting, your mic will be muted when your app goes to background.
+
 
 ## Integration Steps
 
@@ -156,3 +214,8 @@ Run `pod install --repo-update` command. Open JioMeetCoreUIDemo.xcworkspace file
 ## Reference Classes
 
 Please check `MeetingScreenViewController` class for integration reference.
+
+## Troubleshooting
+
+Facing any issues while integrating or installing the JioMeet Template UI Kit please connect with us via real time support present in jiomeet.support@jio.com or https://jiomeetpro.jio.com/contact-us
+
