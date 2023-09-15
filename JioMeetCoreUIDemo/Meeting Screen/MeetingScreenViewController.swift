@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import JioMeetUIKit
+import JioMeetCoreSDK
 
 class MeetingScreenViewController: UIViewController {
 	
@@ -33,14 +34,20 @@ class MeetingScreenViewController: UIViewController {
 			meetingView.topAnchor.constraint(equalTo: view.topAnchor),
 			meetingView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
 		])
-		
-		meetingView.joinMeeting(
-			meetingID: meetingID,
-			meetingPIN: meetingPIN,
-			userDisplayName: userDisplayName,
-			hostToken: hostToken,
-			delegate: self
-		)
+        
+        
+        let joinMeetingData = JMJoinMeetingData(
+            meetingId: meetingID,
+            meetingPin: meetingPIN,
+            displayName: userDisplayName
+        )
+        
+        let joinMeetingConfig = JMJoinMeetingConfig(
+            userRole: .speaker,
+            isInitialAudioOn: false,
+            isInitialVideoOn: false
+        )
+        meetingView.joinMeeting(meetingData: joinMeetingData, config: joinMeetingConfig, delegate: self)
 	}
 	
 	private func showMeetingJoinError(message: String) {

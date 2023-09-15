@@ -41,14 +41,69 @@ NSLayoutConstraint.activate([
 ])
 ```
 
-Join meeting by calling `joinMeeting` method by passing meeting data.
+## Join Meeting
+
+### Create Meeting Data
+
+First create `JMJoinMeetingData` type object. Following are the properties of this object.
+
+| Property Name | Type  | Description  |
+| ------- | --- | --- |
+| meetingId | String | Meeting ID of the meeting user is going to join. |
+| meetingPin | String | Meeting PIN of the meeting user is going to join. |
+| displayName | String | Display Name with which user is going to join the meeting. |
 
 ```swift
-meetingView.joinMeeting(
-    meetingID: meetingID,
-    meetingPIN: meetingPIN,
-    userDisplayName: userDisplayName,
-    hostToken: hostToken,
+let joinMeetingData = JMJoinMeetingData(
+    meetingId: "9680763133",
+    meetingPin: "1tKzt",
+    displayName: "John Appleased"
+)
+```
+
+### Create Meeting Configuration
+
+Create a `JMJoinMeetingConfig` type object. Following are the properties of this object.
+
+| Property Name | Type  | Description  |
+| ------- | --- | --- |
+| userRole | JMUserRole | Role of the user in the meeting. Possible values are `.host`, `.speaker`, `.audience`. If you are assigning `.host` value, please pass the token in its argument. |
+| isInitialAudioOn | Bool | Initial Audio State of the user when user joins the meeting. If meeting is hard muted by a host, initial audio state will be muted and this setting will not take place. |
+| isInitialVideoOn | Bool | Initial Video State of the user when user joins the meeting. |
+
+```swift
+let joinMeetingConfig = JMJoinMeetingConfig(
+    userRole: .host(hostToken: "MD5hQxGAwjW2"),
+    isInitialAudioOn: true,
+    isInitialVideoOn: true
+)
+```
+
+### Create `JMClient` instance
+
+Create a `JMClient` class instance. Use this instance to call all the SDK Methods.
+
+```swift
+let jioMeetClient = JMClient()
+```
+
+### Join Meeting with data and config
+
+After creating `JMJoinMeetingData` and `JMJoinMeetingConfig` objects, call `joinMeeting` method of `JMClient` instance.
+
+Following are the arguments of `joinMeeting` method.
+
+| Argument Name | Type  | Description  |
+| ------- | --- | --- |
+| data | JMJoinMeetingData | Meeting Data which include meeting id, pin and user display name. |
+| config | JMJoinMeetingConfig | Meeting Configuration which include user role, mic and camera initial states. |
+| delegate | JMClientDelegate? | A class conforming to `JMClientDelegate` protocol.  |
+
+
+```swift
+jioMeetClient.joinMeeting(
+    data: joinMeetingData,
+    config: joinMeetingConfig,
     delegate: self
 )
 ```
