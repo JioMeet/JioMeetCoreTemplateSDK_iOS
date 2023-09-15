@@ -1,7 +1,5 @@
 # JioMeet Template UI Quickstart
 
-**Welcome to Jiomeet Template UI**, a SDK that streamlines the integration of Jiomeet's powerful audio and video functionalities, along with an array of features such as the Participant panel, virtual background, and screen sharing/whiteboard sharing, into your iOS application with minimal coding effort. With just a few simple steps, you can enable high-quality real-time communication, allowing users to effortlessly connect, collaborate, and communicate.
-
 ## Table of Contents
 
 1. [Introduction](#introduction)
@@ -25,7 +23,7 @@
 
 ## Introduction
 
-In this documentation, we'll guide you through the process of installation, enabling you to enhance your iOS app with Jiomeet's real-time communication capabilities swiftly and efficiently.Let's get started on your journey to creating seamless communication experiences with Jiomeet Template UI!
+In this documentation, we'll guide you through the process of installation, enabling you to enhance your iOS app with Jiomeet's real-time communication capabilities swiftly and efficiently. Let's get started on your journey to creating seamless communication experiences with Jiomeet Template UI!
 
 ---
 
@@ -33,7 +31,7 @@ In this documentation, we'll guide you through the process of installation, enab
 
 In Jiomeet Template UI, you'll find a range of powerful features designed to enhance your iOS application's communication and collaboration capabilities. These features include:
 
-1. **Voice and Video Calling**:Enjoy high-quality, real-time audio and video calls with your contacts.
+1. **Voice and Video Calling**: Enjoy high-quality, real-time audio and video calls with your contacts.
 
 2. **Participant Panel**: Manage and monitor participants in real-time meetings or video calls for a seamless user experience.
 
