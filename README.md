@@ -4,7 +4,7 @@
 
 Before getting started with this example app, please ensure you have the following software installed on your machine:
 
-- Xcode 13.0 or later.
+- Xcode 14.2 or later.
 - Swift 5.0 or later.
 - An iOS device or emulator running iOS 13.0 or later.
 
@@ -24,6 +24,7 @@ Please use below import statements
 
 ```swift
 import JioMeetUIKit
+import JioMeetCoreSDK
 ```
 
 ### Integrate Meeting View
