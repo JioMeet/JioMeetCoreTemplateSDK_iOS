@@ -1,5 +1,13 @@
 # JioMeetCore UI Demo
 
+## Prerequisites
+
+Before getting started with this example app, please ensure you have the following software installed on your machine:
+
+- Xcode 13.0 or later.
+- Swift 5.0 or later.
+- An iOS device or emulator running iOS 13.0 or later.
+
 ## Integration Steps
 
 ### Add SDK
@@ -74,17 +82,9 @@ Create a `JMJoinMeetingConfig` type object. Following are the properties of this
 ```swift
 let joinMeetingConfig = JMJoinMeetingConfig(
     userRole: .host(hostToken: "MD5hQxGAwjW2"),
-    isInitialAudioOn: true,
-    isInitialVideoOn: true
+    isInitialAudioOn: false,
+    isInitialVideoOn: false
 )
-```
-
-### Create `JMClient` instance
-
-Create a `JMClient` class instance. Use this instance to call all the SDK Methods.
-
-```swift
-let jioMeetClient = JMClient()
 ```
 
 ### Join Meeting with data and config
@@ -95,14 +95,14 @@ Following are the arguments of `joinMeeting` method.
 
 | Argument Name | Type  | Description  |
 | ------- | --- | --- |
-| data | JMJoinMeetingData | Meeting Data which include meeting id, pin and user display name. |
+| meetingData | JMJoinMeetingData | Meeting Data which include meeting id, pin and user display name. |
 | config | JMJoinMeetingConfig | Meeting Configuration which include user role, mic and camera initial states. |
 | delegate | JMClientDelegate? | A class conforming to `JMClientDelegate` protocol.  |
 
 
 ```swift
-jioMeetClient.joinMeeting(
-    data: joinMeetingData,
+meetingView.joinMeeting(
+    meetingData: joinMeetingData,
     config: joinMeetingConfig,
     delegate: self
 )

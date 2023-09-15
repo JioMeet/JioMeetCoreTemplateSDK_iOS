@@ -43,7 +43,7 @@ class MeetingScreenViewController: UIViewController {
         )
         
         let joinMeetingConfig = JMJoinMeetingConfig(
-            userRole: .speaker,
+            userRole: .host(hostToken: hostToken ?? ""),
             isInitialAudioOn: false,
             isInitialVideoOn: false
         )
