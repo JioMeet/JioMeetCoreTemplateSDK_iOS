@@ -138,15 +138,15 @@ Before getting started with JioMeet Core SDK integration, please ensure you have
 
 ## Setup
 
-##### Register on JioMeet Platform:
+#### Register on JioMeet Platform:
 
-You need to first register on Jiomeet platform.[Click here to sign up](https://platform.jiomeet.com/login/signUp)
+You need to first register on Jiomeet platform. [Click here to sign up](https://platform.jiomeet.com/login/signUp)
 
-##### Get your application keys:
+#### Get your application keys:
 
 Create a new app. Please follow the steps provided in the [Documentation guide](https://dev.jiomeet.com/docs/quick-start/introduction) to create apps before you proceed.
 
-###### Get your Jiomeet meeting id and pin
+#### Get your Jiomeet meeting id and pin
 
 Use the [create meeting api](https://dev.jiomeet.com/docs/JioMeet%20Platform%20Server%20APIs/create-a-dynamic-meeting) to get your room id and password
 
