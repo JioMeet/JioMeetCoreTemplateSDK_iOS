@@ -5,18 +5,22 @@
 1. [Introduction](#introduction)
 2. [Features](#features)
 3. [Prerequisites](#prerequisites)
-4. [Project Settings](#project-settings)
-   - Info.plist Changes
-   - Enable Background Mode
+4. [Setup](#setup)
+   - [Register on JioMeet Platform](#register-on-jiomeet-platform)
+   - [Get Your Application Keys](#get-your-application-keys)
+   - [Get Your JioMeet Meeting ID and PIN](#get-your-jiomeet-meeting-id-and-pin)
+5. [Project Settings](#project-settings)
+   - [Info.plist Changes](#infoplist-changes)
+   - [Enable Background Mode](#enable-background-mode)
 6. [Integration Steps](#integration-steps)
-   - Add SDK
-   - Import SDK
-   - Integrate Meeting View
+   - [Add SDK](#add-sdk)
+   - [Import SDK](#import-sdk)
+   - [Integrate Meeting View](#integrate-meeting-view)
 7. [Join Meeting](#join-meeting)
-   - Create Meeting Data
-   - Create Meeting Configuration
-   - Join Meeting with data and config
-   - Implement JMMeetingViewDelegate methods
+   - [Create Meeting Data](#create-meeting-data)
+   - [Create Meeting Configuration](#create-meeting-configuration)
+   - [Join Meeting with data and config](#join-meeting-with-data-and-config)
+   - [Implement JMMeetingViewDelegate methods](#implement-jmmeetingviewdelegate-methods)
 8. [Run Project](#run-project)
 9. [Reference Classes](#reference-classes)
 10. [Troubleshooting](#troubleshooting)
@@ -45,6 +49,20 @@ Before getting started with this example app, please ensure you have the followi
 - Xcode 14.2 or later.
 - Swift 5.0 or later.
 - An iOS device or emulator running iOS 13.0 or later.
+
+## Setup
+
+##### Register on JioMeet Platform:
+
+You need to first register on Jiomeet platform.[Click here to sign up](https://platform.jiomeet.com/login/signUp)
+
+##### Get your application keys:
+
+Create a new app. Please follow the steps provided in the [Documentation guide](https://dev.jiomeet.com/docs/quick-start/introduction) to create apps before you proceed.
+
+##### Get your Jiomeet meeting id and pin
+
+Use the [create meeting api](https://dev.jiomeet.com/docs/JioMeet%20Platform%20Server%20APIs/create-a-dynamic-meeting) to get your room id and password
 
 ## Project Settings
 
