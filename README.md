@@ -7,6 +7,9 @@
     - [Install Via Cocoapods](#install-via-cocoapods)
 3. [Prerequisites](#prerequisites)
 4. [Setup](#setup)
+   - [Register on JioMeet Platform](#register-on-jiomeet-platform)
+   - [Get Your Application Keys](#get-your-application-keys)
+   - [Get Your JioMeet Meeting ID and PIN](#get-your-jiomeet-meeting-id-and-pin)
 5. [Project Settings](#project-settings)
    - [Info.plist Changes](#infoplist-changes)
    - [Enable Background Mode](#enable-background-mode)
@@ -108,7 +111,7 @@
 
 In this documentation, we'll guide you through the process of installation, enabling you to enhance your iOS app with real-time communication capabilities swiftly and efficiently. Let's get started on your journey to creating seamless communication experiences with JioMeet Core SDK!
 
-![image info](./images/core_flow.png)
+![image info](./Images/core_flow.png)
 
 ---
 
