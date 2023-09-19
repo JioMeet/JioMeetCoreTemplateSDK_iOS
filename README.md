@@ -1,8 +1,116 @@
 # Core SDK Documentation
 
+## Table of Contents
+
+1. [Introduction](#introduction)
+2. [Install the SDK](#install-the-sdk)
+    - [Install Via Cocoapods](#install-via-cocoapods)
+3. [Prerequisites](#prerequisites)
+4. [Project Settings](#project-settings)
+   - [Info.plist Changes](#infoplist-changes)
+   - [Enable Background Mode](#enable-background-mode)
+6. [Join Meeting](#join-meeting)
+   - [Create Meeting Data](#create-meeting-data)
+   - [Create Meeting Configuration](#create-meeting-configuration)
+   - [Create JMClient instance](#create-jmclient-instance)
+   - [Join Meeting with data and config](#join-meeting-with-data-and-config)
+7. [Local User Meeting Controls and Helper Methods](#local-user-meeting-controls-and-helper-methods)
+   - [Mute/Unmute Local Audio](#muteunmute-local-audio)
+   - [Mute/Unmute Local Video](#muteunmute-local-video)
+   - [Switch Camera](#switch-camera)
+   - [Start Preview](#start-preview)
+   - [Stop Preview](#stop-preview)
+   - [Raise Local User Hand](#raise-local-user-hand)
+   - [Lower Local User Raised Hand](#lower-local-user-raised-hand)
+   - [Leave Meeting](#leave-meeting)
+   - [Decline Host's Audio Request](#decline-hosts-audio-request)
+   - [Decline Host's Video Request](#decline-hosts-video-request)
+   - [Switch Local User Role](#switch-local-user-role)
+   - [Apply Virtual Background](#apply-virtual-background)
+   - [Toggle Audio-Only Mode](#toggle-audio-only-mode)
+8. [Public Getter Methods](#public-getter-methods)
+   - [Get Local User](#get-local-user)
+   - [Get Remote Users](#get-remote-users)
+   - [Get All Users](#get-all-users)
+9. [Remote User Meeting Controls and Helper Methods](#remote-user-meeting-controls-and-helper-methods)
+   - [Subscribe Remote User Audio](#subscribe-remote-user-audio)
+   - [Unsubscribe Remote User Audio](#unsubscribe-remote-user-audio)
+   - [Subscribe Remote User Video](#subscribe-remote-user-video)
+   - [Unsubscribe Remote User Video](#unsubscribe-remote-user-video)
+   - [Hard Mute/Unmute User's Audio](#hard-muteunmute-users-audio)
+   - [Soft Mute Users Audio](#soft-mute-users-audio)
+   - [Lowers All Users Hands](#lowers-all-users-hands)
+   - [Change Participant Audio State](#change-participant-audio-state)
+   - [Change Participant Video State](#change-participant-video-state)
+   - [Remove Participant From Meeting](#remove-participant-from-meeting)
+   - [Change Participant User Role](#change-participant-user-role)
+   - [Stop Screenshare of User](#stop-screenshare-of-user)
+   - [Start Recording](#start-recording)
+   - [Stop Recording](#stop-recording)
+   - [Lock Meeting](#lock-meeting)
+   - [UnLock Meeting](#unlock-meeting)
+   - [Start Whiteboard](#start-whiteboard)
+   - [Stop Whiteboard](#stop-whiteboard)
+   - [Update User Co-Host Rights](#update-user-co-host-rights)
+10. [Observe Meeting Events](#observe-meeting-events)
+    - [User Failed to join the meeting](#user-failed-to-join-the-meeting)
+    - [User Joined Meeting Successfully](#user-joined-meeting-successfully)
+    - [Local User Audio Status Update](#local-user-audio-status-update)
+    - [Local User Video Status Update](#local-user-video-status-update)
+    - [Local User Hand Raise Status Update](#local-user-hand-raise-status-update)
+    - [Remote User Joined Meeting](#remote-user-joined-meeting)
+    - [Remote User Audio Status Update](#remote-user-audio-status-update)
+    - [Remote User Video Status Update](#remote-user-video-status-update)
+    - [Remote User Hand Raise Status Update](#remote-user-hand-raise-status-update)
+    - [Remote User Left Meeting](#remote-user-left-meeting)
+    - [Host Enable Hard Audio Mute](#host-enable-hard-audio-mute)
+    - [Host Disable Hard Audio Mute](#host-disable-hard-audio-mute)
+    - [Host Enable Soft Audio Mute](#host-enable-soft-audio-mute)
+    - [Host Lowers all Raised Hands](#host-lowers-all-raised-hands)
+    - [Meeting Data Refreshed](#meeting-data-refreshed)
+    - [Loudest Speaker Detected](#loudest-speaker-detected)
+    - [Network Quality Update](#network-quality-update)
+    - [Network Stats Update](#network-stats-update)
+    - [Network Connection State Update](#network-connection-state-update)
+    - [Local ScreenShare State Change](#local-screenshare-state-change)
+    - [Remote ScreenShare State Change](#remote-screenshare-state-change)
+    - [Recording Started](#recording-started)
+    - [Recording Stopped](#recording-stopped)
+    - [Host/Co-Host Requests Participant to change Audio/Video state](#hostco-host-requests-participant-to-change-audiovideo-state)
+    - [Participant Declines Request to Change Audio/Video State by Host/Co-Host](#participant-declines-request-to-change-audiovideo-state-by-hostco-host)
+    - [Local User moved to Audience](#local-user-moved-to-audience)
+    - [Local User moved to Participant](#local-user-moved-to-participant)
+    - [Remote User moved to Audience](#remote-user-moved-to-audience)
+    - [Remote User moved to Participants](#remote-user-moved-to-participants)
+    - [Audio Output Route Change](#audio-output-route-change)
+    - [Local User Leaves Meeting](#local-user-leaves-meeting)
+    - [Meeting Locked Event](#meeting-locked-event)
+    - [Meeting UnLocked Event](#meeting-unlocked-event)
+    - [Local Speaker Volume Change Event](#local-speaker-volume-change-event)
+    - [Local Participant Connection State Change Event](#local-participant-connection-state-change-event)
+    - [Co-Host Rights Change Event](#co-host-rights-change-event)
+    - [Whiteboard Started Event](#whiteboard-started-event)
+    - [Whiteboard Stopped Event](#whiteboard-stopped-event)
+11. [Classes, Structs and Enums](#classes-structs-and-enums)
+    - [JMJoinMeetingData](#jmjoinmeetingdata)
+    - [JMUserRole](#jmuserrole)
+    - [JMJoinMeetingConfig](#jmjoinmeetingconfig)
+    - [JMMeetingJoinError](#jmmeetingjoinerror)
+    - [JMMeeting](#jmmeeting)
+    - [JMMeetingUser](#jmmeetinguser)
+    - [JMNetworkQuality](#jmnetworkquality)
+12. [Troubleshooting](#troubleshooting)
+
+
+## Introduction
+
+In this documentation, we'll guide you through the process of installation, enabling you to enhance your iOS app with real-time communication capabilities swiftly and efficiently. Let's get started on your journey to creating seamless communication experiences with JioMeet Core SDK!
+
+---
+
 ## Install the SDK
 
-You can install JioMeet Core SDK either via Cocoapods or Swift Package Manager.
+You can install JioMeet Core SDK via Cocoapods.
 
 ### Install Via Cocoapods
 
@@ -16,10 +124,13 @@ target 'Your_App_Name' do
 end
 ```
 
-### Install Via Swift Package Manager
+## Prerequisites
 
-Please use `https://github.com/JioMeet/JioMeet-SDK-iOS.git` to add JioMeet SDK as package source.
+Before getting started with JioMeet Core SDK integration, please ensure you have the following software installed on your machine:
 
+- Xcode 14.2 or later.
+- Swift 5.0 or later.
+- An iOS device or emulator running iOS 13.0 or later.
 
 ## Project Settings
 
@@ -68,14 +179,12 @@ Create a `JMJoinMeetingConfig` type object. Following are the properties of this
 | userRole | JMUserRole | Role of the user in the meeting. Possible values are `.host`, `.speaker`, `.audience`. If you are assigning `.host` value, please pass the token in its argument. |
 | isInitialAudioOn | Bool | Initial Audio State of the user when user joins the meeting. If meeting is hard muted by a host, initial audio state will be muted and this setting will not take place. |
 | isInitialVideoOn | Bool | Initial Video State of the user when user joins the meeting. |
-| autoSubscribeRemoteAudioStreams | Bool | Wether to subscribe Audio Streams on Join on Not. Default value is true. | 
 
 ```swift
 let joinMeetingConfig = JMJoinMeetingConfig(
     userRole: .host(hostToken: "MD5hQxGAwjW2"),
     isInitialAudioOn: true,
-    isInitialVideoOn: true,
-    autoSubscribeRemoteAudioStreams: true
+    isInitialVideoOn: true
 )
 ```
 
@@ -108,146 +217,9 @@ jioMeetClient.joinMeeting(
 )
 ```
 
-## Meeting Controls and Helper Methods
+## Local User Meeting Controls and Helper Methods
 
-Below All Methods will be called via SDK `JMClient` instance.
-
-### Get Local User
-
-**Summary**
-
-This method returns Local user object in a meeting.
-
-**Declaration**
-
-```swift
-func getMeetingLocalUser() -> JMMeetingUser 
-```
-
-**Important**
-
-Please call this method only when local user has joined meeting successfully.
-
-### Get Remote Users
-
-**Summary**
-
-This method returns all remote users objects in a meeting.
-
-**Declaration**
-
-```swift
-func getMeetingRemoteUsers() -> [JMMeetingUser]
-```
-
-**Important**
-
-Please call this method only when local user has joined meeting successfully.
-
-
-### Get All Users
-
-**Summary**
-
-This method returns all users objects in a meeting.
-
-**Declaration**
-
-```swift
-func getMeetingUsers() -> [JMMeetingUser]
-```
-
-**Important**
-
-Please call this method only when local user has joined meeting successfully.
-
-
-### Subscribe Remote User Audio
-
-**Summary**
-
-This method subscribe a remote User's audio Stream
-
-**Declaration**
-
-```swift
-func subscribeRemoteUserAudio(id: String)
-```
-
-**Important**
-
-When a remote user joins the meeting, by default you will not be able to hear his audio. You need to subscribe his audio by calling above method.
-
-**Parameters**
-
-| Parameter Name | Type  | Description  |
-| ------- | --- | --- |
-| id | String | id of remote user. |
-
-
-### Unsubscribe Remote User Audio
-
-**Summary**
-
-This method unsubscribe a remote User's audio Stream
-
-**Declaration**
-
-```swift
-func unsubscribeRemoteUserAudio(id: String)
-```
-
-**Parameters**
-
-| Parameter Name | Type  | Description  |
-| ------- | --- | --- |
-| id | String | id of remote user. |
-
-
-### Subscribe Remote User Video
-
-**Summary**
-
-This method subscribe a remote User's Video Stream
-
-**Declaration**
-
-```swift
-func subscribeRemoteUserVideo(id: String)
-```
-
-**Important**
-
-When a remote user joins the meeting, by default you will not be able to observe his video stream. You need to subscribe his video stream by calling above method.
-
-**Parameters**
-
-| Parameter Name | Type  | Description  |
-| ------- | --- | --- |
-| id | String | id of remote user. |
-
-### Unsubscribe Remote User Video
-
-**Summary**
-
-This method unsubscribe a remote User's Video Stream
-
-**Declaration**
-
-```swift
-func unsubscribeRemoteUserVideo(id: String)
-```
-
-**Important**
-
-This methos is helpful in scenarios when there are lot of users in meeting but you want to display video tiles of only few users. It will reduce app resource utilisation and network bandwidth also.
-
-**Parameters**
-
-| Parameter Name | Type  | Description  |
-| ------- | --- | --- |
-| id | String | id of remote user. |
-
+Below Local Users Methods will be called via SDK `JMClient` instance.
 
 ### Mute/Unmute Local Audio
 
@@ -475,7 +447,7 @@ func switchLocalUserRole(newRole: JMUserRole)
 
 | Parameter Name | Type  | Description  |
 | ------- | --- | --- |
-| newRole | JMUserRole | Defines user roles in a meeting: host, speaker, and audience. Options are `.host(hostToken: String)`, `.speaker`, `.audience` |
+| newRole | JMUserRole | Switch user roles in a meeting. Options are `.speaker`, `.audience`. |
 
 **Usage Example**
 
@@ -523,7 +495,7 @@ func setAudioOnlyMode(enabled: Bool)
 
 | Parameter Name | Type  | Description  |
 | ------- | --- | --- |
-| enabled | Bool | When enabled, it mutes the video feed; otherwise, it switches to regular mode. Options are true/false. |
+| enabled | Bool | When enabled, this feature mutes the video feed and restricts user screen share and whiteboard content. Otherwise it switches to regular mode. The available options are true or false. |
 
 **Usage Example**
 
@@ -531,29 +503,149 @@ func setAudioOnlyMode(enabled: Bool)
 jioMeetClient.setAudioOnlyMode(enabled: true)
 ```
 
-### Switch Audio Device
+## Public Getter Methods
+
+All the methods below are public getter methods.
+
+### Get Local User
 
 **Summary**
 
-This function allows users to switch between different audio device types.
+This method returns Local user object in a meeting.
 
 **Declaration**
 
 ```swift
-func switchAudioDevice(_ type: JMAudioDeviceType)
+func getMeetingLocalUser() -> JMMeetingUser 
+```
+
+**Important**
+
+Please call this method only when local user has joined meeting successfully.
+
+### Get Remote Users
+
+**Summary**
+
+This method returns all remote users objects in a meeting.
+
+**Declaration**
+
+```swift
+func getMeetingRemoteUsers() -> [JMMeetingUser]
+```
+
+**Important**
+
+Please call this method only when local user has joined meeting successfully.
+
+
+### Get All Users
+
+**Summary**
+
+This method returns all users objects in a meeting.
+
+**Declaration**
+
+```swift
+func getMeetingUsers() -> [JMMeetingUser]
+```
+
+**Important**
+
+Please call this method only when local user has joined meeting successfully.
+
+## Remote User Meeting Controls and Helper Methods
+
+All the methods below are remote user methods.
+
+### Subscribe Remote User Audio
+
+**Summary**
+
+This method subscribe a remote User's audio Stream
+
+**Declaration**
+
+```swift
+func subscribeRemoteUserAudio(id: String)
+```
+
+**Important**
+
+When a remote user joins the meeting, by default you will not be able to hear his audio. You need to subscribe his audio by calling above method.
+
+**Parameters**
+
+| Parameter Name | Type  | Description  |
+| ------- | --- | --- |
+| id | String | id of remote user. |
+
+
+### Unsubscribe Remote User Audio
+
+**Summary**
+
+This method unsubscribe a remote User's audio Stream
+
+**Declaration**
+
+```swift
+func unsubscribeRemoteUserAudio(id: String)
 ```
 
 **Parameters**
 
 | Parameter Name | Type  | Description  |
 | ------- | --- | --- |
-| type | JMAudioDeviceType | Defines different audio device types, Options are `.speaker`, `.device`, `.audioOff` |
+| id | String | id of remote user. |
 
-**Usage Example**
+
+### Subscribe Remote User Video
+
+**Summary**
+
+This method subscribe a remote User's Video Stream
+
+**Declaration**
 
 ```swift
-jioMeetClient.switchAudioDevice(_ type: JMAudioDeviceType)
+func subscribeRemoteUserVideo(id: String)
 ```
+
+**Important**
+
+When a remote user joins the meeting, by default you will not be able to observe his video stream. You need to subscribe his video stream by calling above method.
+
+**Parameters**
+
+| Parameter Name | Type  | Description  |
+| ------- | --- | --- |
+| id | String | id of remote user. |
+
+### Unsubscribe Remote User Video
+
+**Summary**
+
+This method unsubscribe a remote User's Video Stream
+
+**Declaration**
+
+```swift
+func unsubscribeRemoteUserVideo(id: String)
+```
+
+**Important**
+
+This methos is helpful in scenarios when there are lot of users in meeting but you want to display video tiles of only few users. It will reduce app resource utilisation and network bandwidth also.
+
+**Parameters**
+
+| Parameter Name | Type  | Description  |
+| ------- | --- | --- |
+| id | String | id of remote user. |
+
 
 ### Hard Mute/Unmute User's Audio
 
@@ -563,7 +655,7 @@ This method do hard audio mute of all users in meeting.
 
 **Important**
 
-This method should be called only by Host or Co-host. If any normal user try to perform this you will get error. Once a room is hard audio muted, only host and co-host will be able to unmute themselves.
+This method should be called only by Host or Co-host.  Once a room is hard audio muted, only host and co-host will be able to unmute themselves.
 
 **Declaration**
 
@@ -591,7 +683,7 @@ This method do soft audio mute of all users in meeting.
 
 **Important**
 
-This method should be called only by Host or Co-host. If any normal user try to perform this you will get error. Once a room is soft audio muted, all users audio will be muted. Users can unmute themselves.
+This method should be called only by Host or Co-host.  Once a room is soft audio muted, all users audio will be muted. Users can unmute themselves.
 
 **Declaration**
 
@@ -613,7 +705,7 @@ This method lowers all raised hands in the meeting.
 
 **Important**
 
-This method should be called only by Host or Co-host. If any normal user try to perform this you will get error.
+This method should be called only by Host or Co-host. 
 
 **Declaration**
 
@@ -631,11 +723,11 @@ jioMeetClient.lowerAllUsersHands()
 
 **Summary**
 
-This method requests the audio of the participant to modify their microphone state.
+This method enables the Host or Co-host to request participants to modify their audio settings.
 
 **Important**
 
-This method should be called only by Host or Co-host. If any normal user try to perform this you will get error.
+This method should be called only by Host or Co-host. .
 
 **Declaration**
 
@@ -664,7 +756,7 @@ This method requests the video of the participant to modify their camera state.
 
 **Important**
 
-This method should be called only by Host or Co-host. If any normal user try to perform this you will get error.
+This method should be called only by Host or Co-host. 
 
 **Declaration**
 
@@ -693,7 +785,7 @@ This method removes the participant from meeting.
 
 **Important**
 
-This method should be called only by Host or Co-host. If any normal user try to perform this you will get error.
+This method should be called only by Host or Co-host. 
 
 **Declaration**
 
@@ -721,7 +813,7 @@ This method changes the participant user role in the meeting.
 
 **Important**
 
-This method should be called only by Host or Co-host. If any normal user try to perform this you will get error.
+This method should be called only by Host or Co-host.
 
 **Declaration**
 
@@ -742,7 +834,7 @@ func changeUserRole(user: JMMeetingUser, newRole: JMUserRole)
 jioMeetClient.changeUserRole(user: jmMeetingUser, newRole: .audience)
 ```
 
-### Stop Screenshare
+### Stop Screenshare of User
 
 **Summary**
 
@@ -750,7 +842,7 @@ This method terminates the participant's screen sharing session.
 
 **Important**
 
-This method should be called only by Host or Co-host. If any normal user try to perform this you will get error.
+This method should be called only by Host or Co-host. 
 
 **Declaration**
 
@@ -770,29 +862,15 @@ func stopUserScreenShare(user: JMMeetingUser)
 jioMeetClient.stopUserScreenShare(user: jmMeetingUser)
 ```
 
-### Stop Local Screenshare
-
-**Summary**
-
- This method responsible for ending the local user's screen sharing session within the current meeting.
-
-**Declaration**
-
-```swift
-func stopLocalScreenShare()
-```
-
-**Usage Example**
-
-```swift
-jioMeetClient.stopLocalScreenShare()
-```
-
 ### Start Recording
 
 **Summary**
 
-This method allow the user to start screen recording.
+This method is responsible for starting screen recording. Once recording is completed recordings will be available in portal.
+
+**Important**
+
+This method should be called only by Host or Co-host. 
 
 **Declaration**
 
@@ -810,7 +888,7 @@ jioMeetClient.startRecording()
 
 **Summary**
 
-This method allow the user to stop screen recording.
+This method is responsible for stopping screen recording.
 
 **Declaration**
 
@@ -828,11 +906,11 @@ jioMeetClient.stopRecording()
 
 **Summary**
 
-This method is responsible for locking the current meeting session.
+This method is responsible for locking the current meeting session, once we lock the meeting no new remote participants can join until meeting is un-locked.
 
 **Important**
 
-This method should be called only by Host or Co-host. If any normal user try to perform this you will get error.
+This method should be called only by Host or Co-host. 
 
 **Declaration**
 
@@ -850,11 +928,11 @@ jioMeetClient.lockMeeting()
 
 **Summary**
 
-This method is responsible for unlocking the current meeting session.
+This method is responsible for unlocking the current meeting session, once un-lock new remote participants can join the meeting.
 
 **Important**
 
-This method should be called only by Host or Co-host. If any normal user try to perform this you will get error.
+This method should be called only by Host or Co-host. 
 
 **Declaration**
 
@@ -872,11 +950,7 @@ jioMeetClient.unLockMeeting()
 
 **Summary**
 
-This method initiates the whiteboard feature for a meeting session. It can be used to start a whiteboard session either locally or remotely. 
-
-**Important**
-
-This method should be called only by Host or Co-host. If any normal user try to perform this you will get error.
+This method initializes the whiteboard feature for a meeting session. It can be used to start a whiteboard session either locally or for remote whiteboard rendering as well.
 
 **Declaration**
 
@@ -903,10 +977,6 @@ jioMeetClient.startWhitebboard(remote: true, startedBy: senderName)
 
 This method is responsible for ending the whiteboard session within a meeting.
 
-**Important**
-
-This method should be called only by Host or Co-host. If any normal user try to perform this you will get error.
-
 **Declaration**
 
 ```swift
@@ -927,7 +997,7 @@ This method facilitates the modification of co-host rights for a specific user w
 
 **Important**
 
-This method should be called only by Host or Co-host. If any normal user try to perform this you will get error.
+This method should be called only by Host or Co-host. 
 
 **Declaration**
 
@@ -1214,7 +1284,7 @@ Once hard audio mute is disabled, users can unmute themselves.
 
 **Summary**
 
-Triggered When a Host/Co-Host disables Hard Audio Mute
+Triggered When a Host/Co-Host disables Hard Audio Mute.
 
 **Declaration**
 
@@ -1392,8 +1462,7 @@ func jmClient(_ meeting: JMMeeting, didNetworkConnectedStateUpdated isConnected:
 
 **Summary**
 
-This method is triggered when the local screen share status changed. It removes all existing tracks and updates the `JMScreenShareState` with the new status.
-
+This method is triggered when the local screen share status changed.
 **Declaration**
 
 ```swift
@@ -1410,7 +1479,8 @@ func jmClient(_ meeting: JMMeeting, didLocalScreenShareStateChanged state: JMScr
 ### Remote ScreenShare State Change
 
 **Summary**
-This method is triggered when a participant screen share status changed. It removes all existing tracks and updates the `JMScreenShareState` with the new status.
+
+This method is triggered when a participant screen share status changed.
 
 **Declaration**
 
@@ -1428,6 +1498,7 @@ func jmClient(_ meeting: JMMeeting, didRemoteScreenShareStateChanged state: JMSc
 ### Recording Started
 
 **Summary**
+
 This method is triggered when the user started the recording.
 
 **Declaration**
@@ -1441,11 +1512,12 @@ func jmClient(_ meeting: JMMeeting, didRecordingStarted user: JMMeetingUser?)
 | Parameter Name | Type  | Description  |
 | ------- | --- | --- |
 | meeting | JMMeeting | Current Joined Meeting Object. |
-| user | JMMeetingUser | User information like display name, audio track, video track and other meta data.  |
+| user | JMMeetingUser | User who has started the recording. If user is nil recording is automatically start by server. |
 
 ### Recording Stopped
 
 **Summary**
+
 This method is triggered when the user stopped the recording.
 
 **Declaration**
@@ -1459,11 +1531,12 @@ func jmClient(_ meeting: JMMeeting, didRecordingStopped user: JMMeetingUser?)
 | Parameter Name | Type  | Description  |
 | ------- | --- | --- |
 | meeting | JMMeeting | Current Joined Meeting Object. |
-| user | JMMeetingUser | User information.  |
+| user | JMMeetingUser | User who has stopped the recording. If user is nil recording is automatically stopped by server. |
 
 ### Host/Co-Host Requests Participant to change Audio/Video state
 
 **Summary**
+
 This method is triggered when the Host/Co-Host request the participant user to change their audio or video state.
 
 **Declaration**
@@ -1477,12 +1550,13 @@ func jmClient(_ meeting: JMMeeting, didHostRequestToChangeAudioVideoState host: 
 | Parameter Name | Type  | Description  |
 | ------- | --- | --- |
 | meeting | JMMeeting | Current Joined Meeting Object. |
-| host | JMMeetingUser | User information.  |
+| host | JMMeetingUser | Host information.  |
 | state | AudioVideoState | Defines the possible states of a audio and video, possible states are `.startAudio`, `.stopAudio`, `.startVideo`, `.stopVideo`  |
 
 ### Participant Declines Request to Change Audio/Video State by Host/Co-Host
 
 **Summary**
+
 This method is triggered when the participant user declining a request initiated by a host or co-host to change their audio/video state during a meeting session.
 
 **Declaration**
@@ -1502,6 +1576,7 @@ func jmClient(_ meeting: JMMeeting, didUserDeclineToChangeAudioVideoState user: 
 ### Local User moved to Audience
 
 **Summary**
+
 This method is triggered when the Local user's role is changed to Audience within a meeting session.
 
 **Declaration**
@@ -1520,6 +1595,7 @@ func jmClient(_ meeting: JMMeeting, didLocalUserMovedToAudience user: JMMeetingU
 ### Local User moved to Participant
 
 **Summary**
+
 This method is triggered when the Local user's role is changed to Participant within a meeting session.
 
 **Declaration**
@@ -1533,11 +1609,12 @@ func jmClient(_ meeting: JMMeeting, didLocalUserMovedToParticipant user: JMMeeti
 | Parameter Name | Type  | Description  |
 | ------- | --- | --- |
 | meeting | JMMeeting | Current Joined Meeting Object. |
-| user | JMMeetingUser | User information.  |
+| user | JMMeetingUser | Local user information.  |
 
 ### Remote User moved to Audience
 
 **Summary**
+
 This method is triggered when the remote user's role is changed to Audience within a meeting session.
 
 **Declaration**
@@ -1596,7 +1673,7 @@ func jmClient(_ meeting: JMMeeting, didAudioOutputRouteChanged newRoute: JMAudio
 
 **Summary**
 
-Triggered when Local User leaves a meeting
+Triggered when Local User leaves a meeting.
 
 **Declaration**
 
@@ -1616,7 +1693,7 @@ jioMeetClient.delegate = nil
 
 **Summary**
 
-It is triggered when a meeting is locked by the host
+It is triggered when a meeting is locked by the host.
 
 **Declaration**
 
@@ -1629,7 +1706,7 @@ func jmClient(_ meeting: JMMeeting, didMeetingLocked host: JMMeetingUser?)
 | Parameter Name | Type  | Description  |
 | ------- | --- | --- |
 | meeting | JMMeeting | Current Joined Meeting Object. |
-| host | JMMeetingUser | provides information about the meeting host. |
+| host | JMMeetingUser | Host information. |
 
 ### Meeting UnLocked Event
 
@@ -1648,7 +1725,7 @@ func jmClient(_ meeting: JMMeeting, didMeetingUnLocked host: JMMeetingUser?)
 | Parameter Name | Type  | Description  |
 | ------- | --- | --- |
 | meeting | JMMeeting | Current Joined Meeting Object. |
-| host | JMMeetingUser | provides information about the meeting host. |
+| host | JMMeetingUser | Host information. |
 
 ### Local Speaker Volume Change Event
 
@@ -1668,104 +1745,8 @@ func jmClient(_ meeting: JMMeeting, didLocalSpeakerVolumeChanges newLevel: Int, 
 | ------- | --- | --- |
 | meeting | JMMeeting | Current Joined Meeting Object. |
 | newLevel | Int | speaker volume level. |
-| localUserSpeaking | Bool | Determines local user starts or stops speaking Options are true/false |
+| localUserSpeaking | Bool | Determines local user starts or stops speaking Options are true/false. |
 
-### Active Speakers Detection Event
-
-**Summary**
-
-It is triggered when active speakers are detected during a meeting
-
-**Declaration**
-
-```swift
-func jmClient(_ meeting: JMMeeting, didDetectActiveSpeakers speakers:[JMMeetingUser])
-```
-
-**Parameters**
-
-| Parameter Name | Type  | Description  |
-| ------- | --- | --- |
-| speakers | [JMMeetingUser] | Determines multipel speakers during the meeting. |
-
-### Local Audio State Change Failure Event
-
-**Summary**
-
-It is triggered when a local user's attempt to change their audio state (e.g., muting or unmuting) encounters a failure.
-
-**Declaration**
-
-```swift
-func jmClient(_ meeting: JMMeeting, didLocalAudioStateChangeFailed errorType: JMAudioVideoErrorType, errorDesc: String)
-```
-
-**Parameters**
-
-| Parameter Name | Type  | Description  |
-| ------- | --- | --- |
-| meeting | JMMeeting | Current Joined Meeting Object. |
-| errorType | JMAudioVideoErrorType | Defines various error types that can occur, Options are `.reconnectError`, `.deviceBusyError`, `.permissionError`, `.multipleAppsOrBackground`, `.ok`, `.unknown` |
-| errorDesc | String | Description of the error. |
-
-### Local Video State Change Failure Event
-
-**Summary**
-
-It is triggered when a local user's attempt to change their video state encounters a failure.
-
-**Declaration**
-
-```swift
-func jmClient(_ meeting: JMMeeting, didLocalVideoStateChangeFailed errorType: JMAudioVideoErrorType, errorDesc: String)
-```
-
-**Parameters**
-
-| Parameter Name | Type  | Description  |
-| ------- | --- | --- |
-| meeting | JMMeeting | Current Joined Meeting Object. |
-| errorType | JMAudioVideoErrorType | Defines various error types that can occur, Options are `.reconnectError`, `.deviceBusyError`, `.permissionError`, `.multipleAppsOrBackground`, `.ok`, `.unknown` |
-| errorDesc | String | Description of the error. |
-
-### Local User Fallback to Audio-Only Mode Event
-
-**Summary**
-
-It is triggered when the local user either falls back to audio-only mode or recovers from it during a meeting. 
-
-**Declaration**
-
-```swift
-func jmClient(_ meeting: JMMeeting, didLocalUserFallBackToAudioOnlyMode isFallbackOrRecover: Bool)
-```
-
-**Parameters**
-
-| Parameter Name | Type  | Description  |
-| ------- | --- | --- |
-| meeting | JMMeeting | Current Joined Meeting Object. |
-| isFallbackOrRecover | Bool | Represents falling back to audio-only mode or recovering from it. Options are true/false |
-
-### Remote User Fallback to Audio-Only Mode Event
-
-**Summary**
-
-It is triggered when the remote user either falls back to audio-only mode or recovers from it during a meeting. 
-
-**Declaration**
-
-```swift
-func jmClient(_ meeting: JMMeeting, didRemoteUserFallBackToAudioOnlyMode isFallbackOrRecover: Bool, user: JMMeetingUser)
-```
-
-**Parameters**
-
-| Parameter Name | Type  | Description  |
-| ------- | --- | --- |
-| meeting | JMMeeting | Current Joined Meeting Object. |
-| isFallbackOrRecover | Bool | Represents falling back to audio-only mode or recovering from it. Options are true/false |
-| user | JMMeetingUser | Determines remote user. |
 
 ### Local Participant Connection State Change Event
 
@@ -1831,7 +1812,7 @@ func jmClient(_ meeting: JMMeeting, didWhiteboardStarted user: JMMeetingUser, is
 
 **Summary**
 
-It is triggered when a whiteboard session is stopped or concluded within a meeting.
+It is triggered when a whiteboard session is stopped or when user who is sharing the whiteboard leaves the meeting.
 
 **Declaration**
 
@@ -2007,29 +1988,17 @@ Meeting User Object
 
 ```swift
 public class JMMeetingUser {
-
     public let id: String
-
     public var userId: String
-
     public var sourceType: JMMediaTrackSourceType = .user
-
     public var audioTrack: JMAudioTrack
-
     public var videoTrack: JMVideoTrack
-
     public var displayName: String
-
     public var isSpeaker: Bool = false
-
     public var isCoHost: Bool = false
-
     public var isHandRaised: Bool = false
-
     public var isSharingScreen: Bool = false
-
     public var isHost: Bool = false
-
 }
 ```
 
@@ -2055,6 +2024,7 @@ public class JMMeetingUser {
 Network quality in meeting
 
 **Declaration**
+
 ```swift
 public enum JMNetworkQuality : Int {
     case good
@@ -2073,15 +2043,6 @@ public enum JMNetworkQuality : Int {
 | poor | Network quality is very bad. User can unsubscribe all remote video streams and only subscibe remote audio streams until network got restored to good.  |
 | detecting | Network quality is in detecting state. |
 
+## Troubleshooting
 
-
-
-
-
-
-
-
-
-
-
-
+Facing any issues while integrating or installing the JioMeet Core SDK please connect with us via real time support present in jiomeet.support@jio.com or https://jiomeetpro.jio.com/contact-us
