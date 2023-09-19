@@ -6,7 +6,8 @@
 2. [Install the SDK](#install-the-sdk)
     - [Install Via Cocoapods](#install-via-cocoapods)
 3. [Prerequisites](#prerequisites)
-4. [Project Settings](#project-settings)
+4. [Setup](#setup)
+5. [Project Settings](#project-settings)
    - [Info.plist Changes](#infoplist-changes)
    - [Enable Background Mode](#enable-background-mode)
 6. [Join Meeting](#join-meeting)
@@ -99,12 +100,15 @@
     - [JMMeeting](#jmmeeting)
     - [JMMeetingUser](#jmmeetinguser)
     - [JMNetworkQuality](#jmnetworkquality)
-12. [Troubleshooting](#troubleshooting)
+12. [Sample App](#sample-app)    
+13. [Troubleshooting](#troubleshooting)
 
 
 ## Introduction
 
 In this documentation, we'll guide you through the process of installation, enabling you to enhance your iOS app with real-time communication capabilities swiftly and efficiently. Let's get started on your journey to creating seamless communication experiences with JioMeet Core SDK!
+
+![image info](./images/core_flow.png)
 
 ---
 
@@ -120,7 +124,7 @@ Please add `JioMeetCoreSDK_iOS` pod to your podfile and run `pod install --repo-
 target 'Your_App_Name' do
   use_frameworks!
   # Other Pods
-  pod 'JioMeetCoreSDK_iOS'
+  pod 'JioMeetCoreSDK_iOS', '2.3.1'
 end
 ```
 
@@ -131,6 +135,22 @@ Before getting started with JioMeet Core SDK integration, please ensure you have
 - Xcode 14.2 or later.
 - Swift 5.0 or later.
 - An iOS device or emulator running iOS 13.0 or later.
+
+## Setup
+
+##### Register on JioMeet Platform:
+
+You need to first register on Jiomeet platform.[Click here to sign up](https://platform.jiomeet.com/login/signUp)
+
+##### Get your application keys:
+
+Create a new app. Please follow the steps provided in the [Documentation guide](https://dev.jiomeet.com/docs/quick-start/introduction) to create apps before you proceed.
+
+###### Get your Jiomeet meeting id and pin
+
+Use the [create meeting api](https://dev.jiomeet.com/docs/JioMeet%20Platform%20Server%20APIs/create-a-dynamic-meeting) to get your room id and password
+
+---
 
 ## Project Settings
 
@@ -2042,6 +2062,10 @@ public enum JMNetworkQuality : Int {
 | bad | Network quality is not good. User will get low resolution video streams of remote users.  |
 | poor | Network quality is very bad. User can unsubscribe all remote video streams and only subscibe remote audio streams until network got restored to good.  |
 | detecting | Network quality is in detecting state. |
+
+## Sample App
+
+Visit our [Jiomeet Template UI Sample app](https://github.com/JioMeet/JioMeetCoreTemplateSDK_iOS) repo to run the sample app.
 
 ## Troubleshooting
 
