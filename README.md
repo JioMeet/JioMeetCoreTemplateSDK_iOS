@@ -108,44 +108,53 @@ Please add below pod to your Podfile and run command `pod install`.
 pod 'JioMeetUIKit_iOS', '2.5'
 ```
 
-To enable paritipant panel we need to set `JMUIKit.isParticipantPanelEnabled = true` and add below pod to your Podfile
+Participant Panel, Chat View and Virtualbackground selector view are additional seperate frameworks. If you want to include them in your app, please enable below flags and add respective pods in podfile
 
-```ruby
-pod 'JioMeetParticipantPanelSDK_iOS', '2.5'
+For Participant Panel View
+
+```swift
+JMUIKit.isParticipantPanelEnabled = true
+pod 'JioMeetUIKit_iOS', '2.5'
 ```
 
-To enable chat we need to set `JMUIKit.isChatViewEnabled = true` and add below pod to your Podfile
+For Chat View
 
-```ruby
+```swift
+JMUIKit.isChatViewEnabled = true
 pod 'JioMeetChatUIKit_iOS', '2.5'
 ```
 
-To enable chat we need to set `JMUIKit.isVirtualBackgroundEnabled = true` and add below pod to your Podfile
+For Virtaul Background
 
-```ruby
-pod 'JioMeetVBGUIKit_iOS', '2.5'
+```swift
+JMUIKit.isVirtualBackgroundEnabled = true
+pod 'JioMeetChatUIKit_iOS', '2.5'
 ```
 
+JioMeetUIKit has many optional features which you can enable according to your requirement. Please check below snippet.
 
-Also we have other variable to enable features. default values are false
+```swift
 
-1. Recording : To enable reocrding we need to set 
+// Enable White Board Feature. You can ignore it if you don't want to use Whiteboard
 
-```ruby
-`JMUIKit.isRecordingEnabled = true
-```
+JMUIKit.isWhiteboardEnabled = true
 
-2. Whiteboard : To enable whiteboard we need to set 
 
-```ruby
-`JMUIKit.isRecordingEnabled = true
-```
+// Enable Start and Stop Recording option. You can ignore if you don't want to handle recording from app side
 
-3. Play chime on user join: To enable chime we need to set below paramters
-```ruby
-    JMUIKit.isEntryExitChimeEnabled = true
-    JMUIKit.entryChimeSoundPath = LOCAL_MP3_FILE_PATH
-    JMUIKit.exitChimeSoundPath = LOCAL_MP3_FILE_PATH
+JMUIKit.isRecordingEnabled = true
+
+
+// Enable Entry/Exit Chime. You can ignore if you don't want to use this feature
+
+// Please provide path for Entry/Exit Chime audio files if you enable this feature
+
+JMUIKit.isEntryExitChimeEnabled = true
+
+JMUIKit.entryChimeSoundPath = Bundle.main.path(forResource: "LOCAL_FILE_NAME", ofType: "mp3") ?? ""
+
+JMUIKit.exitChimeSoundPath = Bundle.main.path(forResource: "LOCAL_FILE_NAME", ofType: "mp3") ?? ""
+
 ```
 
 ### Import SDK
