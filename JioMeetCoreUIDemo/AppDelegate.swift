@@ -14,7 +14,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-		// Override point for customization after application launch.
+		if #available(iOS 15, *) {
+			let appearance = UINavigationBarAppearance()
+			appearance.configureWithOpaqueBackground()
+			UINavigationBar.appearance().standardAppearance = appearance
+			UINavigationBar.appearance().scrollEdgeAppearance = appearance
+		}
+		
+		// Set App group. You can ignore it if you don't want to use screen share feature
+		JMUIKit.appGroupName = "group.com.jio.jiomeet.nativesdk"
+		
+		// Screen Share Extension Bundle Identifier. You can ignore it if you don't want to use screen share feature
+		JMUIKit.screenShareExtensionBundleIdentifier = "com.jio.jiomeet.nativesdk.broadcast"
+		
+		// Enable Participant Panel View. You can ignore it if you don't want to use Participant Panel View
+		JMUIKit.isParticipantPanelEnabled = true
+		
+		// Enable Chat View. You can ignore it if you don't want to use Chat View
+		JMUIKit.isChatViewEnabled = true
+		
+		// Enable Virtual Background Selection View. You can ignore it if you don't want to use Virtual Background
+		JMUIKit.isVirtualBackgroundEnabled = true
+		
+		// Enable White Board Feature. You can ignore it if you don't want to use Whiteboard
+		JMUIKit.isWhiteboardEnabled = true
+		
+		// Enable Start and Stop Recording option. You can ignore if you don't want to handle recording from app side
+		JMUIKit.isRecordingEnabled = true
+		
+		// Enable Entry/Exit Chime. You can ignore if you don't want to use this feature
+		// Please provide path for Entry/Exit Chime audio files if you enable this feature
+		JMUIKit.isEntryExitChimeEnabled = true
+		JMUIKit.entryChimeSoundPath = Bundle.main.path(forResource: "user_join_chime", ofType: "mp3") ?? ""
+		JMUIKit.exitChimeSoundPath = Bundle.main.path(forResource: "user_left_chime", ofType: "mp3") ?? ""
 		return true
 	}
 

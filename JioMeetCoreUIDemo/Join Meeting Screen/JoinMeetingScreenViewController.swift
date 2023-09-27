@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import AVFoundation
 import JioMeetUIKit
 
 class JoinMeetingScreenViewController: UIViewController {
@@ -23,10 +24,13 @@ class JoinMeetingScreenViewController: UIViewController {
 	private var contentStackViewCenterYConstraints: NSLayoutConstraint!
 	
 	// MARK: - Properties
+	private var isCameraAllowed = false
+	private var isMicAllowed = false
 	var meetingID = ""
 	var meetingPIN = ""
 	var hostToken = ""
 	var userDisplayName = ""
+	
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -47,14 +51,6 @@ class JoinMeetingScreenViewController: UIViewController {
 			name: UIResponder.keyboardWillChangeFrameNotification,
 			object: nil
 		)
-	}
-}
-
-extension UIImage {
-	func resized(to size: CGSize) -> UIImage {
-		return UIGraphicsImageRenderer(size: size).image { _ in
-			draw(in: CGRect(origin: .zero, size: size))
-		}
 	}
 }
 
@@ -98,6 +94,20 @@ extension JoinMeetingScreenViewController {
 	
 	@objc private func didPressJoinButton(sender: UIButton) {
 		view.endEditing(true)
+		
+		// Check Mic and Camera Permissions
+		getAudioVideoAuthorization {[weak self] (isCameraAllowed, isMicAllowed, isFirstTime) in
+			self?.isCameraAllowed = isCameraAllowed
+			self?.isMicAllowed = isMicAllowed
+			guard isCameraAllowed && isMicAllowed else {
+				self?.showMicCameraErrorAlert()
+				return
+			}
+			self?.joinMeeting()
+		}
+	}
+	
+	private func joinMeeting() {
 		let meetingIDValidateResult = meetingIdInputView.validateData()
 		let meetingPinValidateResult = meetingPinInputView.validateData()
 		let userNameValidateResult = userNameInputView.validateData()
@@ -131,7 +141,6 @@ extension JoinMeetingScreenViewController {
 		meetingScreenController.userDisplayName = userNameInputView.getTextFieldText()
 		meetingScreenController.hostToken = hostToken
 		navigationController?.pushViewController(meetingScreenController, animated: true)
-		
 	}
 }
 
@@ -164,6 +173,61 @@ extension JoinMeetingScreenViewController {
 		let okAction = UIAlertAction(title: "Ok", style: .default)
 		errorAlert.addAction(okAction)
 		present(errorAlert, animated: true)
+	}
+	
+	private func showMicCameraErrorAlert() {
+		let errorAlert = UIAlertController(
+			title: "Camera Mic Permission Error",
+			message: "You have not granted Mic and Camera Permission. Please provide.",
+			preferredStyle: .alert
+		)
+		let cancelAction = UIAlertAction(title: "Cancel", style: .default)
+		let settingsAction = UIAlertAction(title: "Open Settings", style: .default) { _ in
+			guard let appSettingURL = URL(string: UIApplication.openSettingsURLString) else { return }
+			guard UIApplication.shared.canOpenURL(appSettingURL) else { return }
+			UIApplication.shared.open(appSettingURL)
+		}
+		errorAlert.addAction(cancelAction)
+		errorAlert.addAction(settingsAction)
+		present(errorAlert, animated: true)
+	}
+	
+	private func getAudioVideoAuthorization(completion: @escaping ((_ isCameraAllowed: Bool, _ isMicAllowed: Bool, _ isFirstTime: Bool) -> Void)) {
+		getVideoAuthorization(completion: {(isSuccess, isFirstTime) in
+			let cameraAccess = isSuccess
+			self.getAudioAuthorization(completion: {(isSuccess) in
+				let micAccess = isSuccess
+				completion(cameraAccess, micAccess, isFirstTime)
+			})
+		})
+	}
+	
+	private func getVideoAuthorization(completion: @escaping (_ isAuthorized: Bool, _ isFirstTime: Bool) -> Void) {
+		AVCaptureDevice.authorizeVideo(completion: {(status) in
+			switch status {
+			case .justAuthorized:
+				completion(true, true)
+			case .alreadyAuthorized:
+				completion(true, false)
+			case .justDenied:
+				completion(false, true)
+			case .alreadyDenied, .restricted:
+				completion(false, false)
+			default:
+				completion(false, false)
+			}
+		})
+	}
+	
+	private func getAudioAuthorization(completion: @escaping (_ isAuthorized: Bool) -> Void) {
+		AVCaptureDevice.authorizeAudio(completion: {(status) in
+			switch status {
+			case .justAuthorized, .alreadyAuthorized:
+				completion(true)
+			default:
+				completion(false)
+			}
+		})
 	}
 }
 
