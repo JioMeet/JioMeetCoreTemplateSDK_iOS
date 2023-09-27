@@ -24,7 +24,6 @@
    - [Implement JMMeetingViewDelegate methods](#implement-jmmeetingviewdelegate-methods)
 8. [Run Project](#run-project)
 9. [Reference Classes](#reference-classes)
-10. [Troubleshooting](#troubleshooting)
 
 # Screen Share Integration
 
@@ -35,6 +34,8 @@
 3. [Enable App Groups](#enable-app-groups)
 4. [Edit SampleHandler.swift file](#edit-sampleHandler.swift-file)
 5. [Main App Changes](#main-app-changes)
+6. [Troubleshooting](#troubleshooting)
+
 
 ## Introduction
 
@@ -286,11 +287,6 @@ Run `pod install --repo-update` command. Open JioMeetCoreUIDemo.xcworkspace file
 Please check `MeetingScreenViewController` class for integration reference.
 
 
-## Troubleshooting
-
-Facing any issues while integrating or installing the JioMeet Template UI Kit please connect with us via real time support present in jiomeet.support@jio.com or https://jiomeetpro.jio.com/contact-us
-
-
 # Screen Share Integration
 
 
@@ -394,3 +390,7 @@ You need to provide both your app-group and screen share extension bundle identi
 JMUIKit.appGroupName = "YOUR_APP_GROUP_NAME_IDENTIFIER"
 JMUIKit.screenShareExtensionBundleIdentifier = "BROADCAST_UPLOAD_EXTENSION_IDENTIFIER"
 ```
+
+## Troubleshooting
+
+Facing any issues while integrating or installing the JioMeet Template UI Kit please connect with us via real time support present in jiomeet.support@jio.com or https://jiomeetpro.jio.com/contact-us
