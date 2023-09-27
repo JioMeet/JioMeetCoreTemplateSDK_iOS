@@ -142,9 +142,7 @@ JMUIKit.isWhiteboardEnabled = true
 JMUIKit.isRecordingEnabled = true
 
 
-// Enable Entry/Exit Chime. You can ignore if you don't want to use this feature
-
-// Please provide path for Entry/Exit Chime audio files if you enable this feature
+// Enable Entry/Exit Chime. You can ignore if you don't want to use this feature. Please provide path for Entry/Exit Chime audio files if you enable this feature
 
 JMUIKit.isEntryExitChimeEnabled = true
 
