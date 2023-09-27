@@ -12,6 +12,7 @@
 5. [Project Settings](#project-settings)
    - [Info.plist Changes](#infoplist-changes)
    - [Enable Background Mode](#enable-background-mode)
+   - [Enable Audio Video Permissons](#enable-audio-video-permissons)
 6. [Integration Steps](#integration-steps)
    - [Add SDK](#add-sdk)
    - [Import SDK](#import-sdk)
@@ -23,7 +24,13 @@
    - [Implement JMMeetingViewDelegate methods](#implement-jmmeetingviewdelegate-methods)
 8. [Run Project](#run-project)
 9. [Reference Classes](#reference-classes)
-10. [Troubleshooting](#troubleshooting)
+10. [Screen Share Integration](#screen-share-integration)
+    - [Add Broadcast Upload Extension](#add-broadcast-upload-extension)
+    - [Add JioMeet Screen Share SDK](#add-jiomeet-screen-share-sdk)
+    - [Enable App Groups](#enable-app-groups)
+    - [Edit SampleHandler file](#edit-samplehandler-file)
+    - [Main App Changes](#main-app-changes)
+11. [Troubleshooting](#troubleshooting)
 
 ## Introduction
 
@@ -40,6 +47,11 @@ In Jiomeet Template UI, you'll find a range of powerful features designed to enh
 2. **Participant Panel**: Manage and monitor participants in real-time meetings or video calls for a seamless user experience.
 
 3. **Group Conversation**: Easily engage in text-based conversations with multiple participants in one chat group.
+
+4. **Virtual Background**: Customize your video conferencing environment with various background options .
+
+5. **Whiteboard/Screen Share:** Collaborate seamlessly with screen sharing and digital whiteboard capabilities.
+
 
 
 ## Prerequisites
@@ -81,15 +93,63 @@ Please add below permissions keys to your `Info.plist` file with proper descript
 
 Please enable `Background Modes` in your project `Signing & Capibilities` tab. After enabling please check box with option `Audio, Airplay, and Pictures in Pictures`. If you don't enables this setting, your mic will be muted when your app goes to background.
 
+### Enable Audio Video Permissons
+
+Before joining the meeting please check audio video permissons are enabled or not. If not please throw an error to enable both audio and video permissons 
 
 ## Integration Steps
 
 ### Add SDK
 
-Please add below pod to your Podfile and run command `pod install --repo-update`.
+Please add below pod to your Podfile and run command `pod install`.
 
 ```ruby
-pod 'JioMeetUIKit_iOS', '~> 2.0'
+pod 'JioMeetUIKit_iOS', '2.5'
+```
+
+Participant Panel, Chat View and Virtualbackground selector view are additional seperate frameworks. If you want to include them in your app, please enable below flags and add respective pods in podfile
+
+For Participant Panel View
+
+```swift
+JMUIKit.isParticipantPanelEnabled = true
+pod 'JioMeetUIKit_iOS', '2.5'
+```
+
+For Chat View
+
+```swift
+JMUIKit.isChatViewEnabled = true
+pod 'JioMeetChatUIKit_iOS', '2.5'
+```
+
+For Virtaul Background
+
+```swift
+JMUIKit.isVirtualBackgroundEnabled = true
+pod 'JioMeetChatUIKit_iOS', '2.5'
+```
+
+JioMeetUIKit has many optional features which you can enable according to your requirement. Please check below snippet.
+
+```swift
+// Enable White Board Feature. You can ignore it if you don't want to use Whiteboard
+
+JMUIKit.isWhiteboardEnabled = true
+
+// Enable Start and Stop Recording option. You can ignore if you don't want to handle recording from app side
+
+JMUIKit.isRecordingEnabled = true
+
+
+// Enable Entry/Exit Chime. You can ignore if you don't want to use this feature. Please provide path for Entry/Exit Chime audio files if you enable this feature
+
+JMUIKit.isEntryExitChimeEnabled = true
+
+JMUIKit.entryChimeSoundPath = Bundle.main.path(forResource: "LOCAL_FILE_NAME", ofType: "mp3") ?? ""
+
+JMUIKit.exitChimeSoundPath = Bundle.main.path(forResource: "LOCAL_FILE_NAME", ofType: "mp3") ?? ""
+
 ```
 
 ### Import SDK
@@ -231,7 +291,111 @@ Run `pod install --repo-update` command. Open JioMeetCoreUIDemo.xcworkspace file
 
 Please check `MeetingScreenViewController` class for integration reference.
 
+
+## Screen Share Integration
+
+
+### Add Broadcast Upload Extension
+
+You need to create a Broadcast Upload Extension to enable the screen sharing process. To do that,
+
+open your project, go to **Xcode -> File -> Target... ->** 
+
+![create_broadcast_upload_extension](https://storage.googleapis.com/cpass-sdk/assets/screenshots/iOS/screenshare_1.png)
+
+Select **Broadcast Upload Extension** and click on **Next**
+
+![select_broadcast_upload_extension](https://storage.googleapis.com/cpass-sdk/assets/screenshots/iOS/screenshare_2.png)
+
+Fill the **Product name** and other info, uncheck **Include UI Extension**, and click **Finish**.
+
+![broadcast_upload_extension_info](https://storage.googleapis.com/cpass-sdk/assets/screenshots/iOS/screenshare_3.png)
+
+Activate the Extension
+
+![activate_broadcast_upload_extension](https://storage.googleapis.com/cpass-sdk/assets/screenshots/iOS/screenshare_4.png)
+
+Xcode automatically creates the Extension folder, which contains the **SampleHandler.swift** file.
+
+**NOTE: Please set deployment target for Broadcast Upload Extension same as of your main app.**
+
+
+### Add JioMeet Screen Share SDK
+
+Go to your Podfile. Add `JioMeetScreenShareSDK_iOS` pod for your newly created broadcast upload extension and run `pod install` command to install the SDK.
+
+```ruby
+target 'ScreenShareExtension' do
+    use_frameworks!
+    pod 'JioMeetScreenShareSDK_iOS', '2.5'
+end
+```
+
+**NOTE: `ScreenShareExtension` is name of target you fill while creating `Broadcast Upload Extension`**
+
+
+### Enable App Groups
+
+You need to enable app groups for your main app and screenshare extension. Please follow guide from below link.
+[https://developer.apple.com/documentation/xcode/configuring-app-groups](https://developer.apple.com/documentation/xcode/configuring-app-groups)
+
+[https://www.appcoda.com/app-group-macos-ios-communication/](https://www.appcoda.com/app-group-macos-ios-communication/)
+
+
+### Edit `SampleHandler` file.
+
+Go to your `SampleHandler.swift` file. Replace the whole file content with content below.
+
+**NOTE: Please change `YOUR_APP_GROUP_NAME_IDENTIFIER` with app group you created in above step.**
+
+```swift
+import ReplayKit
+import JioMeetScreenShareSDK
+
+class SampleHandler: JMScreenShareHandler {
+    
+    let appGroupsIdentifier: String = "YOUR_APP_GROUP_NAME_IDENTIFIER"
+    
+    override func clearScreenShareDataFromUserDefaults() {
+        let currentUserDefaults = UserDefaults(suiteName: appGroupsIdentifier)
+        currentUserDefaults?.removeObject(forKey: ScreenShareUserDefaultsKeys.rtcAppIdKey.rawValue)
+        currentUserDefaults?.removeObject(forKey: ScreenShareUserDefaultsKeys.rtcRoomIdKey.rawValue)
+        currentUserDefaults?.removeObject(forKey: ScreenShareUserDefaultsKeys.rtcTokenKey.rawValue)
+        currentUserDefaults?.removeObject(forKey: ScreenShareUserDefaultsKeys.shareUidKey.rawValue)
+    }
+    
+    override func didRequestScreenShareStartData() -> NSDictionary {
+        let currentUserDefaults = UserDefaults(suiteName: appGroupsIdentifier)
+        let rtcAppId = currentUserDefaults?.value(forKey: ScreenShareUserDefaultsKeys.rtcAppIdKey.rawValue) as? String ?? ""
+        let rtcRoomId = currentUserDefaults?.value(forKey: ScreenShareUserDefaultsKeys.rtcRoomIdKey.rawValue) as? String ?? ""
+        let rtcToken = currentUserDefaults?.value(forKey: ScreenShareUserDefaultsKeys.rtcTokenKey.rawValue) as? String ?? ""
+        let uid = currentUserDefaults?.value(forKey: ScreenShareUserDefaultsKeys.shareUidKey.rawValue) as? String ?? ""
+        let dataDictionary : NSDictionary = [
+            ScreenShareStrings.rtcAppId.rawValue: rtcAppId,
+            ScreenShareStrings.rtcRoomId.rawValue: rtcRoomId,
+            ScreenShareStrings.rtcToken.rawValue: rtcToken,
+            ScreenShareStrings.shareUid.rawValue: uid,
+        ]
+        return dataDictionary
+    }
+    
+    override func didRequestScreenShareStopReason() -> String? {
+        let currentUserDefaults = UserDefaults(suiteName: appGroupsIdentifier)
+        return currentUserDefaults?.value(forKey: ScreenShareUserDefaultsKeys.screenShareStopReason.rawValue) as? String
+    }
+}
+```
+
+
+### Main App Changes
+
+You need to provide both your app-group and screen share extension bundle identifier to JioMeet UI SDK. Please use `JMUIKit` class `appGroupName` and `screenShareExtensionBundleIdentifier` static variables to provide this info.
+
+```swift
+JMUIKit.appGroupName = "YOUR_APP_GROUP_NAME_IDENTIFIER"
+JMUIKit.screenShareExtensionBundleIdentifier = "BROADCAST_UPLOAD_EXTENSION_IDENTIFIER"
+```
+
 ## Troubleshooting
 
 Facing any issues while integrating or installing the JioMeet Template UI Kit please connect with us via real time support present in jiomeet.support@jio.com or https://jiomeetpro.jio.com/contact-us
-
