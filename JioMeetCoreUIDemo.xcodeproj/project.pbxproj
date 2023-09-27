@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3DD362C9EB93EB193C312B37 /* Pods_JioMeetCoreUIDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9969620B70269FEC494386E /* Pods_JioMeetCoreUIDemo.framework */; };
+		4398AA9CC4FB883DAD238396 /* Pods_ScreenShareExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6477D553DE7D64EAED6AF13F /* Pods_ScreenShareExtension.framework */; };
 		EB2270B02A56D98000266D5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2270AF2A56D98000266D5C /* AppDelegate.swift */; };
 		EB2270B22A56D98000266D5C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2270B12A56D98000266D5C /* SceneDelegate.swift */; };
 		EB2270B42A56D98000266D5C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2270B32A56D98000266D5C /* ViewController.swift */; };
@@ -19,11 +20,41 @@
 		EB2270CA2A56DAD700266D5C /* JoinInputDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2270C92A56DAD700266D5C /* JoinInputDataView.swift */; };
 		EB2270CC2A56DAF400266D5C /* JoinMeetingScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2270CB2A56DAF400266D5C /* JoinMeetingScreenViewController.swift */; };
 		EB2270CF2A56DB1D00266D5C /* MeetingScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2270CE2A56DB1D00266D5C /* MeetingScreenViewController.swift */; };
+		EBD8A5862AC415D100A92522 /* ReplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBD8A5852AC415D100A92522 /* ReplayKit.framework */; };
+		EBD8A5892AC415D100A92522 /* SampleHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD8A5882AC415D100A92522 /* SampleHandler.swift */; };
+		EBD8A58D2AC415D100A92522 /* ScreenShareExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = EBD8A5842AC415D100A92522 /* ScreenShareExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		EBD8A58B2AC415D100A92522 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EB2270A42A56D98000266D5C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EBD8A5832AC415D100A92522;
+			remoteInfo = ScreenShareExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EBD8A5912AC415D100A92522 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				EBD8A58D2AC415D100A92522 /* ScreenShareExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		6477D553DE7D64EAED6AF13F /* Pods_ScreenShareExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScreenShareExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		66A5F9825015683CEDADDA0D /* Pods-ScreenShareExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScreenShareExtension.release.xcconfig"; path = "Target Support Files/Pods-ScreenShareExtension/Pods-ScreenShareExtension.release.xcconfig"; sourceTree = "<group>"; };
 		67B84EE635636E75F15F0CD7 /* Pods-JioMeetCoreUIDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JioMeetCoreUIDemo.debug.xcconfig"; path = "Target Support Files/Pods-JioMeetCoreUIDemo/Pods-JioMeetCoreUIDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		BF520F6F2C06001763731A8C /* Pods-JioMeetCoreUIDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JioMeetCoreUIDemo.release.xcconfig"; path = "Target Support Files/Pods-JioMeetCoreUIDemo/Pods-JioMeetCoreUIDemo.release.xcconfig"; sourceTree = "<group>"; };
+		BF732594BA1836E8557639C2 /* Pods-ScreenShareExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScreenShareExtension.debug.xcconfig"; path = "Target Support Files/Pods-ScreenShareExtension/Pods-ScreenShareExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		C9969620B70269FEC494386E /* Pods_JioMeetCoreUIDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JioMeetCoreUIDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB2270AC2A56D98000266D5C /* JioMeetCoreUIDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JioMeetCoreUIDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB2270AF2A56D98000266D5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +69,12 @@
 		EB2270C92A56DAD700266D5C /* JoinInputDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinInputDataView.swift; sourceTree = "<group>"; };
 		EB2270CB2A56DAF400266D5C /* JoinMeetingScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinMeetingScreenViewController.swift; sourceTree = "<group>"; };
 		EB2270CE2A56DB1D00266D5C /* MeetingScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingScreenViewController.swift; sourceTree = "<group>"; };
+		EBD8A5842AC415D100A92522 /* ScreenShareExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ScreenShareExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBD8A5852AC415D100A92522 /* ReplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReplayKit.framework; path = System/Library/Frameworks/ReplayKit.framework; sourceTree = SDKROOT; };
+		EBD8A5882AC415D100A92522 /* SampleHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleHandler.swift; sourceTree = "<group>"; };
+		EBD8A58A2AC415D100A92522 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBD8A5922AC4176500A92522 /* JioMeetCoreUIDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JioMeetCoreUIDemo.entitlements; sourceTree = "<group>"; };
+		EBD8A5932AC4176A00A92522 /* ScreenShareExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ScreenShareExtension.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +86,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EBD8A5812AC415D100A92522 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBD8A5862AC415D100A92522 /* ReplayKit.framework in Frameworks */,
+				4398AA9CC4FB883DAD238396 /* Pods_ScreenShareExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -57,6 +103,8 @@
 			children = (
 				67B84EE635636E75F15F0CD7 /* Pods-JioMeetCoreUIDemo.debug.xcconfig */,
 				BF520F6F2C06001763731A8C /* Pods-JioMeetCoreUIDemo.release.xcconfig */,
+				BF732594BA1836E8557639C2 /* Pods-ScreenShareExtension.debug.xcconfig */,
+				66A5F9825015683CEDADDA0D /* Pods-ScreenShareExtension.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -65,6 +113,8 @@
 			isa = PBXGroup;
 			children = (
 				C9969620B70269FEC494386E /* Pods_JioMeetCoreUIDemo.framework */,
+				EBD8A5852AC415D100A92522 /* ReplayKit.framework */,
+				6477D553DE7D64EAED6AF13F /* Pods_ScreenShareExtension.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -73,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				EB2270AE2A56D98000266D5C /* JioMeetCoreUIDemo */,
+				EBD8A5872AC415D100A92522 /* ScreenShareExtension */,
 				EB2270AD2A56D98000266D5C /* Products */,
 				B060438C8C655EF0131706EF /* Pods */,
 				D6FC5520802F04DF00BE419E /* Frameworks */,
@@ -83,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				EB2270AC2A56D98000266D5C /* JioMeetCoreUIDemo.app */,
+				EBD8A5842AC415D100A92522 /* ScreenShareExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -90,6 +142,7 @@
 		EB2270AE2A56D98000266D5C /* JioMeetCoreUIDemo */ = {
 			isa = PBXGroup;
 			children = (
+				EBD8A5922AC4176500A92522 /* JioMeetCoreUIDemo.entitlements */,
 				EB2270CD2A56DB0B00266D5C /* Meeting Screen */,
 				EB2270C82A56DAC300266D5C /* Join Meeting Screen */,
 				EB2270C32A56DA7200266D5C /* Extensions */,
@@ -130,6 +183,16 @@
 			path = "Meeting Screen";
 			sourceTree = "<group>";
 		};
+		EBD8A5872AC415D100A92522 /* ScreenShareExtension */ = {
+			isa = PBXGroup;
+			children = (
+				EBD8A5932AC4176A00A92522 /* ScreenShareExtension.entitlements */,
+				EBD8A5882AC415D100A92522 /* SampleHandler.swift */,
+				EBD8A58A2AC415D100A92522 /* Info.plist */,
+			);
+			path = ScreenShareExtension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -142,15 +205,35 @@
 				EB2270A92A56D98000266D5C /* Frameworks */,
 				EB2270AA2A56D98000266D5C /* Resources */,
 				732B28B72B2F4CC3DC1C6EC6 /* [CP] Embed Pods Frameworks */,
+				EBD8A5912AC415D100A92522 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				EBD8A58C2AC415D100A92522 /* PBXTargetDependency */,
 			);
 			name = JioMeetCoreUIDemo;
 			productName = JioMeetCoreUIDemo;
 			productReference = EB2270AC2A56D98000266D5C /* JioMeetCoreUIDemo.app */;
 			productType = "com.apple.product-type.application";
+		};
+		EBD8A5832AC415D100A92522 /* ScreenShareExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBD8A58E2AC415D100A92522 /* Build configuration list for PBXNativeTarget "ScreenShareExtension" */;
+			buildPhases = (
+				24E519E1D17511D39DA43577 /* [CP] Check Pods Manifest.lock */,
+				EBD8A5802AC415D100A92522 /* Sources */,
+				EBD8A5812AC415D100A92522 /* Frameworks */,
+				EBD8A5822AC415D100A92522 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ScreenShareExtension;
+			productName = ScreenShareExtension;
+			productReference = EBD8A5842AC415D100A92522 /* ScreenShareExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -159,11 +242,14 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1420;
+				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
 					EB2270AB2A56D98000266D5C = {
 						CreatedOnToolsVersion = 14.2;
+					};
+					EBD8A5832AC415D100A92522 = {
+						CreatedOnToolsVersion = 14.3.1;
 					};
 				};
 			};
@@ -181,6 +267,7 @@
 			projectRoot = "";
 			targets = (
 				EB2270AB2A56D98000266D5C /* JioMeetCoreUIDemo */,
+				EBD8A5832AC415D100A92522 /* ScreenShareExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -193,6 +280,13 @@
 				EB2270BC2A56D98100266D5C /* LaunchScreen.storyboard in Resources */,
 				EB2270B92A56D98100266D5C /* Assets.xcassets in Resources */,
 				EB2270B72A56D98000266D5C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBD8A5822AC415D100A92522 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,6 +309,28 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-JioMeetCoreUIDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		24E519E1D17511D39DA43577 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ScreenShareExtension-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -256,7 +372,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EBD8A5802AC415D100A92522 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBD8A5892AC415D100A92522 /* SampleHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EBD8A58C2AC415D100A92522 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EBD8A5832AC415D100A92522 /* ScreenShareExtension */;
+			targetProxy = EBD8A58B2AC415D100A92522 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		EB2270B52A56D98000266D5C /* Main.storyboard */ = {
@@ -396,13 +528,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 67B84EE635636E75F15F0CD7 /* Pods-JioMeetCoreUIDemo.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_ENTITLEMENTS = JioMeetCoreUIDemo/JioMeetCoreUIDemo.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = W84Y3AR95Z;
+				DEVELOPMENT_TEAM = 8PVH2NGH42;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = JioMeetCoreUIDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -419,7 +552,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.jio.jiomeet.demoapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = rohit_kumar_jio_sdk_dev;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -430,13 +562,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BF520F6F2C06001763731A8C /* Pods-JioMeetCoreUIDemo.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_ENTITLEMENTS = JioMeetCoreUIDemo/JioMeetCoreUIDemo.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = W84Y3AR95Z;
+				DEVELOPMENT_TEAM = 8PVH2NGH42;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = JioMeetCoreUIDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -453,7 +586,62 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.jio.jiomeet.demoapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = rohit_kumar_jio_sdk_dev;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EBD8A58F2AC415D100A92522 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF732594BA1836E8557639C2 /* Pods-ScreenShareExtension.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ScreenShareExtension/ScreenShareExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8PVH2NGH42;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ScreenShareExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ScreenShareExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jio.jiomeet.demoapp.broadcast;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EBD8A5902AC415D100A92522 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66A5F9825015683CEDADDA0D /* Pods-ScreenShareExtension.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ScreenShareExtension/ScreenShareExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8PVH2NGH42;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ScreenShareExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ScreenShareExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jio.jiomeet.demoapp.broadcast;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -477,6 +665,15 @@
 			buildConfigurations = (
 				EB2270C12A56D98100266D5C /* Debug */,
 				EB2270C22A56D98100266D5C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EBD8A58E2AC415D100A92522 /* Build configuration list for PBXNativeTarget "ScreenShareExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBD8A58F2AC415D100A92522 /* Debug */,
+				EBD8A5902AC415D100A92522 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
