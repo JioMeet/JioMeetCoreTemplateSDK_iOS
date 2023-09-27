@@ -12,6 +12,7 @@
 5. [Project Settings](#project-settings)
    - [Info.plist Changes](#infoplist-changes)
    - [Enable Background Mode](#enable-background-mode)
+   - [Enable Audio Video Permissons](#enable-audio-video-permissons)
 6. [Integration Steps](#integration-steps)
    - [Add SDK](#add-sdk)
    - [Import SDK](#import-sdk)
@@ -24,6 +25,16 @@
 8. [Run Project](#run-project)
 9. [Reference Classes](#reference-classes)
 10. [Troubleshooting](#troubleshooting)
+
+# Screen Share Integration
+
+## Table of Contents
+
+1. [Add Broadcast Upload Extension](#add-broadcast-upload-extension)
+2. [Add JioMeet Screen Share SDK](#add-jiomeet-screen-share-sdk)
+3. [Enable App Groups](#enable-app-groups)
+4. [Edit SampleHandler.swift file](#edit-sampleHandler.swift-file)
+5. [Main App Changes](#main-app-changes)
 
 ## Introduction
 
@@ -81,15 +92,58 @@ Please add below permissions keys to your `Info.plist` file with proper descript
 
 Please enable `Background Modes` in your project `Signing & Capibilities` tab. After enabling please check box with option `Audio, Airplay, and Pictures in Pictures`. If you don't enables this setting, your mic will be muted when your app goes to background.
 
+### Enable Audio Video Permissons
+
+Before joining the meeting please check audio video permissons are enabled or not. If not please throw an error to enable both audio and video permissons 
 
 ## Integration Steps
 
 ### Add SDK
 
-Please add below pod to your Podfile and run command `pod install --repo-update`.
+Please add below pod to your Podfile and run command `pod install`.
 
 ```ruby
-pod 'JioMeetUIKit_iOS', '~> 2.0'
+pod 'JioMeetUIKit_iOS', '2.5'
+```
+
+To enable paritipant panel we need to set `JMUIKit.isParticipantPanelEnabled = true` and add below pod to your Podfile
+
+```ruby
+pod 'JioMeetParticipantPanelSDK_iOS', '2.5'
+```
+
+To enable chat we need to set `JMUIKit.isChatViewEnabled = true` and add below pod to your Podfile
+
+```ruby
+pod 'JioMeetChatUIKit_iOS', '2.5'
+```
+
+To enable chat we need to set `JMUIKit.isVirtualBackgroundEnabled = true` and add below pod to your Podfile
+
+```ruby
+pod 'JioMeetVBGUIKit_iOS', '2.5'
+```
+
+
+Also we have other variable to enable features. default values are false
+
+1. Recording : To enable reocrding we need to set 
+
+```ruby
+`JMUIKit.isRecordingEnabled = true
+```
+
+2. Whiteboard : To enable whiteboard we need to set 
+
+```ruby
+`JMUIKit.isRecordingEnabled = true
+```
+
+3. Play chime on user join: To enable chime we need to set below paramters
+```ruby
+    JMUIKit.isEntryExitChimeEnabled = true
+    JMUIKit.entryChimeSoundPath = LOCAL_MP3_FILE_PATH
+    JMUIKit.exitChimeSoundPath = LOCAL_MP3_FILE_PATH
 ```
 
 ### Import SDK
@@ -231,6 +285,7 @@ Run `pod install --repo-update` command. Open JioMeetCoreUIDemo.xcworkspace file
 
 Please check `MeetingScreenViewController` class for integration reference.
 
+
 ## Troubleshooting
 
 Facing any issues while integrating or installing the JioMeet Template UI Kit please connect with us via real time support present in jiomeet.support@jio.com or https://jiomeetpro.jio.com/contact-us
@@ -266,12 +321,12 @@ Xcode automatically creates the Extension folder, which contains the **SampleHan
 
 ## Add JioMeet Screen Share SDK
 
-Go to your Podfile. Add `JioMeetScreenShareSDK_iOS` pod for your newly created broadcast upload extension and run `pod install --repo-update --verbose` command to install the SDK.
+Go to your Podfile. Add `JioMeetScreenShareSDK_iOS` pod for your newly created broadcast upload extension and run `pod install` command to install the SDK.
 
 ```ruby
 target 'ScreenShareExtension' do
     use_frameworks!
-    pod 'JioMeetScreenShareSDK_iOS', '~> 2.0'
+    pod 'JioMeetScreenShareSDK_iOS', '2.5'
 end
 ```
 
