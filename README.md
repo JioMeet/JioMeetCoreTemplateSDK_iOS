@@ -24,19 +24,13 @@
    - [Implement JMMeetingViewDelegate methods](#implement-jmmeetingviewdelegate-methods)
 8. [Run Project](#run-project)
 9. [Reference Classes](#reference-classes)
-
-# Screen Share Integration
-
-## Table of Contents
-
-1. [Add Broadcast Upload Extension](#add-broadcast-upload-extension)
-2. [Add JioMeet Screen Share SDK](#add-jiomeet-screen-share-sdk)
-3. [Enable App Groups](#enable-app-groups)
-4. [Edit SampleHandler.swift file](#edit-sampleHandler.swift-file)
-5. [Main App Changes](#main-app-changes)
-6. [Troubleshooting](#troubleshooting)
-
-# JioMeet Template UI Quickstart
+10. [Screen Share Integration](#screen-share-integration)
+    - [Add Broadcast Upload Extension](#add-broadcast-upload-extension)
+    - [Add JioMeet Screen Share SDK](#add-jiomeet-screen-share-sdk)
+    - [Enable App Groups](#enable-app-groups)
+    - [Edit SampleHandler file](#edit-samplehandler-file)
+    - [Main App Changes](#main-app-changes)
+11. [Troubleshooting](#troubleshooting)
 
 ## Introduction
 
@@ -53,6 +47,11 @@ In Jiomeet Template UI, you'll find a range of powerful features designed to enh
 2. **Participant Panel**: Manage and monitor participants in real-time meetings or video calls for a seamless user experience.
 
 3. **Group Conversation**: Easily engage in text-based conversations with multiple participants in one chat group.
+
+4. **Virtual Background**: Customize your video conferencing environment with various background options .
+
+5. **Whiteboard/Screen Share:** Collaborate seamlessly with screen sharing and digital whiteboard capabilities.
+
 
 
 ## Prerequisites
@@ -134,11 +133,9 @@ pod 'JioMeetChatUIKit_iOS', '2.5'
 JioMeetUIKit has many optional features which you can enable according to your requirement. Please check below snippet.
 
 ```swift
-
 // Enable White Board Feature. You can ignore it if you don't want to use Whiteboard
 
 JMUIKit.isWhiteboardEnabled = true
-
 
 // Enable Start and Stop Recording option. You can ignore if you don't want to handle recording from app side
 
@@ -297,10 +294,10 @@ Run `pod install --repo-update` command. Open JioMeetCoreUIDemo.xcworkspace file
 Please check `MeetingScreenViewController` class for integration reference.
 
 
-# Screen Share Integration
+## Screen Share Integration
 
 
-## Add Broadcast Upload Extension
+### Add Broadcast Upload Extension
 
 You need to create a Broadcast Upload Extension to enable the screen sharing process. To do that,
 
@@ -325,7 +322,7 @@ Xcode automatically creates the Extension folder, which contains the **SampleHan
 **NOTE: Please set deployment target for Broadcast Upload Extension same as of your main app.**
 
 
-## Add JioMeet Screen Share SDK
+### Add JioMeet Screen Share SDK
 
 Go to your Podfile. Add `JioMeetScreenShareSDK_iOS` pod for your newly created broadcast upload extension and run `pod install` command to install the SDK.
 
@@ -339,7 +336,7 @@ end
 **NOTE: `ScreenShareExtension` is name of target you fill while creating `Broadcast Upload Extension`**
 
 
-## Enable App Groups
+### Enable App Groups
 
 You need to enable app groups for your main app and screenshare extension. Please follow guide from below link.
 [https://developer.apple.com/documentation/xcode/configuring-app-groups](https://developer.apple.com/documentation/xcode/configuring-app-groups)
@@ -347,7 +344,7 @@ You need to enable app groups for your main app and screenshare extension. Pleas
 [https://www.appcoda.com/app-group-macos-ios-communication/](https://www.appcoda.com/app-group-macos-ios-communication/)
 
 
-## Edit `SampleHandler.swift` file.
+### Edit `SampleHandler` file.
 
 Go to your `SampleHandler.swift` file. Replace the whole file content with content below.
 
@@ -392,7 +389,7 @@ class SampleHandler: JMScreenShareHandler {
 ```
 
 
-## Main App Changes
+### Main App Changes
 
 You need to provide both your app-group and screen share extension bundle identifier to JioMeet UI SDK. Please use `JMUIKit` class `appGroupName` and `screenShareExtensionBundleIdentifier` static variables to provide this info.
 
