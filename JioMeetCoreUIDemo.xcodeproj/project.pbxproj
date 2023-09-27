@@ -20,6 +20,7 @@
 		EB2270CA2A56DAD700266D5C /* JoinInputDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2270C92A56DAD700266D5C /* JoinInputDataView.swift */; };
 		EB2270CC2A56DAF400266D5C /* JoinMeetingScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2270CB2A56DAF400266D5C /* JoinMeetingScreenViewController.swift */; };
 		EB2270CF2A56DB1D00266D5C /* MeetingScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2270CE2A56DB1D00266D5C /* MeetingScreenViewController.swift */; };
+		EB808E682AC427F900B46C9F /* AVFoundation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB808E672AC427F900B46C9F /* AVFoundation+Extension.swift */; };
 		EBD8A5862AC415D100A92522 /* ReplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBD8A5852AC415D100A92522 /* ReplayKit.framework */; };
 		EBD8A5892AC415D100A92522 /* SampleHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD8A5882AC415D100A92522 /* SampleHandler.swift */; };
 		EBD8A58D2AC415D100A92522 /* ScreenShareExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = EBD8A5842AC415D100A92522 /* ScreenShareExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -69,6 +70,7 @@
 		EB2270C92A56DAD700266D5C /* JoinInputDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinInputDataView.swift; sourceTree = "<group>"; };
 		EB2270CB2A56DAF400266D5C /* JoinMeetingScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinMeetingScreenViewController.swift; sourceTree = "<group>"; };
 		EB2270CE2A56DB1D00266D5C /* MeetingScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingScreenViewController.swift; sourceTree = "<group>"; };
+		EB808E672AC427F900B46C9F /* AVFoundation+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVFoundation+Extension.swift"; sourceTree = "<group>"; };
 		EBD8A5842AC415D100A92522 /* ScreenShareExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ScreenShareExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBD8A5852AC415D100A92522 /* ReplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReplayKit.framework; path = System/Library/Frameworks/ReplayKit.framework; sourceTree = SDKROOT; };
 		EBD8A5882AC415D100A92522 /* SampleHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleHandler.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 			children = (
 				EB2270C42A56DA8D00266D5C /* String+Extension.swift */,
 				EB2270C62A56DAAB00266D5C /* UIColor+Extension.swift */,
+				EB808E672AC427F900B46C9F /* AVFoundation+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -368,6 +371,7 @@
 				EB2270CF2A56DB1D00266D5C /* MeetingScreenViewController.swift in Sources */,
 				EB2270CA2A56DAD700266D5C /* JoinInputDataView.swift in Sources */,
 				EB2270B22A56D98000266D5C /* SceneDelegate.swift in Sources */,
+				EB808E682AC427F900B46C9F /* AVFoundation+Extension.swift in Sources */,
 				EB2270C72A56DAAB00266D5C /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
