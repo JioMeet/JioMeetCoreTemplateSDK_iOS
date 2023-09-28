@@ -111,7 +111,8 @@
     - [Enable App Groups](#enable-app-groups)
     - [Edit SampleHandler file](#edit-samplehandler-file)
     - [Core SDK Changes](#core-sdk-changes)    
-13. [Troubleshooting](#troubleshooting)
+13. [Sample App](#sample-app)    
+14. [Troubleshooting](#troubleshooting)
 
 
 ## Introduction
@@ -2301,6 +2302,10 @@ func jmClient(_ meeting: JMMeeting, didRemoteScreenShareStateChanged state: JMSc
 **NOTE: mediaTrack object is of `JMScreenShareTrack` type which confirms to `JMMediaTrack` protocol. It contains Audio Track, Video Track and sharing user id and displayName**
 
 **NOTE:If you are using Objective-C, please check this guide to import Swift Framework. [https://developer.apple.com/documentation/swift/importing-swift-into-objective-c](https://developer.apple.com/documentation/swift/importing-swift-into-objective-c)**
+
+## Sample App
+
+Visit our [Jiomeet Template UI Sample app](https://github.com/JioMeet/JioMeetCoreTemplateSDK_iOS) repo to run the sample app.
 
 ## Troubleshooting
 
