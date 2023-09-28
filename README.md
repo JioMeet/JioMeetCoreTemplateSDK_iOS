@@ -6,7 +6,11 @@
 2. [Install the SDK](#install-the-sdk)
     - [Install Via Cocoapods](#install-via-cocoapods)
 3. [Prerequisites](#prerequisites)
-4. [Project Settings](#project-settings)
+4. [Setup](#setup)
+   - [Register on JioMeet Platform](#register-on-jiomeet-platform)
+   - [Get Your Application Keys](#get-your-application-keys)
+   - [Get Your JioMeet Meeting ID and PIN](#get-your-jiomeet-meeting-id-and-pin)
+5. [Project Settings](#project-settings)
    - [Info.plist Changes](#infoplist-changes)
    - [Enable Background Mode](#enable-background-mode)
 6. [Join Meeting](#join-meeting)
@@ -52,6 +56,8 @@
    - [Start Whiteboard](#start-whiteboard)
    - [Stop Whiteboard](#stop-whiteboard)
    - [Update User Co-Host Rights](#update-user-co-host-rights)
+   - [Set Audio File Path for User Join Chime Sournd](#set-audio-file-path-for-user-join-chime-sournd)
+   - [Set Audio File Path for User Left Chime Sournd](#set-audio-file-path-for-user-left-chime-sournd)
 10. [Observe Meeting Events](#observe-meeting-events)
     - [User Failed to join the meeting](#user-failed-to-join-the-meeting)
     - [User Joined Meeting Successfully](#user-joined-meeting-successfully)
@@ -99,12 +105,20 @@
     - [JMMeeting](#jmmeeting)
     - [JMMeetingUser](#jmmeetinguser)
     - [JMNetworkQuality](#jmnetworkquality)
-12. [Troubleshooting](#troubleshooting)
+12. [Screen Share Integration](#screen-share-integration)
+    - [Add Broadcast Upload Extension](#add-broadcast-upload-extension)
+    - [Add JioMeet Screen Share SDK](#add-jiomeet-screen-share-sdk)
+    - [Enable App Groups](#enable-app-groups)
+    - [Edit SampleHandler file](#edit-samplehandler-file)
+    - [Core SDK Changes](#core-sdk-changes)    
+13. [Troubleshooting](#troubleshooting)
 
 
 ## Introduction
 
 In this documentation, we'll guide you through the process of installation, enabling you to enhance your iOS app with real-time communication capabilities swiftly and efficiently. Let's get started on your journey to creating seamless communication experiences with JioMeet Core SDK!
+
+![image info](./Images/core_flow.png)
 
 ---
 
@@ -120,7 +134,7 @@ Please add `JioMeetCoreSDK_iOS` pod to your podfile and run `pod install --repo-
 target 'Your_App_Name' do
   use_frameworks!
   # Other Pods
-  pod 'JioMeetCoreSDK_iOS'
+  pod 'JioMeetCoreSDK_iOS', '2.3.1'
 end
 ```
 
@@ -131,6 +145,22 @@ Before getting started with JioMeet Core SDK integration, please ensure you have
 - Xcode 14.2 or later.
 - Swift 5.0 or later.
 - An iOS device or emulator running iOS 13.0 or later.
+
+## Setup
+
+#### Register on JioMeet Platform:
+
+You need to first register on Jiomeet platform. [Click here to sign up](https://platform.jiomeet.com/login/signUp)
+
+#### Get your application keys:
+
+Create a new app. Please follow the steps provided in the [Documentation guide](https://dev.jiomeet.com/docs/quick-start/introduction) to create apps before you proceed.
+
+#### Get your Jiomeet meeting id and pin
+
+Use the [Create meeting api](https://dev.jiomeet.com/docs/JioMeet%20Platform%20Server%20APIs/create-a-dynamic-meeting) to get your room id and password
+
+---
 
 ## Project Settings
 
@@ -1016,6 +1046,54 @@ func updateUserCoHostRights(user: JMMeetingUser, makeCoHost: Bool)
 
 ```swift
 jioMeetClient.updateUserCoHostRights(user: jmMeetingUser, makeCoHost: true)
+```
+
+### Set Audio File Path for User Join Chime Sournd
+
+**Summary**
+
+This function configures the audio file path for the chime sound, which is provided by the client app, to notify the Host/Co-Host when a user joins the meeting.
+
+**Declaration**
+
+```swift
+func setAudioFilePathForUserJoin(filePath: String)
+```
+
+**Parameters**
+
+| Parameter Name | Type  | Description  |
+| ------- | --- | --- |
+| filePath | String | The file path to an audio file. |
+
+**Usage Example**
+
+```swift
+jioMeetClient.setAudioFilePathForUserJoin(filePath: entryChimeSoundPath)
+```
+
+### Set Audio File Path for User Left Chime Sournd
+
+**Summary**
+
+This function configures the audio file path for the chime sound, which is provided by the client app, to notify the Host/Co-Host when a user leaves the meeting.
+
+**Declaration**
+
+```swift
+func setAudioFilePathForUserLeft(filePath: String)
+```
+
+**Parameters**
+
+| Parameter Name | Type  | Description  |
+| ------- | --- | --- |
+| filePath | String | The file path to an audio file. |
+
+**Usage Example**
+
+```swift
+jioMeetClient.setAudioFilePathForUserLeft(filePath: exitChimeSoundPath)
 ```
 
 ## Observe Meeting Events
@@ -2042,6 +2120,187 @@ public enum JMNetworkQuality : Int {
 | bad | Network quality is not good. User will get low resolution video streams of remote users.  |
 | poor | Network quality is very bad. User can unsubscribe all remote video streams and only subscibe remote audio streams until network got restored to good.  |
 | detecting | Network quality is in detecting state. |
+
+## Screen Share Integration
+
+### Add Broadcast Upload Extension
+
+You need to create a Broadcast Upload Extension to enable the screen sharing process. To do that,
+
+open your project, go to **Xcode -> File -> Target... ->** 
+
+![create_broadcast_upload_extension](https://storage.googleapis.com/cpass-sdk/assets/screenshots/iOS/screenshare_1.png)
+
+Select **Broadcast Upload Extension** and click on **Next**
+
+![select_broadcast_upload_extension](https://storage.googleapis.com/cpass-sdk/assets/screenshots/iOS/screenshare_2.png)
+
+Fill the **Product name** and other info, uncheck **Include UI Extension**, and click **Finish**.
+
+![broadcast_upload_extension_info](https://storage.googleapis.com/cpass-sdk/assets/screenshots/iOS/screenshare_3.png)
+
+Activate the Extension
+
+![activate_broadcast_upload_extension](https://storage.googleapis.com/cpass-sdk/assets/screenshots/iOS/screenshare_4.png)
+
+Xcode automatically creates the Extension folder, which contains the **SampleHandler.swift** file.
+
+**NOTE: Please set deployment target for Broadcast Upload Extension same as of your main app.**
+
+
+### Add JioMeet Screen Share SDK
+
+Go to your Podfile. Add `JioMeetScreenShareSDK_iOS` pod for your newly created broadcast upload extension and run `pod install --repo-update --verbose` command to install the SDK.
+
+```ruby
+target 'ScreenShareExtension' do
+    use_frameworks!
+    pod 'JioMeetScreenShareSDK_iOS', '~> 2.0'
+end
+```
+
+**NOTE: `ScreenShareExtension` is name of target you fill while creating `Broadcast Upload Extension`**
+
+
+### Enable App Groups
+
+You need to enable app groups for your main app and screenshare extension. Please follow guide from below link.
+[https://developer.apple.com/documentation/xcode/configuring-app-groups](https://developer.apple.com/documentation/xcode/configuring-app-groups)
+
+[https://www.appcoda.com/app-group-macos-ios-communication/](https://www.appcoda.com/app-group-macos-ios-communication/)
+
+
+### Edit SampleHandler file.
+
+Go to your `SampleHandler.swift` file. Replace the whole file content with content below.
+
+**NOTE: Please change `YOUR_APP_GROUP_NAME_IDENTIFIER` with app group you created in above step.**
+
+```swift
+import ReplayKit
+import JioMeetScreenShareSDK
+
+class SampleHandler: JMScreenShareHandler {
+    
+    let appGroupsIdentifier: String = "YOUR_APP_GROUP_NAME_IDENTIFIER"
+    
+    override func clearScreenShareDataFromUserDefaults() {
+        let currentUserDefaults = UserDefaults(suiteName: appGroupsIdentifier)
+        currentUserDefaults?.removeObject(forKey: ScreenShareUserDefaultsKeys.rtcAppIdKey.rawValue)
+        currentUserDefaults?.removeObject(forKey: ScreenShareUserDefaultsKeys.rtcRoomIdKey.rawValue)
+        currentUserDefaults?.removeObject(forKey: ScreenShareUserDefaultsKeys.rtcTokenKey.rawValue)
+        currentUserDefaults?.removeObject(forKey: ScreenShareUserDefaultsKeys.shareUidKey.rawValue)
+    }
+    
+    override func didRequestScreenShareStartData() -> NSDictionary {
+        let currentUserDefaults = UserDefaults(suiteName: appGroupsIdentifier)
+        let rtcAppId = currentUserDefaults?.value(forKey: ScreenShareUserDefaultsKeys.rtcAppIdKey.rawValue) as? String ?? ""
+        let rtcRoomId = currentUserDefaults?.value(forKey: ScreenShareUserDefaultsKeys.rtcRoomIdKey.rawValue) as? String ?? ""
+        let rtcToken = currentUserDefaults?.value(forKey: ScreenShareUserDefaultsKeys.rtcTokenKey.rawValue) as? String ?? ""
+        let uid = currentUserDefaults?.value(forKey: ScreenShareUserDefaultsKeys.shareUidKey.rawValue) as? String ?? ""
+        let dataDictionary : NSDictionary = [
+            ScreenShareStrings.rtcAppId.rawValue: rtcAppId,
+            ScreenShareStrings.rtcRoomId.rawValue: rtcRoomId,
+            ScreenShareStrings.rtcToken.rawValue: rtcToken,
+            ScreenShareStrings.shareUid.rawValue: uid,
+        ]
+        return dataDictionary
+    }
+    
+    override func didRequestScreenShareStopReason() -> String? {
+        let currentUserDefaults = UserDefaults(suiteName: appGroupsIdentifier)
+        return currentUserDefaults?.value(forKey: ScreenShareUserDefaultsKeys.screenShareStopReason.rawValue) as? String
+    }
+}
+```
+
+
+### Core SDK Changes
+
+To sync broadcast upload extension and core sdk you need to provide your app group identifier to the JioMeetCoreSDK. Please use `setParameters` method of `JMClient` instance and pass info in dictionary. Call this method after you create `JMClient` instance Please check below code.
+
+```swift
+let jmClient = JMClient()
+jmClient.setParameters(params: ["jm_app_group_name": "YOUR_APP_GROUP_NAME_IDENTIFIER"])
+```
+
+**NOTE: Replace `YOUR_APP_GROUP_NAME_IDENTIFIER` with your app group name identifier.**
+
+
+#### Start/Stop Local ScreenShare
+
+From your UI, whenever user want to start/stop screen share execute below code to show native screen share view. Please import `ReplayKit` in your file.
+
+```swift
+import ReplayKit
+```
+
+```swift
+DispatchQueue .main.async {
+    let pickerView = RPSystemBroadcastPickerView (frame: .zero)
+    pickerButton = pickerView.subviews.first( where : { $ 0 is UIButton }) as? UIButton
+    pickerView.showsMicrophoneButton = false
+    pickerView.preferredExtension = "YOUR_BROADCAST_EXTENSION_BUNDLE_IDENTIFIER"
+    pickerButton?.sendActions( for : .touchUpInside)
+}
+```
+
+**NOTE: Replace `YOUR_BROADCAST_EXTENSION_BUNDLE_IDENTIFIER` with your Broadcast Upload Extension bundle identifier.**
+
+
+#### Stop ScreenShare of a Remote User as Host/CoHost
+
+```swift
+// If a Remote user is currently sharing their screen, the host can use this method to force stop participant screen share.
+jioMeetClient.stopUserScreenShare(user: sharingUser)
+```
+
+#### Observe Screen Share Events
+
+Please observe below events related to screen share state changes. These events are of `JMClientDelegate` protocol.
+
+```swift
+// When Local User Screen Share State is Changed
+func jmClient (_ meeting: JMMeeting, didLocalScreenShareStateChanged state: JMScreenShareState)
+
+// When Remote User Screen Share State is Changed
+func jmClient (_ meeting: JMMeeting, didRemoteScreenShareStateChanged state: JMScreenShareState)
+```
+
+Example Code
+
+```swift
+func jmClient(_ meeting: JMMeeting, didLocalScreenShareStateChanged state: JMScreenShareState) {
+    updatePropertiesWithMeetingObject(meeting: meeting)
+    switch state {
+    case .started(let mediaTrack):
+        jioMeetClient?.unsubscribeRemoteUserVideo(id: mediaTrack.videoTrack.sourceId)
+        jioMeetClient?.unsubscribeRemoteUserAudio(id: mediaTrack.audioTrack.sourceId)
+        // Implement your logic to handle local screen share started
+    case .stopped(let reason):
+        // Implement your logic to handle local screen share stopped
+        break
+    default: break
+    }
+}
+    
+func jmClient(_ meeting: JMMeeting, didRemoteScreenShareStateChanged state: JMScreenShareState) {
+    updatePropertiesWithMeetingObject(meeting: meeting)
+    switch state {
+    case .started(let mediaTrack):
+        jioMeetClient?.subscribeRemoteUserVideo(id: mediaTrack.id)
+         // Implement your logic to handle remote screen share started
+    case .stopped(let reason):
+        // Implement your logic to handle remote screen share stopped
+        break
+    default: break
+    }
+}
+```
+
+**NOTE: mediaTrack object is of `JMScreenShareTrack` type which confirms to `JMMediaTrack` protocol. It contains Audio Track, Video Track and sharing user id and displayName**
+
+**NOTE:If you are using Objective-C, please check this guide to import Swift Framework. [https://developer.apple.com/documentation/swift/importing-swift-into-objective-c](https://developer.apple.com/documentation/swift/importing-swift-into-objective-c)**
 
 ## Troubleshooting
 
