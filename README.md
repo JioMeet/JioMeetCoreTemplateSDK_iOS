@@ -56,8 +56,8 @@
    - [Start Whiteboard](#start-whiteboard)
    - [Stop Whiteboard](#stop-whiteboard)
    - [Update User Co-Host Rights](#update-user-co-host-rights)
-   - [Set Audio File Path for User Join Chime Sournd](#set-audio-file-path-for-user-join-chime-sournd)
-   - [Set Audio File Path for User Left Chime Sournd](#set-audio-file-path-for-user-left-chime-sournd)
+   - [Set Audio File Path for User Join Chime Sound](#set-audio-file-path-for-user-join-chime-sound)
+   - [Set Audio File Path for User Left Chime Sound](#set-audio-file-path-for-user-left-chime-sound)
 10. [Observe Meeting Events](#observe-meeting-events)
     - [User Failed to join the meeting](#user-failed-to-join-the-meeting)
     - [User Joined Meeting Successfully](#user-joined-meeting-successfully)
@@ -1049,7 +1049,7 @@ func updateUserCoHostRights(user: JMMeetingUser, makeCoHost: Bool)
 jioMeetClient.updateUserCoHostRights(user: jmMeetingUser, makeCoHost: true)
 ```
 
-### Set Audio File Path for User Join Chime Sournd
+### Set Audio File Path for User Join Chime Sound
 
 **Summary**
 
@@ -1073,7 +1073,7 @@ func setAudioFilePathForUserJoin(filePath: String)
 jioMeetClient.setAudioFilePathForUserJoin(filePath: entryChimeSoundPath)
 ```
 
-### Set Audio File Path for User Left Chime Sournd
+### Set Audio File Path for User Left Chime Sound
 
 **Summary**
 
