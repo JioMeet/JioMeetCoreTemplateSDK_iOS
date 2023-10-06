@@ -13,6 +13,7 @@
    - [Info.plist Changes](#infoplist-changes)
    - [Enable Background Mode](#enable-background-mode)
    - [Enable Audio Video Permissons](#enable-audio-video-permissons)
+   - [Orientation](#orientation)
 6. [Integration Steps](#integration-steps)
    - [Add SDK](#add-sdk)
    - [Import SDK](#import-sdk)
@@ -97,14 +98,18 @@ Please enable `Background Modes` in your project `Signing & Capibilities` tab. A
 
 Before joining the meeting please check audio video permissons are enabled or not. If not please throw an error to enable both audio and video permissons 
 
+### Orientation 
+
+Currently SDK support portarait orientation for the iPhone and landscape for the iPad. If your app supports multiple orientation, please lock down orientation when you show the SDK View.
+
 ## Integration Steps
 
 ### Add SDK
 
-Please add below pod to your Podfile and run command `pod install`.
+Please add below pod to your Podfile and run command `pod install --repo-update --verbose`.
 
 ```ruby
-pod 'JioMeetUIKit_iOS', '2.5'
+pod 'JioMeetUIKit_iOS', '~>2.5'
 ```
 
 Participant Panel, Chat View and Virtualbackground selector view are additional seperate frameworks. If you want to include them in your app, please enable below flags and add respective pods in podfile
@@ -113,21 +118,21 @@ For Participant Panel View
 
 ```swift
 JMUIKit.isParticipantPanelEnabled = true
-pod 'JioMeetUIKit_iOS', '2.5'
+pod 'JioMeetUIKit_iOS', '~>2.5'
 ```
 
 For Chat View
 
 ```swift
 JMUIKit.isChatViewEnabled = true
-pod 'JioMeetChatUIKit_iOS', '2.5'
+pod 'JioMeetChatUIKit_iOS', '~>2.5'
 ```
 
 For Virtaul Background
 
 ```swift
 JMUIKit.isVirtualBackgroundEnabled = true
-pod 'JioMeetChatUIKit_iOS', '2.5'
+pod 'JioMeetChatUIKit_iOS', '~>2.5'
 ```
 
 JioMeetUIKit has many optional features which you can enable according to your requirement. Please check below snippet.
@@ -322,12 +327,12 @@ Xcode automatically creates the Extension folder, which contains the **SampleHan
 
 ### Add JioMeet Screen Share SDK
 
-Go to your Podfile. Add `JioMeetScreenShareSDK_iOS` pod for your newly created broadcast upload extension and run `pod install` command to install the SDK.
+Go to your Podfile. Add `JioMeetScreenShareSDK_iOS` pod for your newly created broadcast upload extension and run `pod install --repo-update --verbose` command to install the SDK.
 
 ```ruby
 target 'ScreenShareExtension' do
     use_frameworks!
-    pod 'JioMeetScreenShareSDK_iOS', '2.5'
+    pod 'JioMeetScreenShareSDK_iOS', '~>2.5'
 end
 ```
 
