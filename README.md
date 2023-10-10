@@ -118,7 +118,7 @@ For Participant Panel View
 
 ```swift
 JMUIKit.isParticipantPanelEnabled = true
-pod 'JioMeetUIKit_iOS', '~>2.5'
+pod 'JioMeetParticipantPanelSDK_iOS', '~>2.5'
 ```
 
 For Chat View
@@ -132,7 +132,7 @@ For Virtaul Background
 
 ```swift
 JMUIKit.isVirtualBackgroundEnabled = true
-pod 'JioMeetChatUIKit_iOS', '~>2.5'
+pod 'JioMeetVBGUIKit_iOS', '~>2.5'
 ```
 
 JioMeetUIKit has many optional features which you can enable according to your requirement. Please check below snippet.
