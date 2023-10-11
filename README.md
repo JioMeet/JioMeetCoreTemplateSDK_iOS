@@ -138,13 +138,21 @@ pod 'JioMeetVBGUIKit_iOS', '~>2.5'
 JioMeetUIKit has many optional features which you can enable according to your requirement. Please check below snippet.
 
 ```swift
-// Enable White Board Feature. You can ignore it if you don't want to use Whiteboard
+// Enable White Board feature. You can ignore it if you don't want to use Whiteboard
 
 JMUIKit.isWhiteboardEnabled = true
 
 // Enable Start and Stop Recording option. You can ignore if you don't want to handle recording from app side
 
 JMUIKit.isRecordingEnabled = true
+
+// Enable More Settings (Hand raise, Share, Audio only mode etc). You can ignore if you don't want more settings 
+
+JMUIKit.isMoreFeaturesEnabled = true
+
+// Enable Audio only mode feature. You can ignore if you don't want audio only mode feature 
+
+JMUIKit.isAudioOnlyModeFeatureEnabled = true
 
 
 // Enable Entry/Exit Chime. You can ignore if you don't want to use this feature. Please provide path for Entry/Exit Chime audio files if you enable this feature
@@ -156,6 +164,37 @@ JMUIKit.entryChimeSoundPath = Bundle.main.path(forResource: "LOCAL_FILE_NAME", o
 JMUIKit.exitChimeSoundPath = Bundle.main.path(forResource: "LOCAL_FILE_NAME", ofType: "mp3") ?? ""
 
 ```
+
+JioMeetUIKit also have some other configuration settings to disable existing features according to your requirement. Please check below snippet.
+
+```swift
+
+// You can disable meeting title label by using below flag 
+
+JMUIKit.showMeetingTitle = false
+
+// You can disable meeting duration label by using below flag 
+
+JMUIKit.showMeetingTimer = false
+
+// You can disable meeting info icon by using below flag 
+
+JMUIKit.showMeetingInfo = false
+
+// You can disable switching audio mode option (Speaker, Earphones, Bluetooth etc) by using below flag 
+
+JMUIKit.showAudioOptions = false
+
+// You can disable flip camera option by using below flag 
+
+JMUIKit.enableFlipCamera = false
+
+// You can disable network indicator option by using below flag 
+
+JMUIKit.showConnectionStateIndicator = false
+
+```
+
 
 ### Import SDK
 
@@ -322,10 +361,17 @@ Activate the Extension
 
 Xcode automatically creates the Extension folder, which contains the **SampleHandler.swift** file.
 
+
 **NOTE: Please set deployment target for Broadcast Upload Extension same as of your main app.**
 
 
 ### Add JioMeet Screen Share SDK
+
+Before installing pod please enable below flag to get screen share option in more settings
+
+```swift
+JMUIKit.isScreenShareEnabled = true
+```
 
 Go to your Podfile. Add `JioMeetScreenShareSDK_iOS` pod for your newly created broadcast upload extension and run `pod install --repo-update --verbose` command to install the SDK.
 
