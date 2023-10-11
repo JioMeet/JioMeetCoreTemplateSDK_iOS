@@ -146,7 +146,7 @@ JMUIKit.isWhiteboardEnabled = true
 
 JMUIKit.isRecordingEnabled = true
 
-// Enable More Settings (Hand raise, Share etc). You can ignore if you don't want more settings 
+// Enable More Settings (Hand raise, Share, Audio only mode etc). You can ignore if you don't want more settings 
 
 JMUIKit.isMoreFeaturesEnabled = true
 
