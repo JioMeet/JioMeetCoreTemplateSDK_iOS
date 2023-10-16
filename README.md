@@ -1935,6 +1935,54 @@ public struct JMJoinMeetingData {
 | displayName | String | Display Name with which user is going to join the meeting. |
 
 
+### JMRoomDetails
+
+**Description** 
+
+Room Details Struct
+
+**Declaration** 
+
+```swift
+struct JMRoomDetails {
+	let rtcToken: String
+	let rtcUID: String
+	let rtcRTMToken: String
+	var roomID: String = ""
+	
+	var topic: String = ""
+	var userId: String = ""
+	var speakerCount: Int = 0
+	var maxParticipants: Int = 0
+	var mediaEngine: JMRoomMediaEngine = JMRoomMediaEngine.agora
+	var ownerDetails: JMUser?
+    var isWatermarkEnabled: Bool?
+
+	var isHardAudioMute: Bool = false
+	var isParticipantAudioEnabledoOnJoin = false
+	var isParticipantVideoEnabledoOnJoin = false
+    var waitingRoomId: String?
+}
+```
+
+| Property Name | Type  | Description  |
+| ------- | --- | --- |
+| rtcToken | String | agoraToken for the meeting.|
+| rtcUID | String | agoraUid for the meeting.|
+| rtcRTMToken | String | agoraRtmToken for the meeting.|
+| roomID | String | roomId for the meeting.|
+| topic | String | meeting topic.|
+| userId | String | Role of the user in the meeting.|
+| speakerCount | Int | Current participants count in the meeting.|
+| maxParticipants | Int | Max participants in the meeting.|
+| mediaEngine | JMRoomMediaEngine | Media Engine.|
+| ownerDetails | JMUser | Meeting Host.|
+| isWatermarkEnabled | Bool | Watermark profile based flag.|
+| isHardAudioMute | Bool | Force Mute flag for the meeting.|
+| isParticipantAudioEnabledoOnJoin | Bool | participants audio status on join.|
+| isParticipantVideoEnabledoOnJoin | Bool | participants video status on join.|
+| waitingRoomId | String | Waiting Room Id of the meeting.|
+
 ### JMUserRole
 
 **Description** 
