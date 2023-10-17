@@ -53,7 +53,7 @@ In Jiomeet Template UI, you'll find a range of powerful features designed to enh
 
 5. **Whiteboard/Screen Share:** Collaborate seamlessly with screen sharing and digital whiteboard capabilities.
 
-6. **Watermark:** JioMeet watermark to be present in all meetings however it's configurable.
+6. **Watermark:** JioMeet watermark to be present in all meetings. However, it is configurable.
 
 ## Prerequisites
 
