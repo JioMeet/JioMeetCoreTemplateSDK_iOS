@@ -53,7 +53,7 @@ In Jiomeet Template UI, you'll find a range of powerful features designed to enh
 
 5. **Whiteboard/Screen Share:** Collaborate seamlessly with screen sharing and digital whiteboard capabilities.
 
-
+6. **Watermark:** JioMeet watermark to be present in all meetings. However, it is configurable.
 
 ## Prerequisites
 
@@ -109,7 +109,7 @@ Currently SDK support portarait orientation for the iPhone and landscape for the
 Please add below pod to your Podfile and run command `pod install --repo-update --verbose`.
 
 ```ruby
-pod 'JioMeetUIKit_iOS', '~>2.5'
+pod 'JioMeetUIKit_iOS', '~>2.6'
 ```
 
 Participant Panel, Chat View and Virtualbackground selector view are additional seperate frameworks. If you want to include them in your app, please enable below flags and add respective pods in podfile
@@ -118,21 +118,21 @@ For Participant Panel View
 
 ```swift
 JMUIKit.isParticipantPanelEnabled = true
-pod 'JioMeetParticipantPanelSDK_iOS', '~>2.5'
+pod 'JioMeetParticipantPanelSDK_iOS', '~>2.6'
 ```
 
 For Chat View
 
 ```swift
 JMUIKit.isChatViewEnabled = true
-pod 'JioMeetChatUIKit_iOS', '~>2.5'
+pod 'JioMeetChatUIKit_iOS', '~>2.6'
 ```
 
 For Virtaul Background
 
 ```swift
 JMUIKit.isVirtualBackgroundEnabled = true
-pod 'JioMeetVBGUIKit_iOS', '~>2.5'
+pod 'JioMeetVBGUIKit_iOS', '~>2.6'
 ```
 
 JioMeetUIKit has many optional features which you can enable according to your requirement. Please check below snippet.
@@ -378,7 +378,7 @@ Go to your Podfile. Add `JioMeetScreenShareSDK_iOS` pod for your newly created b
 ```ruby
 target 'ScreenShareExtension' do
     use_frameworks!
-    pod 'JioMeetScreenShareSDK_iOS', '~>2.5'
+    pod 'JioMeetScreenShareSDK_iOS', '~>2.6'
 end
 ```
 
