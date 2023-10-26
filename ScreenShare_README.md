@@ -33,7 +33,7 @@ Go to your Podfile. Add `JioMeetScreenShareSDK_iOS` pod for your newly created b
 ```ruby
 target 'ScreenShareExtension' do
 	use_frameworks!
-	pod 'JioMeetScreenShareSDK_iOS', '~> 2.0'
+	pod 'JioMeetScreenShareSDK_iOS', '~> 2.6'
 end
 ```
 
@@ -59,36 +59,9 @@ import ReplayKit
 import JioMeetScreenShareSDK
 
 class SampleHandler: JMScreenShareHandler {
-	
-	let appGroupsIdentifier: String = "YOUR_APP_GROUP_NAME_IDENTIFIER"
-	
-	override func clearScreenShareDataFromUserDefaults() {
-		let currentUserDefaults = UserDefaults(suiteName: appGroupsIdentifier)
-		currentUserDefaults?.removeObject(forKey: ScreenShareUserDefaultsKeys.rtcAppIdKey.rawValue)
-		currentUserDefaults?.removeObject(forKey: ScreenShareUserDefaultsKeys.rtcRoomIdKey.rawValue)
-		currentUserDefaults?.removeObject(forKey: ScreenShareUserDefaultsKeys.rtcTokenKey.rawValue)
-		currentUserDefaults?.removeObject(forKey: ScreenShareUserDefaultsKeys.shareUidKey.rawValue)
-	}
-	
-	override func didRequestScreenShareStartData() -> NSDictionary {
-		let currentUserDefaults = UserDefaults(suiteName: appGroupsIdentifier)
-		let rtcAppId = currentUserDefaults?.value(forKey: ScreenShareUserDefaultsKeys.rtcAppIdKey.rawValue) as? String ?? ""
-		let rtcRoomId = currentUserDefaults?.value(forKey: ScreenShareUserDefaultsKeys.rtcRoomIdKey.rawValue) as? String ?? ""
-		let rtcToken = currentUserDefaults?.value(forKey: ScreenShareUserDefaultsKeys.rtcTokenKey.rawValue) as? String ?? ""
-		let uid = currentUserDefaults?.value(forKey: ScreenShareUserDefaultsKeys.shareUidKey.rawValue) as? String ?? ""
-		let dataDictionary : NSDictionary = [
-			ScreenShareStrings.rtcAppId.rawValue: rtcAppId,
-			ScreenShareStrings.rtcRoomId.rawValue: rtcRoomId,
-			ScreenShareStrings.rtcToken.rawValue: rtcToken,
-			ScreenShareStrings.shareUid.rawValue: uid,
-		]
-		return dataDictionary
-	}
-	
-	override func didRequestScreenShareStopReason() -> String? {
-		let currentUserDefaults = UserDefaults(suiteName: appGroupsIdentifier)
-		return currentUserDefaults?.value(forKey: ScreenShareUserDefaultsKeys.screenShareStopReason.rawValue) as? String
-	}
+    override func getAppGroupsIdentifier() -> String {
+        return "YOUR_APP_GROUP_NAME_IDENTIFIER"
+    }
 }
 ```
 
