@@ -128,7 +128,7 @@ JMUIKit.isChatViewEnabled = true
 pod 'JioMeetChatUIKit_iOS', '~>2.6'
 ```
 
-For Virtaul Background
+For Virtual Background
 
 ```swift
 JMUIKit.isVirtualBackgroundEnabled = true
@@ -153,6 +153,14 @@ JMUIKit.isMoreFeaturesEnabled = true
 // Enable Audio only mode feature. You can ignore if you don't want audio only mode feature 
 
 JMUIKit.isAudioOnlyModeFeatureEnabled = true
+
+// Enable Reactions feature. You can ignore if you don't want reactions feature 
+
+JMUIKit.isReactionsEnabled = true
+
+// Enable Live stream feature. You can ignore if you don't want live stream feature 
+
+JMUIKit.isLiveStreamEnabled = true
 
 
 // Enable Entry/Exit Chime. You can ignore if you don't want to use this feature. Please provide path for Entry/Exit Chime audio files if you enable this feature

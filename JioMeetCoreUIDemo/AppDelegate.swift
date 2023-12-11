@@ -41,6 +41,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		
 		// Enable Start and Stop Recording option. You can ignore if you don't want to handle recording from app side
 		JMUIKit.isRecordingEnabled = true
+        
+        // Enable Reactions feature. You can ignore it if you don't want to use Reactions
+        JMUIKit.isReactionsEnabled = true
+
 		
 		// Enable Entry/Exit Chime. You can ignore if you don't want to use this feature
 		// Please provide path for Entry/Exit Chime audio files if you enable this feature
