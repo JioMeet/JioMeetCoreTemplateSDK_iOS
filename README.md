@@ -55,6 +55,10 @@ In Jiomeet Template UI, you'll find a range of powerful features designed to enh
 
 6. **Watermark:** JioMeet watermark to be present in all meetings. However, it is configurable.
 
+7. **Livestream:** It will enable users to broadcast their meetings and presentations in real time.
+
+8. **Reactions:** It will provide users with a non-verbal means of expressing emotions and feedback during meetings.
+
 ## Prerequisites
 
 Before getting started with this example app, please ensure you have the following software installed on your machine:
@@ -109,30 +113,37 @@ Currently SDK support portarait orientation for the iPhone and landscape for the
 Please add below pod to your Podfile and run command `pod install --repo-update --verbose`.
 
 ```ruby
-pod 'JioMeetUIKit_iOS', '~>2.6'
+pod 'JioMeetUIKit_iOS', '~>2.7'
 ```
 
-Participant Panel, Chat View and Virtualbackground selector view are additional seperate frameworks. If you want to include them in your app, please enable below flags and add respective pods in podfile
+Participant Panel, Chat View, Virtualbackground and Reactions are additional seperate frameworks. If you want to include them in your app, please enable below flags and add respective pods in podfile
 
 For Participant Panel View
 
 ```swift
 JMUIKit.isParticipantPanelEnabled = true
-pod 'JioMeetParticipantPanelSDK_iOS', '~>2.6'
+pod 'JioMeetParticipantPanelSDK_iOS', '~>2.7'
 ```
 
 For Chat View
 
 ```swift
 JMUIKit.isChatViewEnabled = true
-pod 'JioMeetChatUIKit_iOS', '~>2.6'
+pod 'JioMeetChatUIKit_iOS', '~>2.7'
 ```
 
 For Virtual Background
 
 ```swift
 JMUIKit.isVirtualBackgroundEnabled = true
-pod 'JioMeetVBGUIKit_iOS', '~>2.6'
+pod 'JioMeetVBGUIKit_iOS', '~>2.7'
+```
+
+For Reactions
+
+```swift
+JMUIKit.isReactionsEnabled = true
+pod 'JioMeetReactions_iOS', '~>2.7'
 ```
 
 JioMeetUIKit has many optional features which you can enable according to your requirement. Please check below snippet.
@@ -390,7 +401,7 @@ Go to your Podfile. Add `JioMeetScreenShareSDK_iOS` pod for your newly created b
 ```ruby
 target 'ScreenShareExtension' do
     use_frameworks!
-    pod 'JioMeetScreenShareSDK_iOS', '~>2.6'
+    pod 'JioMeetScreenShareSDK_iOS', '~>2.7'
 end
 ```
 
