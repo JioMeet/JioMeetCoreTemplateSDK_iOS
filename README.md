@@ -113,7 +113,7 @@ Currently SDK support portarait orientation for the iPhone and landscape for the
 Please add below pod to your Podfile and run command `pod install --repo-update --verbose`.
 
 ```ruby
-pod 'JioMeetUIKit_iOS', '~>2.7'
+pod 'JioMeetUIKit_iOS', '~>3.0.2'
 ```
 
 Participant Panel, Chat View, Virtualbackground and Reactions are additional seperate frameworks. If you want to include them in your app, please enable below flags and add respective pods in podfile
@@ -122,28 +122,28 @@ For Participant Panel View
 
 ```swift
 JMUIKit.isParticipantPanelEnabled = true
-pod 'JioMeetParticipantPanelSDK_iOS', '~>2.7'
+pod 'JioMeetParticipantPanelSDK_iOS', '~>3.0.2'
 ```
 
 For Chat View
 
 ```swift
 JMUIKit.isChatViewEnabled = true
-pod 'JioMeetChatUIKit_iOS', '~>2.7'
+pod 'JioMeetChatUIKit_iOS', '~>3.0.2'
 ```
 
 For Virtual Background
 
 ```swift
 JMUIKit.isVirtualBackgroundEnabled = true
-pod 'JioMeetVBGUIKit_iOS', '~>2.7'
+pod 'JioMeetVBGUIKit_iOS', '~>3.0.2'
 ```
 
 For Reactions
 
 ```swift
 JMUIKit.isReactionsEnabled = true
-pod 'JioMeetReactions_iOS', '~>2.7'
+pod 'JioMeetReactions_iOS', '~>3.0.2'
 ```
 
 JioMeetUIKit has many optional features which you can enable according to your requirement. Please check below snippet.
@@ -172,6 +172,14 @@ JMUIKit.isReactionsEnabled = true
 // Enable Live stream feature. You can ignore if you don't want live stream feature 
 
 JMUIKit.isLiveStreamEnabled = true
+
+// Enable below flag to leave the meeting once other user left the call 
+
+JMUIKit.exitMeetingOnRemoteUserLeft = true
+
+// Enable below flag to leave the meeting if recording is not started automatically 
+
+JMUIKit.exitMeetingIfRecordingNotStarted = true
 
 
 // Enable Entry/Exit Chime. You can ignore if you don't want to use this feature. Please provide path for Entry/Exit Chime audio files if you enable this feature
@@ -401,7 +409,7 @@ Go to your Podfile. Add `JioMeetScreenShareSDK_iOS` pod for your newly created b
 ```ruby
 target 'ScreenShareExtension' do
     use_frameworks!
-    pod 'JioMeetScreenShareSDK_iOS', '~>2.7'
+    pod 'JioMeetScreenShareSDK_iOS', '~>3.0.2'
 end
 ```
 
