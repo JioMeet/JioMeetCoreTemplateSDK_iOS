@@ -41,7 +41,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		
 		// Enable Start and Stop Recording option. You can ignore if you don't want to handle recording from app side
 		JMUIKit.isRecordingEnabled = true
-        JMUIKit.isMoreFeaturesEnabled = true
         // Enable Reactions feature. You can ignore it if you don't want to use Reactions
         JMUIKit.isReactionsEnabled = true
 
@@ -52,8 +51,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		JMUIKit.entryChimeSoundPath = Bundle.main.path(forResource: "user_join_chime", ofType: "mp3") ?? ""
 		JMUIKit.exitChimeSoundPath = Bundle.main.path(forResource: "user_left_chime", ofType: "mp3") ?? ""
         
-        JMUIKit.exitMeetingOnRemoteUserLeft = true
-        JMUIKit.exitMeetingIfRecordingNotStarted = true
 		return true
 	}
 
