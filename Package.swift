@@ -58,7 +58,7 @@ let package = Package(
 				.target(name: "JioMeetUIFoundation"),
                 .product(name: "JioMeetCoreSDK", package: "JioMeetCoreSDK")
 			],
-			path: "UIFoundationSDK",
+			path: "SPMSource/UIFoundationSDK",
 			exclude: []
 		),
         .target(
@@ -68,7 +68,7 @@ let package = Package(
 				.target(name: "JioMeetUIKit"),
                 .product(name: "JioMeetCoreSDK", package: "JioMeetCoreSDK")
 			],
-			path: "CoreUISDK",
+			path: "SPMSource/CoreUISDK",
 			exclude: []
 		),
         .target(
@@ -78,7 +78,7 @@ let package = Package(
 				.target(name: "JioMeetChatUIKit"),
                 .product(name: "JioMeetCoreSDK", package: "JioMeetCoreSDK")
 			],
-			path: "ChatUISDK",
+			path: "SPMSource/ChatUISDK",
 			exclude: []
 		),
         .target(
@@ -88,7 +88,7 @@ let package = Package(
 				.target(name: "JioMeetParticipantPanelSDK"),
                 .product(name: "JioMeetCoreSDK", package: "JioMeetCoreSDK")
 			],
-			path: "ParticipantsUISDK",
+			path: "SPMSource/ParticipantsUISDK",
 			exclude: []
 		),
         .target(
@@ -98,7 +98,7 @@ let package = Package(
 				.target(name: "JioMeetVBGUIKit"),
                 .product(name: "JioMeetCoreSDK", package: "JioMeetCoreSDK")
 			],
-			path: "VirtualBackgroundSDK",
+			path: "SPMSource/VirtualBackgroundSDK",
 			exclude: []
 		),
         .target(
@@ -109,7 +109,7 @@ let package = Package(
                 .product(name: "JioMeetCoreSDK", package: "JioMeetCoreSDK"),
                 .product(name: "Lottie", package: "Lottie"),
 			],
-			path: "ReactionsUISDK",
+			path: "SPMSource/ReactionsUISDK",
 			exclude: []
 		)
     ]
