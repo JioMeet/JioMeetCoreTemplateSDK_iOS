@@ -1,0 +1,137 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name JioMeetUIKit
+import AVKit
+import CoreImage
+import DeveloperToolsSupport
+import Foundation
+import JioMeetCoreSDK
+import JioMeetUIFoundation
+@_exported import JioMeetUIKit
+import Photos
+import ReplayKit
+import Swift
+import SwiftUI
+import UIKit
+import WebKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@_hasMissingDesignatedInitializers public class JMUIKit {
+  public static var appGroupName: Swift.String
+  public static var screenShareExtensionBundleIdentifier: Swift.String
+  public static var enablePrivateChat: Swift.Bool
+  public static var showMeetingCopyLink: Swift.Bool
+  public static var entryChimeSoundPath: Swift.String
+  public static var exitChimeSoundPath: Swift.String
+  public static var isEntryExitChimeEnabled: Swift.Bool
+  public static var isCoHostEnabled: Swift.Bool
+  public static var isRecordingEnabled: Swift.Bool
+  public static var isParticipantPanelEnabled: Swift.Bool
+  public static var isChatViewEnabled: Swift.Bool
+  public static var isMoreFeaturesEnabled: Swift.Bool
+  public static var isVirtualBackgroundEnabled: Swift.Bool
+  public static var isSettingsEnabled: Swift.Bool
+  public static var isWhiteboardEnabled: Swift.Bool
+  public static var isReactionsEnabled: Swift.Bool
+  public static var isScreenShareEnabled: Swift.Bool
+  public static var isAudioOnlyModeFeatureEnabled: Swift.Bool
+  public static var enableFlipCamera: Swift.Bool
+  public static var showMeetingTitle: Swift.Bool
+  public static var showConnectionStateIndicator: Swift.Bool
+  public static var showAudioOptions: Swift.Bool
+  public static var showMeetingInfo: Swift.Bool
+  public static var showMeetingTimer: Swift.Bool
+  public static var isLiveStreamEnabled: Swift.Bool
+  public static var showThankYouScreen: Swift.Bool
+  public static var exitMeetingOnRemoteUserLeft: Swift.Bool
+  public static var exitMeetingIfRecordingNotStarted: Swift.Bool
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class LeaveMeetingConfirmView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class CustomNavigationView : UIKit.UIView {
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class JMMeetingViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) public var meetingID: Swift.String
+  @_Concurrency.MainActor(unsafe) public var meetingPIN: Swift.String
+  @_Concurrency.MainActor(unsafe) public var userDisplayName: Swift.String
+  @_Concurrency.MainActor(unsafe) public var userRole: JioMeetCoreSDK.JMUserRole
+  @_Concurrency.MainActor(unsafe) public var isInitialAudioOn: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public var isInitialVideoOn: Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension JioMeetUIKit.JMMeetingViewController : JioMeetUIKit.JMMeetingViewDelegate {
+  @_Concurrency.MainActor(unsafe) public func didLocalUserExitsMeetingView()
+  @_Concurrency.MainActor(unsafe) public func didLocalUserFailedToJoinMeeting(errorMessage: Swift.String)
+  @_Concurrency.MainActor(unsafe) public func didRequestToShareMeetingView(meetingID: Swift.String, meetingPin: Swift.String)
+  @_Concurrency.MainActor(unsafe) public func didRequestToBuildMeetingShareLink(meetingID: Swift.String, meetingPin: Swift.String, completion: @escaping ((Swift.String) -> Swift.Void))
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class JMMeetingView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) public func setParameters(params: [Swift.String : Any])
+  @_Concurrency.MainActor(unsafe) public func joinMeeting(meetingData: JioMeetCoreSDK.JMJoinMeetingData, config: JioMeetCoreSDK.JMJoinMeetingConfig, delegate: (any JioMeetUIKit.JMMeetingViewDelegate)?)
+  @_Concurrency.MainActor(unsafe) public func addMeetingEventsDelegate(delegate: (any JioMeetCoreSDK.JMClientDelegate)?, identifier: Foundation.UUID)
+  @_Concurrency.MainActor(unsafe) public func removeMeetingEventsDelegate(identifier: Foundation.UUID)
+  @available(*, deprecated, renamed: "joinMeeting(meetingData:config:delegate:)")
+  @_Concurrency.MainActor(unsafe) public func joinMeeting(meetingID: Swift.String, meetingPIN: Swift.String, userDisplayName: Swift.String, userRole: JioMeetCoreSDK.JMUserRole, delegate: (any JioMeetUIKit.JMMeetingViewDelegate)?)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers open class Ripples : QuartzCore.CAReplicatorLayer, QuartzCore.CAAnimationDelegate {
+  @objc override dynamic open var backgroundColor: CoreGraphics.CGColor? {
+    @objc get
+    @objc set
+  }
+  open var rippleCount: Swift.Int {
+    get
+    set
+  }
+  open var radius: CoreFoundation.CGFloat {
+    get
+    set
+  }
+  open var animationDuration: Swift.Double {
+    get
+    set
+  }
+  @objc override dynamic open var repeatCount: Swift.Float {
+    @objc get
+    @objc set
+  }
+  open var scaleFromValue: Swift.Float {
+    get
+    set
+  }
+  open var keyTimeForHalfOpacity: Swift.Float {
+    get
+    set
+  }
+  open var rippleInterval: Swift.Double
+  open var timingFunction: QuartzCore.CAMediaTimingFunction? {
+    get
+    set
+  }
+  open var isAnimating: Swift.Bool {
+    get
+  }
+  @objc override dynamic public init()
+  @objc override dynamic public init(layer: Any)
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+  open func start()
+  open func stop()
+  @objc public func animationDidStop(_ anim: QuartzCore.CAAnimation, finished flag: Swift.Bool)
+}
+public protocol JMMeetingViewDelegate {
+  func didLocalUserExitsMeetingView()
+  func didLocalUserFailedToJoinMeeting(errorMessage: Swift.String)
+  func didRequestToShareMeetingView(meetingID: Swift.String, meetingPin: Swift.String)
+  func didRequestToBuildMeetingShareLink(meetingID: Swift.String, meetingPin: Swift.String, completion: @escaping ((_ url: Swift.String) -> Swift.Void))
+}

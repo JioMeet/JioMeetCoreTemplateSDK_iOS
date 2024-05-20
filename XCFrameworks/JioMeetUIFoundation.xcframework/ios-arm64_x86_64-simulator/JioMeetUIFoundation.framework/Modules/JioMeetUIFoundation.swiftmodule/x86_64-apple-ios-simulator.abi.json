@@ -1,0 +1,2744 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "JioMeetUIFoundation",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "JioMeetUIFoundation"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "JMUIConstants",
+        "printedName": "JMUIConstants",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "virtualBackgroundImagesDirectory",
+            "printedName": "virtualBackgroundImagesDirectory",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:19JioMeetUIFoundation13JMUIConstantsC32virtualBackgroundImagesDirectorySSvpZ",
+            "mangledName": "$s19JioMeetUIFoundation13JMUIConstantsC32virtualBackgroundImagesDirectorySSvpZ",
+            "moduleName": "JioMeetUIFoundation",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19JioMeetUIFoundation13JMUIConstantsC32virtualBackgroundImagesDirectorySSvgZ",
+                "mangledName": "$s19JioMeetUIFoundation13JMUIConstantsC32virtualBackgroundImagesDirectorySSvgZ",
+                "moduleName": "JioMeetUIFoundation",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "virtualBackgroundThumbnailsDirectory",
+            "printedName": "virtualBackgroundThumbnailsDirectory",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:19JioMeetUIFoundation13JMUIConstantsC36virtualBackgroundThumbnailsDirectorySSvpZ",
+            "mangledName": "$s19JioMeetUIFoundation13JMUIConstantsC36virtualBackgroundThumbnailsDirectorySSvpZ",
+            "moduleName": "JioMeetUIFoundation",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19JioMeetUIFoundation13JMUIConstantsC36virtualBackgroundThumbnailsDirectorySSvgZ",
+                "mangledName": "$s19JioMeetUIFoundation13JMUIConstantsC36virtualBackgroundThumbnailsDirectorySSvgZ",
+                "moduleName": "JioMeetUIFoundation",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "savedVirtualBackgroundUserDefaulstKey",
+            "printedName": "savedVirtualBackgroundUserDefaulstKey",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:19JioMeetUIFoundation13JMUIConstantsC37savedVirtualBackgroundUserDefaulstKeySSvpZ",
+            "mangledName": "$s19JioMeetUIFoundation13JMUIConstantsC37savedVirtualBackgroundUserDefaulstKeySSvpZ",
+            "moduleName": "JioMeetUIFoundation",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19JioMeetUIFoundation13JMUIConstantsC37savedVirtualBackgroundUserDefaulstKeySSvgZ",
+                "mangledName": "$s19JioMeetUIFoundation13JMUIConstantsC37savedVirtualBackgroundUserDefaulstKeySSvgZ",
+                "moduleName": "JioMeetUIFoundation",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:19JioMeetUIFoundation13JMUIConstantsC",
+        "mangledName": "$s19JioMeetUIFoundation13JMUIConstantsC",
+        "moduleName": "JioMeetUIFoundation",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "hasMissingDesignatedInitializers": true
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "JioMeetUIFoundation",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "JioMeetUIFoundation"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "JioMeetUIFoundation",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "VirtualBackgroundAction",
+        "printedName": "VirtualBackgroundAction",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "none",
+            "printedName": "none",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(JioMeetUIFoundation.VirtualBackgroundAction.Type) -> JioMeetUIFoundation.VirtualBackgroundAction",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VirtualBackgroundAction",
+                    "printedName": "JioMeetUIFoundation.VirtualBackgroundAction",
+                    "usr": "s:19JioMeetUIFoundation23VirtualBackgroundActionO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "JioMeetUIFoundation.VirtualBackgroundAction.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VirtualBackgroundAction",
+                        "printedName": "JioMeetUIFoundation.VirtualBackgroundAction",
+                        "usr": "s:19JioMeetUIFoundation23VirtualBackgroundActionO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19JioMeetUIFoundation23VirtualBackgroundActionO4noneyA2CmF",
+            "mangledName": "$s19JioMeetUIFoundation23VirtualBackgroundActionO4noneyA2CmF",
+            "moduleName": "JioMeetUIFoundation"
+          },
+          {
+            "kind": "Var",
+            "name": "blur",
+            "printedName": "blur",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(JioMeetUIFoundation.VirtualBackgroundAction.Type) -> JioMeetUIFoundation.VirtualBackgroundAction",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VirtualBackgroundAction",
+                    "printedName": "JioMeetUIFoundation.VirtualBackgroundAction",
+                    "usr": "s:19JioMeetUIFoundation23VirtualBackgroundActionO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "JioMeetUIFoundation.VirtualBackgroundAction.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VirtualBackgroundAction",
+                        "printedName": "JioMeetUIFoundation.VirtualBackgroundAction",
+                        "usr": "s:19JioMeetUIFoundation23VirtualBackgroundActionO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19JioMeetUIFoundation23VirtualBackgroundActionO4bluryA2CmF",
+            "mangledName": "$s19JioMeetUIFoundation23VirtualBackgroundActionO4bluryA2CmF",
+            "moduleName": "JioMeetUIFoundation"
+          },
+          {
+            "kind": "Var",
+            "name": "selectImage",
+            "printedName": "selectImage",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(JioMeetUIFoundation.VirtualBackgroundAction.Type) -> JioMeetUIFoundation.VirtualBackgroundAction",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VirtualBackgroundAction",
+                    "printedName": "JioMeetUIFoundation.VirtualBackgroundAction",
+                    "usr": "s:19JioMeetUIFoundation23VirtualBackgroundActionO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "JioMeetUIFoundation.VirtualBackgroundAction.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VirtualBackgroundAction",
+                        "printedName": "JioMeetUIFoundation.VirtualBackgroundAction",
+                        "usr": "s:19JioMeetUIFoundation23VirtualBackgroundActionO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19JioMeetUIFoundation23VirtualBackgroundActionO11selectImageyA2CmF",
+            "mangledName": "$s19JioMeetUIFoundation23VirtualBackgroundActionO11selectImageyA2CmF",
+            "moduleName": "JioMeetUIFoundation"
+          },
+          {
+            "kind": "Var",
+            "name": "image",
+            "printedName": "image",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(JioMeetUIFoundation.VirtualBackgroundAction.Type) -> (Swift.String) -> JioMeetUIFoundation.VirtualBackgroundAction",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> JioMeetUIFoundation.VirtualBackgroundAction",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VirtualBackgroundAction",
+                        "printedName": "JioMeetUIFoundation.VirtualBackgroundAction",
+                        "usr": "s:19JioMeetUIFoundation23VirtualBackgroundActionO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(path: Swift.String)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "JioMeetUIFoundation.VirtualBackgroundAction.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VirtualBackgroundAction",
+                        "printedName": "JioMeetUIFoundation.VirtualBackgroundAction",
+                        "usr": "s:19JioMeetUIFoundation23VirtualBackgroundActionO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19JioMeetUIFoundation23VirtualBackgroundActionO5imageyACSS_tcACmF",
+            "mangledName": "$s19JioMeetUIFoundation23VirtualBackgroundActionO5imageyACSS_tcACmF",
+            "moduleName": "JioMeetUIFoundation"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:19JioMeetUIFoundation23VirtualBackgroundActionO9hashValueSivp",
+            "mangledName": "$s19JioMeetUIFoundation23VirtualBackgroundActionO9hashValueSivp",
+            "moduleName": "JioMeetUIFoundation",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19JioMeetUIFoundation23VirtualBackgroundActionO9hashValueSivg",
+                "mangledName": "$s19JioMeetUIFoundation23VirtualBackgroundActionO9hashValueSivg",
+                "moduleName": "JioMeetUIFoundation",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19JioMeetUIFoundation23VirtualBackgroundActionO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s19JioMeetUIFoundation23VirtualBackgroundActionO4hash4intoys6HasherVz_tF",
+            "moduleName": "JioMeetUIFoundation",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VirtualBackgroundAction",
+                "printedName": "JioMeetUIFoundation.VirtualBackgroundAction",
+                "usr": "s:19JioMeetUIFoundation23VirtualBackgroundActionO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VirtualBackgroundAction",
+                "printedName": "JioMeetUIFoundation.VirtualBackgroundAction",
+                "usr": "s:19JioMeetUIFoundation23VirtualBackgroundActionO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19JioMeetUIFoundation23VirtualBackgroundActionO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s19JioMeetUIFoundation23VirtualBackgroundActionO2eeoiySbAC_ACtFZ",
+            "moduleName": "JioMeetUIFoundation",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:19JioMeetUIFoundation23VirtualBackgroundActionO",
+        "mangledName": "$s19JioMeetUIFoundation23VirtualBackgroundActionO",
+        "moduleName": "JioMeetUIFoundation",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "VirtualBackgroundType",
+        "printedName": "VirtualBackgroundType",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "none",
+            "printedName": "none",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(JioMeetUIFoundation.VirtualBackgroundType.Type) -> JioMeetUIFoundation.VirtualBackgroundType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VirtualBackgroundType",
+                    "printedName": "JioMeetUIFoundation.VirtualBackgroundType",
+                    "usr": "s:19JioMeetUIFoundation21VirtualBackgroundTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "JioMeetUIFoundation.VirtualBackgroundType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VirtualBackgroundType",
+                        "printedName": "JioMeetUIFoundation.VirtualBackgroundType",
+                        "usr": "s:19JioMeetUIFoundation21VirtualBackgroundTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19JioMeetUIFoundation21VirtualBackgroundTypeO4noneyA2CmF",
+            "mangledName": "$s19JioMeetUIFoundation21VirtualBackgroundTypeO4noneyA2CmF",
+            "moduleName": "JioMeetUIFoundation"
+          },
+          {
+            "kind": "Var",
+            "name": "blur",
+            "printedName": "blur",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(JioMeetUIFoundation.VirtualBackgroundType.Type) -> JioMeetUIFoundation.VirtualBackgroundType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VirtualBackgroundType",
+                    "printedName": "JioMeetUIFoundation.VirtualBackgroundType",
+                    "usr": "s:19JioMeetUIFoundation21VirtualBackgroundTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "JioMeetUIFoundation.VirtualBackgroundType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VirtualBackgroundType",
+                        "printedName": "JioMeetUIFoundation.VirtualBackgroundType",
+                        "usr": "s:19JioMeetUIFoundation21VirtualBackgroundTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19JioMeetUIFoundation21VirtualBackgroundTypeO4bluryA2CmF",
+            "mangledName": "$s19JioMeetUIFoundation21VirtualBackgroundTypeO4bluryA2CmF",
+            "moduleName": "JioMeetUIFoundation"
+          },
+          {
+            "kind": "Var",
+            "name": "image",
+            "printedName": "image",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(JioMeetUIFoundation.VirtualBackgroundType.Type) -> JioMeetUIFoundation.VirtualBackgroundType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VirtualBackgroundType",
+                    "printedName": "JioMeetUIFoundation.VirtualBackgroundType",
+                    "usr": "s:19JioMeetUIFoundation21VirtualBackgroundTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "JioMeetUIFoundation.VirtualBackgroundType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VirtualBackgroundType",
+                        "printedName": "JioMeetUIFoundation.VirtualBackgroundType",
+                        "usr": "s:19JioMeetUIFoundation21VirtualBackgroundTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19JioMeetUIFoundation21VirtualBackgroundTypeO5imageyA2CmF",
+            "mangledName": "$s19JioMeetUIFoundation21VirtualBackgroundTypeO5imageyA2CmF",
+            "moduleName": "JioMeetUIFoundation"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "JioMeetUIFoundation.VirtualBackgroundType?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VirtualBackgroundType",
+                    "printedName": "JioMeetUIFoundation.VirtualBackgroundType",
+                    "usr": "s:19JioMeetUIFoundation21VirtualBackgroundTypeO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:19JioMeetUIFoundation21VirtualBackgroundTypeO8rawValueACSgSS_tcfc",
+            "mangledName": "$s19JioMeetUIFoundation21VirtualBackgroundTypeO8rawValueACSgSS_tcfc",
+            "moduleName": "JioMeetUIFoundation",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:19JioMeetUIFoundation21VirtualBackgroundTypeO8rawValueSSvp",
+            "mangledName": "$s19JioMeetUIFoundation21VirtualBackgroundTypeO8rawValueSSvp",
+            "moduleName": "JioMeetUIFoundation",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19JioMeetUIFoundation21VirtualBackgroundTypeO8rawValueSSvg",
+                "mangledName": "$s19JioMeetUIFoundation21VirtualBackgroundTypeO8rawValueSSvg",
+                "moduleName": "JioMeetUIFoundation",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:19JioMeetUIFoundation21VirtualBackgroundTypeO",
+        "mangledName": "$s19JioMeetUIFoundation21VirtualBackgroundTypeO",
+        "moduleName": "JioMeetUIFoundation",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "enumRawTypeName": "String",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "VirtualBackground",
+        "printedName": "VirtualBackground",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "id",
+            "printedName": "id",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:19JioMeetUIFoundation17VirtualBackgroundV2idSSvp",
+            "mangledName": "$s19JioMeetUIFoundation17VirtualBackgroundV2idSSvp",
+            "moduleName": "JioMeetUIFoundation",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19JioMeetUIFoundation17VirtualBackgroundV2idSSvg",
+                "mangledName": "$s19JioMeetUIFoundation17VirtualBackgroundV2idSSvg",
+                "moduleName": "JioMeetUIFoundation",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "action",
+            "printedName": "action",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "VirtualBackgroundAction",
+                "printedName": "JioMeetUIFoundation.VirtualBackgroundAction",
+                "usr": "s:19JioMeetUIFoundation23VirtualBackgroundActionO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:19JioMeetUIFoundation17VirtualBackgroundV6actionAA0dE6ActionOvp",
+            "mangledName": "$s19JioMeetUIFoundation17VirtualBackgroundV6actionAA0dE6ActionOvp",
+            "moduleName": "JioMeetUIFoundation",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VirtualBackgroundAction",
+                    "printedName": "JioMeetUIFoundation.VirtualBackgroundAction",
+                    "usr": "s:19JioMeetUIFoundation23VirtualBackgroundActionO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19JioMeetUIFoundation17VirtualBackgroundV6actionAA0dE6ActionOvg",
+                "mangledName": "$s19JioMeetUIFoundation17VirtualBackgroundV6actionAA0dE6ActionOvg",
+                "moduleName": "JioMeetUIFoundation",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "isSelected",
+            "printedName": "isSelected",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:19JioMeetUIFoundation17VirtualBackgroundV10isSelectedSbvp",
+            "mangledName": "$s19JioMeetUIFoundation17VirtualBackgroundV10isSelectedSbvp",
+            "moduleName": "JioMeetUIFoundation",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19JioMeetUIFoundation17VirtualBackgroundV10isSelectedSbvg",
+                "mangledName": "$s19JioMeetUIFoundation17VirtualBackgroundV10isSelectedSbvg",
+                "moduleName": "JioMeetUIFoundation",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19JioMeetUIFoundation17VirtualBackgroundV10isSelectedSbvs",
+                "mangledName": "$s19JioMeetUIFoundation17VirtualBackgroundV10isSelectedSbvs",
+                "moduleName": "JioMeetUIFoundation",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19JioMeetUIFoundation17VirtualBackgroundV10isSelectedSbvM",
+                "mangledName": "$s19JioMeetUIFoundation17VirtualBackgroundV10isSelectedSbvM",
+                "moduleName": "JioMeetUIFoundation",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(action:isSelected:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "VirtualBackground",
+                "printedName": "JioMeetUIFoundation.VirtualBackground",
+                "usr": "s:19JioMeetUIFoundation17VirtualBackgroundV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VirtualBackgroundAction",
+                "printedName": "JioMeetUIFoundation.VirtualBackgroundAction",
+                "usr": "s:19JioMeetUIFoundation23VirtualBackgroundActionO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:19JioMeetUIFoundation17VirtualBackgroundV6action10isSelectedAcA0dE6ActionO_Sbtcfc",
+            "mangledName": "$s19JioMeetUIFoundation17VirtualBackgroundV6action10isSelectedAcA0dE6ActionO_Sbtcfc",
+            "moduleName": "JioMeetUIFoundation",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19JioMeetUIFoundation17VirtualBackgroundV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s19JioMeetUIFoundation17VirtualBackgroundV6encode2toys7Encoder_p_tKF",
+            "moduleName": "JioMeetUIFoundation",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "VirtualBackground",
+                "printedName": "JioMeetUIFoundation.VirtualBackground",
+                "usr": "s:19JioMeetUIFoundation17VirtualBackgroundV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:19JioMeetUIFoundation17VirtualBackgroundV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s19JioMeetUIFoundation17VirtualBackgroundV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "JioMeetUIFoundation",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "getFileName",
+            "printedName": "getFileName()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19JioMeetUIFoundation17VirtualBackgroundV11getFileNameSSyF",
+            "mangledName": "$s19JioMeetUIFoundation17VirtualBackgroundV11getFileNameSSyF",
+            "moduleName": "JioMeetUIFoundation",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:19JioMeetUIFoundation17VirtualBackgroundV9hashValueSivp",
+            "mangledName": "$s19JioMeetUIFoundation17VirtualBackgroundV9hashValueSivp",
+            "moduleName": "JioMeetUIFoundation",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19JioMeetUIFoundation17VirtualBackgroundV9hashValueSivg",
+                "mangledName": "$s19JioMeetUIFoundation17VirtualBackgroundV9hashValueSivg",
+                "moduleName": "JioMeetUIFoundation",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19JioMeetUIFoundation17VirtualBackgroundV4hash4intoys6HasherVz_tF",
+            "mangledName": "$s19JioMeetUIFoundation17VirtualBackgroundV4hash4intoys6HasherVz_tF",
+            "moduleName": "JioMeetUIFoundation",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VirtualBackground",
+                "printedName": "JioMeetUIFoundation.VirtualBackground",
+                "usr": "s:19JioMeetUIFoundation17VirtualBackgroundV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VirtualBackground",
+                "printedName": "JioMeetUIFoundation.VirtualBackground",
+                "usr": "s:19JioMeetUIFoundation17VirtualBackgroundV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19JioMeetUIFoundation17VirtualBackgroundV2eeoiySbAC_ACtFZ",
+            "mangledName": "$s19JioMeetUIFoundation17VirtualBackgroundV2eeoiySbAC_ACtFZ",
+            "moduleName": "JioMeetUIFoundation",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:19JioMeetUIFoundation17VirtualBackgroundV",
+        "mangledName": "$s19JioMeetUIFoundation17VirtualBackgroundV",
+        "moduleName": "JioMeetUIFoundation",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "JioMeetUIFoundation",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "JioMeetUIFoundation"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "JMPadding",
+        "printedName": "JMPadding",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(top:bottom:leading:trailing:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "JMPadding",
+                "printedName": "JioMeetUIFoundation.JMPadding",
+                "usr": "s:19JioMeetUIFoundation9JMPaddingV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:19JioMeetUIFoundation9JMPaddingV3top6bottom7leading8trailingAC14CoreFoundation7CGFloatV_A3Jtcfc",
+            "mangledName": "$s19JioMeetUIFoundation9JMPaddingV3top6bottom7leading8trailingAC12CoreGraphics7CGFloatV_A3Jtcfc",
+            "moduleName": "JioMeetUIFoundation",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "zero",
+            "printedName": "zero",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "JMPadding",
+                "printedName": "JioMeetUIFoundation.JMPadding",
+                "usr": "s:19JioMeetUIFoundation9JMPaddingV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:19JioMeetUIFoundation9JMPaddingV4zeroACvpZ",
+            "mangledName": "$s19JioMeetUIFoundation9JMPaddingV4zeroACvpZ",
+            "moduleName": "JioMeetUIFoundation",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "JMPadding",
+                    "printedName": "JioMeetUIFoundation.JMPadding",
+                    "usr": "s:19JioMeetUIFoundation9JMPaddingV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19JioMeetUIFoundation9JMPaddingV4zeroACvgZ",
+                "mangledName": "$s19JioMeetUIFoundation9JMPaddingV4zeroACvgZ",
+                "moduleName": "JioMeetUIFoundation",
+                "static": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:19JioMeetUIFoundation9JMPaddingV",
+        "mangledName": "$s19JioMeetUIFoundation9JMPaddingV",
+        "moduleName": "JioMeetUIFoundation",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "JioMeetUIFoundation",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UniformTypeIdentifiers",
+        "printedName": "UniformTypeIdentifiers",
+        "declKind": "Import",
+        "moduleName": "JioMeetUIFoundation"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "JioMeetUIFoundation"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "FileManagerError",
+        "printedName": "FileManagerError",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "fileNotFound",
+            "printedName": "fileNotFound",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(JioMeetUIFoundation.FileManagerError.Type) -> JioMeetUIFoundation.FileManagerError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FileManagerError",
+                    "printedName": "JioMeetUIFoundation.FileManagerError",
+                    "usr": "s:19JioMeetUIFoundation16FileManagerErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "JioMeetUIFoundation.FileManagerError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FileManagerError",
+                        "printedName": "JioMeetUIFoundation.FileManagerError",
+                        "usr": "s:19JioMeetUIFoundation16FileManagerErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19JioMeetUIFoundation16FileManagerErrorO12fileNotFoundyA2CmF",
+            "mangledName": "$s19JioMeetUIFoundation16FileManagerErrorO12fileNotFoundyA2CmF",
+            "moduleName": "JioMeetUIFoundation"
+          },
+          {
+            "kind": "Var",
+            "name": "directoryNotFound",
+            "printedName": "directoryNotFound",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(JioMeetUIFoundation.FileManagerError.Type) -> JioMeetUIFoundation.FileManagerError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FileManagerError",
+                    "printedName": "JioMeetUIFoundation.FileManagerError",
+                    "usr": "s:19JioMeetUIFoundation16FileManagerErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "JioMeetUIFoundation.FileManagerError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FileManagerError",
+                        "printedName": "JioMeetUIFoundation.FileManagerError",
+                        "usr": "s:19JioMeetUIFoundation16FileManagerErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:19JioMeetUIFoundation16FileManagerErrorO17directoryNotFoundyA2CmF",
+            "mangledName": "$s19JioMeetUIFoundation16FileManagerErrorO17directoryNotFoundyA2CmF",
+            "moduleName": "JioMeetUIFoundation"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "FileManagerError",
+                "printedName": "JioMeetUIFoundation.FileManagerError",
+                "usr": "s:19JioMeetUIFoundation16FileManagerErrorO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "FileManagerError",
+                "printedName": "JioMeetUIFoundation.FileManagerError",
+                "usr": "s:19JioMeetUIFoundation16FileManagerErrorO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19JioMeetUIFoundation16FileManagerErrorO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s19JioMeetUIFoundation16FileManagerErrorO2eeoiySbAC_ACtFZ",
+            "moduleName": "JioMeetUIFoundation",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:19JioMeetUIFoundation16FileManagerErrorO9hashValueSivp",
+            "mangledName": "$s19JioMeetUIFoundation16FileManagerErrorO9hashValueSivp",
+            "moduleName": "JioMeetUIFoundation",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19JioMeetUIFoundation16FileManagerErrorO9hashValueSivg",
+                "mangledName": "$s19JioMeetUIFoundation16FileManagerErrorO9hashValueSivg",
+                "moduleName": "JioMeetUIFoundation",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19JioMeetUIFoundation16FileManagerErrorO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s19JioMeetUIFoundation16FileManagerErrorO4hash4intoys6HasherVz_tF",
+            "moduleName": "JioMeetUIFoundation",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:19JioMeetUIFoundation16FileManagerErrorO",
+        "mangledName": "$s19JioMeetUIFoundation16FileManagerErrorO",
+        "moduleName": "JioMeetUIFoundation",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Error",
+            "printedName": "Error",
+            "usr": "s:s5ErrorP",
+            "mangledName": "$ss5ErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "JioMeetUIFoundation",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "JioMeetUIFoundation",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "JioMeetUIFoundation"
+      },
+      {
+        "kind": "Import",
+        "name": "JioMeetCoreSDK",
+        "printedName": "JioMeetCoreSDK",
+        "declKind": "Import",
+        "moduleName": "JioMeetUIFoundation"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "JMVirtualBackgroundViewPresenter",
+        "printedName": "JMVirtualBackgroundViewPresenter",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:19JioMeetUIFoundation32JMVirtualBackgroundViewPresenterPxycfc",
+            "mangledName": "$s19JioMeetUIFoundation32JMVirtualBackgroundViewPresenterPxycfc",
+            "moduleName": "JioMeetUIFoundation",
+            "genericSig": "<τ_0_0 where τ_0_0 : JioMeetUIFoundation.JMVirtualBackgroundViewPresenter>",
+            "sugared_genericSig": "<Self where Self : JioMeetUIFoundation.JMVirtualBackgroundViewPresenter>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "presentVirtualBackgroundView",
+            "printedName": "presentVirtualBackgroundView(superView:insertBelow:meetingClient:onClose:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIView",
+                "printedName": "UIKit.UIView",
+                "usr": "c:objc(cs)UIView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIView",
+                "printedName": "UIKit.UIView",
+                "usr": "c:objc(cs)UIView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "JMClient",
+                "printedName": "JioMeetCoreSDK.JMClient",
+                "usr": "c:@M@JioMeetCoreSDK@objc(cs)JMClient"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19JioMeetUIFoundation32JMVirtualBackgroundViewPresenterP014presentVirtualeF005superF011insertBelow13meetingClient7onCloseySo6UIViewC_AJ0aB7CoreSDK8JMClientCyyctF",
+            "mangledName": "$s19JioMeetUIFoundation32JMVirtualBackgroundViewPresenterP014presentVirtualeF005superF011insertBelow13meetingClient7onCloseySo6UIViewC_AJ0aB7CoreSDK8JMClientCyyctF",
+            "moduleName": "JioMeetUIFoundation",
+            "genericSig": "<τ_0_0 where τ_0_0 : JioMeetUIFoundation.JMVirtualBackgroundViewPresenter>",
+            "sugared_genericSig": "<Self where Self : JioMeetUIFoundation.JMVirtualBackgroundViewPresenter>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:19JioMeetUIFoundation32JMVirtualBackgroundViewPresenterP",
+        "mangledName": "$s19JioMeetUIFoundation32JMVirtualBackgroundViewPresenterP",
+        "moduleName": "JioMeetUIFoundation",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "JMChatViewPresenter",
+        "printedName": "JMChatViewPresenter",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:19JioMeetUIFoundation19JMChatViewPresenterPxycfc",
+            "mangledName": "$s19JioMeetUIFoundation19JMChatViewPresenterPxycfc",
+            "moduleName": "JioMeetUIFoundation",
+            "genericSig": "<τ_0_0 where τ_0_0 : JioMeetUIFoundation.JMChatViewPresenter>",
+            "sugared_genericSig": "<Self where Self : JioMeetUIFoundation.JMChatViewPresenter>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "presentChatView",
+            "printedName": "presentChatView(superView:insertBelow:meetingClient:isPrivateChatEnabled:onClose:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIView",
+                "printedName": "UIKit.UIView",
+                "usr": "c:objc(cs)UIView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIView",
+                "printedName": "UIKit.UIView",
+                "usr": "c:objc(cs)UIView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "JMClient",
+                "printedName": "JioMeetCoreSDK.JMClient",
+                "usr": "c:@M@JioMeetCoreSDK@objc(cs)JMClient"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19JioMeetUIFoundation19JMChatViewPresenterP011presentChatE005superE011insertBelow13meetingClient09isPrivateH7Enabled7onCloseySo6UIViewC_AK0aB7CoreSDK8JMClientCSbyyctF",
+            "mangledName": "$s19JioMeetUIFoundation19JMChatViewPresenterP011presentChatE005superE011insertBelow13meetingClient09isPrivateH7Enabled7onCloseySo6UIViewC_AK0aB7CoreSDK8JMClientCSbyyctF",
+            "moduleName": "JioMeetUIFoundation",
+            "genericSig": "<τ_0_0 where τ_0_0 : JioMeetUIFoundation.JMChatViewPresenter>",
+            "sugared_genericSig": "<Self where Self : JioMeetUIFoundation.JMChatViewPresenter>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:19JioMeetUIFoundation19JMChatViewPresenterP",
+        "mangledName": "$s19JioMeetUIFoundation19JMChatViewPresenterP",
+        "moduleName": "JioMeetUIFoundation",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "JMParticipantsListViewPresenter",
+        "printedName": "JMParticipantsListViewPresenter",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:19JioMeetUIFoundation31JMParticipantsListViewPresenterPxycfc",
+            "mangledName": "$s19JioMeetUIFoundation31JMParticipantsListViewPresenterPxycfc",
+            "moduleName": "JioMeetUIFoundation",
+            "genericSig": "<τ_0_0 where τ_0_0 : JioMeetUIFoundation.JMParticipantsListViewPresenter>",
+            "sugared_genericSig": "<Self where Self : JioMeetUIFoundation.JMParticipantsListViewPresenter>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "presentParticipantsListView",
+            "printedName": "presentParticipantsListView(superView:insertBelow:meetingClient:onClose:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIView",
+                "printedName": "UIKit.UIView",
+                "usr": "c:objc(cs)UIView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIView",
+                "printedName": "UIKit.UIView",
+                "usr": "c:objc(cs)UIView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "JMClient",
+                "printedName": "JioMeetCoreSDK.JMClient",
+                "usr": "c:@M@JioMeetCoreSDK@objc(cs)JMClient"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19JioMeetUIFoundation31JMParticipantsListViewPresenterP019presentParticipantseF005superF011insertBelow13meetingClient7onCloseySo6UIViewC_AJ0aB7CoreSDK8JMClientCyyctF",
+            "mangledName": "$s19JioMeetUIFoundation31JMParticipantsListViewPresenterP019presentParticipantseF005superF011insertBelow13meetingClient7onCloseySo6UIViewC_AJ0aB7CoreSDK8JMClientCyyctF",
+            "moduleName": "JioMeetUIFoundation",
+            "genericSig": "<τ_0_0 where τ_0_0 : JioMeetUIFoundation.JMParticipantsListViewPresenter>",
+            "sugared_genericSig": "<Self where Self : JioMeetUIFoundation.JMParticipantsListViewPresenter>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:19JioMeetUIFoundation31JMParticipantsListViewPresenterP",
+        "mangledName": "$s19JioMeetUIFoundation31JMParticipantsListViewPresenterP",
+        "moduleName": "JioMeetUIFoundation",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "JMReactionViewPresenter",
+        "printedName": "JMReactionViewPresenter",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:19JioMeetUIFoundation23JMReactionViewPresenterPxycfc",
+            "mangledName": "$s19JioMeetUIFoundation23JMReactionViewPresenterPxycfc",
+            "moduleName": "JioMeetUIFoundation",
+            "genericSig": "<τ_0_0 where τ_0_0 : JioMeetUIFoundation.JMReactionViewPresenter>",
+            "sugared_genericSig": "<Self where Self : JioMeetUIFoundation.JMReactionViewPresenter>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "presentReactionsView",
+            "printedName": "presentReactionsView(superView:meetingClient:reactionType:targetUser:onClose:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIView",
+                "printedName": "UIKit.UIView",
+                "usr": "c:objc(cs)UIView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "JMClient",
+                "printedName": "JioMeetCoreSDK.JMClient",
+                "usr": "c:@M@JioMeetCoreSDK@objc(cs)JMClient"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "JioMeetCoreSDK.JMMeetingUser?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "JMMeetingUser",
+                    "printedName": "JioMeetCoreSDK.JMMeetingUser",
+                    "usr": "s:14JioMeetCoreSDK13JMMeetingUserC"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19JioMeetUIFoundation23JMReactionViewPresenterP016presentReactionsE005superE013meetingClient12reactionType10targetUser7onCloseySo6UIViewC_0aB7CoreSDK8JMClientCSSSgAL09JMMeetingO0CSgyyctF",
+            "mangledName": "$s19JioMeetUIFoundation23JMReactionViewPresenterP016presentReactionsE005superE013meetingClient12reactionType10targetUser7onCloseySo6UIViewC_0aB7CoreSDK8JMClientCSSSgAL09JMMeetingO0CSgyyctF",
+            "moduleName": "JioMeetUIFoundation",
+            "genericSig": "<τ_0_0 where τ_0_0 : JioMeetUIFoundation.JMReactionViewPresenter>",
+            "sugared_genericSig": "<Self where Self : JioMeetUIFoundation.JMReactionViewPresenter>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:19JioMeetUIFoundation23JMReactionViewPresenterP",
+        "mangledName": "$s19JioMeetUIFoundation23JMReactionViewPresenterP",
+        "moduleName": "JioMeetUIFoundation",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "UIColor",
+        "printedName": "UIColor",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "hexa",
+            "printedName": "hexa",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UInt",
+                "printedName": "Swift.UInt",
+                "usr": "s:Su"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:So7UIColorC19JioMeetUIFoundationE4hexaSuvp",
+            "mangledName": "$sSo7UIColorC19JioMeetUIFoundationE4hexaSuvp",
+            "moduleName": "JioMeetUIFoundation",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UInt",
+                    "printedName": "Swift.UInt",
+                    "usr": "s:Su"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:So7UIColorC19JioMeetUIFoundationE4hexaSuvg",
+                "mangledName": "$sSo7UIColorC19JioMeetUIFoundationE4hexaSuvg",
+                "moduleName": "JioMeetUIFoundation",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:objc(cs)UIColor",
+        "moduleName": "UIKit",
+        "isOpen": true,
+        "intro_iOS": "2.0",
+        "objc_name": "UIColor",
+        "declAttributes": [
+          "Available",
+          "ObjC",
+          "SynthesizedProtocol",
+          "NonSendable",
+          "Sendable",
+          "Dynamic"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "isExternal": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_ExpressibleByColorLiteral",
+            "printedName": "_ExpressibleByColorLiteral",
+            "usr": "s:s26_ExpressibleByColorLiteralP",
+            "mangledName": "$ss26_ExpressibleByColorLiteralP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "UIView",
+        "printedName": "UIView",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "pinEdgesToView",
+            "printedName": "pinEdgesToView(view:padding:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIView",
+                "printedName": "UIKit.UIView",
+                "usr": "c:objc(cs)UIView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "JMPadding",
+                "printedName": "JioMeetUIFoundation.JMPadding",
+                "hasDefaultArg": true,
+                "usr": "s:19JioMeetUIFoundation9JMPaddingV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:So6UIViewC19JioMeetUIFoundationE14pinEdgesToView4view7paddingyAB_AC9JMPaddingVtF",
+            "mangledName": "$sSo6UIViewC19JioMeetUIFoundationE14pinEdgesToView4view7paddingyAB_AC9JMPaddingVtF",
+            "moduleName": "JioMeetUIFoundation",
+            "declAttributes": [
+              "Custom"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:objc(cs)UIView",
+        "moduleName": "UIKit",
+        "isOpen": true,
+        "intro_iOS": "2.0",
+        "objc_name": "UIView",
+        "declAttributes": [
+          "Available",
+          "ObjC",
+          "NonSendable",
+          "Custom",
+          "Dynamic"
+        ],
+        "superclassUsr": "c:objc(cs)UIResponder",
+        "isExternal": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "UIKit.UIResponder",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "UITraitChangeObservable",
+            "printedName": "UITraitChangeObservable",
+            "usr": "s:5UIKit23UITraitChangeObservableP",
+            "mangledName": "$s5UIKit23UITraitChangeObservableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "__DefaultCustomPlaygroundQuickLookable",
+            "printedName": "__DefaultCustomPlaygroundQuickLookable",
+            "usr": "s:s38__DefaultCustomPlaygroundQuickLookableP",
+            "mangledName": "$ss38__DefaultCustomPlaygroundQuickLookableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "FileManager",
+        "printedName": "FileManager",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "getDirectoryUrl",
+            "printedName": "getDirectoryUrl(directoryName:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:So13NSFileManagerC19JioMeetUIFoundationE15getDirectoryUrl13directoryName10Foundation3URLVSS_tKF",
+            "mangledName": "$sSo13NSFileManagerC19JioMeetUIFoundationE15getDirectoryUrl13directoryName10Foundation3URLVSS_tKF",
+            "moduleName": "JioMeetUIFoundation",
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "createDirectory",
+            "printedName": "createDirectory(directoryName:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:So13NSFileManagerC19JioMeetUIFoundationE15createDirectory13directoryName10Foundation3URLVSS_tKF",
+            "mangledName": "$sSo13NSFileManagerC19JioMeetUIFoundationE15createDirectory13directoryName10Foundation3URLVSS_tKF",
+            "moduleName": "JioMeetUIFoundation",
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "writeDataToFile",
+            "printedName": "writeDataToFile(fileName:directoryName:data:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:So13NSFileManagerC19JioMeetUIFoundationE15writeDataToFile8fileName09directoryK04data10Foundation3URLVSS_SSAH0G0VtKF",
+            "mangledName": "$sSo13NSFileManagerC19JioMeetUIFoundationE15writeDataToFile8fileName09directoryK04data10Foundation3URLVSS_SSAH0G0VtKF",
+            "moduleName": "JioMeetUIFoundation",
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getFileUrl",
+            "printedName": "getFileUrl(fileName:directoryName:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:So13NSFileManagerC19JioMeetUIFoundationE10getFileUrl8fileName09directoryJ010Foundation3URLVSS_SStKF",
+            "mangledName": "$sSo13NSFileManagerC19JioMeetUIFoundationE10getFileUrl8fileName09directoryJ010Foundation3URLVSS_SStKF",
+            "moduleName": "JioMeetUIFoundation",
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getContentsOfDirectory",
+            "printedName": "getContentsOfDirectory(directoryName:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:So13NSFileManagerC19JioMeetUIFoundationE22getContentsOfDirectory13directoryNameSaySSGSS_tKF",
+            "mangledName": "$sSo13NSFileManagerC19JioMeetUIFoundationE22getContentsOfDirectory13directoryNameSaySSGSS_tKF",
+            "moduleName": "JioMeetUIFoundation",
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "deleteFile",
+            "printedName": "deleteFile(fileName:directoryName:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:So13NSFileManagerC19JioMeetUIFoundationE10deleteFile8fileName09directoryI0SbSS_SStKF",
+            "mangledName": "$sSo13NSFileManagerC19JioMeetUIFoundationE10deleteFile8fileName09directoryI0SbSS_SStKF",
+            "moduleName": "JioMeetUIFoundation",
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:objc(cs)NSFileManager",
+        "moduleName": "Foundation",
+        "isOpen": true,
+        "objc_name": "NSFileManager",
+        "declAttributes": [
+          "ObjC",
+          "NonSendable",
+          "Dynamic"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "isExternal": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "UserDefaults",
+        "printedName": "UserDefaults",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "getObject",
+            "printedName": "getObject(type:key:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_0_0?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Metatype",
+                "printedName": "τ_0_0.Type",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:So14NSUserDefaultsC19JioMeetUIFoundationE9getObject4type3keyxSgxm_SStSeRzSERzlF",
+            "mangledName": "$sSo14NSUserDefaultsC19JioMeetUIFoundationE9getObject4type3keyxSgxm_SStSeRzSERzlF",
+            "moduleName": "JioMeetUIFoundation",
+            "genericSig": "<τ_0_0 where τ_0_0 : Swift.Decodable, τ_0_0 : Swift.Encodable>",
+            "sugared_genericSig": "<T where T : Swift.Decodable, T : Swift.Encodable>",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setObject",
+            "printedName": "setObject(object:key:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_0_0?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:So14NSUserDefaultsC19JioMeetUIFoundationE9setObject6object3keyyxSg_SStSeRzSERzlF",
+            "mangledName": "$sSo14NSUserDefaultsC19JioMeetUIFoundationE9setObject6object3keyyxSg_SStSeRzSERzlF",
+            "moduleName": "JioMeetUIFoundation",
+            "genericSig": "<τ_0_0 where τ_0_0 : Swift.Decodable, τ_0_0 : Swift.Encodable>",
+            "sugared_genericSig": "<T where T : Swift.Decodable, T : Swift.Encodable>",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:objc(cs)NSUserDefaults",
+        "moduleName": "Foundation",
+        "isOpen": true,
+        "objc_name": "NSUserDefaults",
+        "declAttributes": [
+          "ObjC",
+          "NonSendable",
+          "Dynamic"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "isExternal": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/bigstep\/Documents\/Development\/Cpass_Development\/JioMeetNativeSDKiOS\/SPM_Builder\/CoreUI\/JioMeetUIFoundation\/JioMeetUIFoundation\/JMUIConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 215,
+      "length": 19,
+      "value": "\"JM_VBG_SDK_IMAGES\""
+    },
+    {
+      "filePath": "\/Users\/bigstep\/Documents\/Development\/Cpass_Development\/JioMeetNativeSDKiOS\/SPM_Builder\/CoreUI\/JioMeetUIFoundation\/JioMeetUIFoundation\/JMUIConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 293,
+      "length": 30,
+      "value": "\"JM_VBG_SDK_IMAGES_THUMBNAILS\""
+    },
+    {
+      "filePath": "\/Users\/bigstep\/Documents\/Development\/Cpass_Development\/JioMeetNativeSDKiOS\/SPM_Builder\/CoreUI\/JioMeetUIFoundation\/JioMeetUIFoundation\/JMUIConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 383,
+      "length": 25,
+      "value": "\"JM_VBG_SAVED_BACKGROUND\""
+    },
+    {
+      "filePath": "\/Users\/bigstep\/Documents\/Development\/Cpass_Development\/JioMeetNativeSDKiOS\/SPM_Builder\/CoreUI\/JioMeetUIFoundation\/JioMeetUIFoundation\/VirtualBackground.swift",
+      "kind": "StringLiteral",
+      "offset": 306,
+      "length": 6,
+      "value": "\"1000\""
+    },
+    {
+      "filePath": "\/Users\/bigstep\/Documents\/Development\/Cpass_Development\/JioMeetNativeSDKiOS\/SPM_Builder\/CoreUI\/JioMeetUIFoundation\/JioMeetUIFoundation\/VirtualBackground.swift",
+      "kind": "StringLiteral",
+      "offset": 326,
+      "length": 6,
+      "value": "\"2000\""
+    },
+    {
+      "filePath": "\/Users\/bigstep\/Documents\/Development\/Cpass_Development\/JioMeetNativeSDKiOS\/SPM_Builder\/CoreUI\/JioMeetUIFoundation\/JioMeetUIFoundation\/VirtualBackground.swift",
+      "kind": "StringLiteral",
+      "offset": 347,
+      "length": 6,
+      "value": "\"3000\""
+    },
+    {
+      "filePath": "\/Users\/bigstep\/Documents\/Development\/Cpass_Development\/JioMeetNativeSDKiOS\/SPM_Builder\/CoreUI\/JioMeetUIFoundation\/JioMeetUIFoundation\/VirtualBackground.swift",
+      "kind": "StringLiteral",
+      "offset": 306,
+      "length": 6,
+      "value": "\"1000\""
+    },
+    {
+      "filePath": "\/Users\/bigstep\/Documents\/Development\/Cpass_Development\/JioMeetNativeSDKiOS\/SPM_Builder\/CoreUI\/JioMeetUIFoundation\/JioMeetUIFoundation\/VirtualBackground.swift",
+      "kind": "StringLiteral",
+      "offset": 326,
+      "length": 6,
+      "value": "\"2000\""
+    },
+    {
+      "filePath": "\/Users\/bigstep\/Documents\/Development\/Cpass_Development\/JioMeetNativeSDKiOS\/SPM_Builder\/CoreUI\/JioMeetUIFoundation\/JioMeetUIFoundation\/VirtualBackground.swift",
+      "kind": "StringLiteral",
+      "offset": 347,
+      "length": 6,
+      "value": "\"3000\""
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+framework module JioMeetParticipantPanelSDK {
+  umbrella header "JioMeetParticipantPanelSDK.h"
+  export *
+
+  module * { export * }
+}

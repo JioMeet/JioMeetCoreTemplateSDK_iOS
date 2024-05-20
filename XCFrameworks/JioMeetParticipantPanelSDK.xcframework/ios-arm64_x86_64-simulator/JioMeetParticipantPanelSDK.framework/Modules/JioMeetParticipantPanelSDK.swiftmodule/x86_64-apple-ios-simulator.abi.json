@@ -1,0 +1,1116 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "JioMeetParticipantPanelSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "JioMeetCoreSDK",
+        "printedName": "JioMeetCoreSDK",
+        "declKind": "Import",
+        "moduleName": "JioMeetParticipantPanelSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "JioMeetParticipantPanelSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "JioMeetParticipantPanelSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "JioMeetParticipantPanelSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "JioMeetParticipantPanelSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "JioMeetParticipantPanelSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "JioMeetParticipantPanelSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "JioMeetParticipantPanelSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "JioMeetParticipantPanelSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "JioMeetParticipantPanelSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "JioMeetCoreSDK",
+        "printedName": "JioMeetCoreSDK",
+        "declKind": "Import",
+        "moduleName": "JioMeetParticipantPanelSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "JioMeetUIFoundation",
+        "printedName": "JioMeetUIFoundation",
+        "declKind": "Import",
+        "moduleName": "JioMeetParticipantPanelSDK"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "JMParticipantsListView",
+        "printedName": "JMParticipantsListView",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(frame:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "JMParticipantsListView",
+                "printedName": "JioMeetParticipantPanelSDK.JMParticipantsListView",
+                "usr": "c:@M@JioMeetParticipantPanelSDK@objc(cs)JMParticipantsListView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGRect",
+                "printedName": "CoreFoundation.CGRect",
+                "usr": "c:@S@CGRect"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@JioMeetParticipantPanelSDK@objc(cs)JMParticipantsListView(im)initWithFrame:",
+            "mangledName": "$s26JioMeetParticipantPanelSDK22JMParticipantsListViewC5frameACSo6CGRectV_tcfc",
+            "moduleName": "JioMeetParticipantPanelSDK",
+            "overriding": true,
+            "objc_name": "initWithFrame:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Custom",
+              "Override",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(coder:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "JioMeetParticipantPanelSDK.JMParticipantsListView?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "JMParticipantsListView",
+                    "printedName": "JioMeetParticipantPanelSDK.JMParticipantsListView",
+                    "usr": "c:@M@JioMeetParticipantPanelSDK@objc(cs)JMParticipantsListView"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSCoder",
+                "printedName": "Foundation.NSCoder",
+                "usr": "c:objc(cs)NSCoder"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@JioMeetParticipantPanelSDK@objc(cs)JMParticipantsListView(im)initWithCoder:",
+            "mangledName": "$s26JioMeetParticipantPanelSDK22JMParticipantsListViewC5coderACSgSo7NSCoderC_tcfc",
+            "moduleName": "JioMeetParticipantPanelSDK",
+            "overriding": true,
+            "objc_name": "initWithCoder:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Custom",
+              "Required",
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "presentParticipantsListView",
+            "printedName": "presentParticipantsListView(superView:insertBelow:meetingClient:onClose:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIView",
+                "printedName": "UIKit.UIView",
+                "usr": "c:objc(cs)UIView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIView",
+                "printedName": "UIKit.UIView",
+                "usr": "c:objc(cs)UIView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "JMClient",
+                "printedName": "JioMeetCoreSDK.JMClient",
+                "usr": "c:@M@JioMeetCoreSDK@objc(cs)JMClient"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:26JioMeetParticipantPanelSDK22JMParticipantsListViewC019presentParticipantsgH005superH011insertBelow13meetingClient7onCloseySo6UIViewC_AJ0ab4CoreE08JMClientCyyctF",
+            "mangledName": "$s26JioMeetParticipantPanelSDK22JMParticipantsListViewC019presentParticipantsgH005superH011insertBelow13meetingClient7onCloseySo6UIViewC_AJ0ab4CoreE08JMClientCyyctF",
+            "moduleName": "JioMeetParticipantPanelSDK",
+            "declAttributes": [
+              "Custom",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "assignMeetingClient",
+            "printedName": "assignMeetingClient(client:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "JioMeetCoreSDK.JMClient?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "JMClient",
+                    "printedName": "JioMeetCoreSDK.JMClient",
+                    "usr": "c:@M@JioMeetCoreSDK@objc(cs)JMClient"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:26JioMeetParticipantPanelSDK22JMParticipantsListViewC19assignMeetingClient6clienty0ab4CoreE08JMClientCSg_tF",
+            "mangledName": "$s26JioMeetParticipantPanelSDK22JMParticipantsListViewC19assignMeetingClient6clienty0ab4CoreE08JMClientCSg_tF",
+            "moduleName": "JioMeetParticipantPanelSDK",
+            "declAttributes": [
+              "Custom",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "tableView",
+            "printedName": "tableView(_:heightForRowAt:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UITableView",
+                "printedName": "UIKit.UITableView",
+                "usr": "c:objc(cs)UITableView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "IndexPath",
+                "printedName": "Foundation.IndexPath",
+                "usr": "s:10Foundation9IndexPathV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@JioMeetParticipantPanelSDK@objc(cs)JMParticipantsListView(im)tableView:heightForRowAtIndexPath:",
+            "mangledName": "$s26JioMeetParticipantPanelSDK22JMParticipantsListViewC05tableH0_14heightForRowAt12CoreGraphics7CGFloatVSo07UITableH0C_10Foundation9IndexPathVtF",
+            "moduleName": "JioMeetParticipantPanelSDK",
+            "objc_name": "tableView:heightForRowAtIndexPath:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Custom",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "tableView",
+            "printedName": "tableView(_:viewForHeaderInSection:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIView?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIView",
+                    "printedName": "UIKit.UIView",
+                    "usr": "c:objc(cs)UIView"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UITableView",
+                "printedName": "UIKit.UITableView",
+                "usr": "c:objc(cs)UITableView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@JioMeetParticipantPanelSDK@objc(cs)JMParticipantsListView(im)tableView:viewForHeaderInSection:",
+            "mangledName": "$s26JioMeetParticipantPanelSDK22JMParticipantsListViewC05tableH0_22viewForHeaderInSectionSo6UIViewCSgSo07UITableH0C_SitF",
+            "moduleName": "JioMeetParticipantPanelSDK",
+            "objc_name": "tableView:viewForHeaderInSection:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Custom",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "tableView",
+            "printedName": "tableView(_:heightForHeaderInSection:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UITableView",
+                "printedName": "UIKit.UITableView",
+                "usr": "c:objc(cs)UITableView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@JioMeetParticipantPanelSDK@objc(cs)JMParticipantsListView(im)tableView:heightForHeaderInSection:",
+            "mangledName": "$s26JioMeetParticipantPanelSDK22JMParticipantsListViewC05tableH0_24heightForHeaderInSection12CoreGraphics7CGFloatVSo07UITableH0C_SitF",
+            "moduleName": "JioMeetParticipantPanelSDK",
+            "objc_name": "tableView:heightForHeaderInSection:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Custom",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@JioMeetParticipantPanelSDK@objc(cs)JMParticipantsListView",
+        "mangledName": "$s26JioMeetParticipantPanelSDK22JMParticipantsListViewC",
+        "moduleName": "JioMeetParticipantPanelSDK",
+        "declAttributes": [
+          "Custom",
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)UIView",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "UIKit.UIView",
+          "UIKit.UIResponder",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "JMParticipantsListViewPresenter",
+            "printedName": "JMParticipantsListViewPresenter",
+            "usr": "s:19JioMeetUIFoundation31JMParticipantsListViewPresenterP",
+            "mangledName": "$s19JioMeetUIFoundation31JMParticipantsListViewPresenterP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "UITraitChangeObservable",
+            "printedName": "UITraitChangeObservable",
+            "usr": "s:5UIKit23UITraitChangeObservableP",
+            "mangledName": "$s5UIKit23UITraitChangeObservableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "__DefaultCustomPlaygroundQuickLookable",
+            "printedName": "__DefaultCustomPlaygroundQuickLookable",
+            "usr": "s:s38__DefaultCustomPlaygroundQuickLookableP",
+            "mangledName": "$ss38__DefaultCustomPlaygroundQuickLookableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "JioMeetParticipantPanelSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "JioMeetCoreSDK",
+        "printedName": "JioMeetCoreSDK",
+        "declKind": "Import",
+        "moduleName": "JioMeetParticipantPanelSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "JioMeetParticipantPanelSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "JioMeetCoreSDK",
+        "printedName": "JioMeetCoreSDK",
+        "declKind": "Import",
+        "moduleName": "JioMeetParticipantPanelSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "JioMeetParticipantPanelSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "JioMeetParticipantPanelSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "JioMeetParticipantPanelSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "JioMeetParticipantPanelSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "JioMeetParticipantPanelSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "JioMeetCoreSDK",
+        "printedName": "JioMeetCoreSDK",
+        "declKind": "Import",
+        "moduleName": "JioMeetParticipantPanelSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "JioMeetParticipantPanelSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "JioMeetParticipantPanelSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "JioMeetParticipantPanelSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "JioMeetCoreSDK",
+        "printedName": "JioMeetCoreSDK",
+        "declKind": "Import",
+        "moduleName": "JioMeetParticipantPanelSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "JioMeetParticipantPanelSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "JioMeetParticipantPanelSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "JioMeetParticipantPanelSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "JioMeetCoreSDK",
+        "printedName": "JioMeetCoreSDK",
+        "declKind": "Import",
+        "moduleName": "JioMeetParticipantPanelSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "JioMeetParticipantPanelSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "JioMeetParticipantPanelSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "JioMeetParticipantPanelSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "JioMeetParticipantPanelSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "JioMeetParticipantPanelSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "JioMeetParticipantPanelSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "JioMeetParticipantPanelSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "JioMeetCoreSDK",
+        "printedName": "JioMeetCoreSDK",
+        "declKind": "Import",
+        "moduleName": "JioMeetParticipantPanelSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "JioMeetParticipantPanelSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "JioMeetParticipantPanelSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "JioMeetParticipantPanelSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "DeveloperToolsSupport",
+        "printedName": "DeveloperToolsSupport",
+        "declKind": "Import",
+        "moduleName": "JioMeetParticipantPanelSDK"
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/bigstep\/Documents\/Development\/Cpass_Development\/JioMeetNativeSDKiOS\/SPM_Builder\/CoreUI\/JioMeetUIFoundation\/JioMeetParticipantPanelSDK\/UIColor+Extension.swift",
+      "kind": "FloatLiteral",
+      "offset": 219,
+      "length": 3,
+      "value": "1.0"
+    },
+    {
+      "filePath": "\/Users\/bigstep\/Documents\/Development\/Cpass_Development\/JioMeetNativeSDKiOS\/SPM_Builder\/CoreUI\/JioMeetUIFoundation\/JioMeetParticipantPanelSDK\/UIColor+Extension.swift",
+      "kind": "FloatLiteral",
+      "offset": 932,
+      "length": 3,
+      "value": "1.0"
+    },
+    {
+      "filePath": "\/Users\/bigstep\/Documents\/Development\/Cpass_Development\/JioMeetNativeSDKiOS\/SPM_Builder\/CoreUI\/JioMeetUIFoundation\/JioMeetParticipantPanelSDK\/JMParticipantsListView.swift",
+      "kind": "StringLiteral",
+      "offset": 676,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/bigstep\/Documents\/Development\/Cpass_Development\/JioMeetNativeSDKiOS\/SPM_Builder\/CoreUI\/JioMeetUIFoundation\/JioMeetParticipantPanelSDK\/JMParticipantsListView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 720,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/bigstep\/Documents\/Development\/Cpass_Development\/JioMeetNativeSDKiOS\/SPM_Builder\/CoreUI\/JioMeetUIFoundation\/JioMeetParticipantPanelSDK\/JMParticipantsListView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 768,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/bigstep\/Documents\/Development\/Cpass_Development\/JioMeetNativeSDKiOS\/SPM_Builder\/CoreUI\/JioMeetUIFoundation\/JioMeetParticipantPanelSDK\/ParticipantsSectionHeaderView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 774,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/bigstep\/Documents\/Development\/Cpass_Development\/JioMeetNativeSDKiOS\/SPM_Builder\/CoreUI\/JioMeetUIFoundation\/JioMeetParticipantPanelSDK\/ParticipantsSectionHeaderView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 805,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/bigstep\/Documents\/Development\/Cpass_Development\/JioMeetNativeSDKiOS\/SPM_Builder\/CoreUI\/JioMeetUIFoundation\/JioMeetParticipantPanelSDK\/ParticipantsSectionHeaderView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 842,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/bigstep\/Documents\/Development\/Cpass_Development\/JioMeetNativeSDKiOS\/SPM_Builder\/CoreUI\/JioMeetUIFoundation\/JioMeetParticipantPanelSDK\/ParticipantsSectionHeaderView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 876,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/bigstep\/Documents\/Development\/Cpass_Development\/JioMeetNativeSDKiOS\/SPM_Builder\/CoreUI\/JioMeetUIFoundation\/JioMeetParticipantPanelSDK\/ParticipantsListTableCell.swift",
+      "kind": "StringLiteral",
+      "offset": 269,
+      "length": 27,
+      "value": "\"jm_participant_panel_cell\""
+    },
+    {
+      "filePath": "\/Users\/bigstep\/Documents\/Development\/Cpass_Development\/JioMeetNativeSDKiOS\/SPM_Builder\/CoreUI\/JioMeetUIFoundation\/JioMeetParticipantPanelSDK\/ParticipantsListViewModel.swift",
+      "kind": "IntegerLiteral",
+      "offset": 308,
+      "length": 8,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/bigstep\/Documents\/Development\/Cpass_Development\/JioMeetNativeSDKiOS\/SPM_Builder\/CoreUI\/JioMeetUIFoundation\/JioMeetParticipantPanelSDK\/ParticipantsListViewModel.swift",
+      "kind": "IntegerLiteral",
+      "offset": 308,
+      "length": 8,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/bigstep\/Documents\/Development\/Cpass_Development\/JioMeetNativeSDKiOS\/SPM_Builder\/CoreUI\/JioMeetUIFoundation\/JioMeetParticipantPanelSDK\/ParticipantsListViewModel.swift",
+      "kind": "IntegerLiteral",
+      "offset": 308,
+      "length": 8,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/bigstep\/Documents\/Development\/Cpass_Development\/JioMeetNativeSDKiOS\/SPM_Builder\/CoreUI\/JioMeetUIFoundation\/JioMeetParticipantPanelSDK\/ParticipantsListViewModel.swift",
+      "kind": "BooleanLiteral",
+      "offset": 858,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/bigstep\/Documents\/Development\/Cpass_Development\/JioMeetNativeSDKiOS\/SPM_Builder\/CoreUI\/JioMeetUIFoundation\/JioMeetParticipantPanelSDK\/JMParticipantPanel+Icons.swift",
+      "kind": "StringLiteral",
+      "offset": 429,
+      "length": 6,
+      "value": "\"hand\""
+    },
+    {
+      "filePath": "\/Users\/bigstep\/Documents\/Development\/Cpass_Development\/JioMeetNativeSDKiOS\/SPM_Builder\/CoreUI\/JioMeetUIFoundation\/JioMeetParticipantPanelSDK\/JMParticipantPanel+Icons.swift",
+      "kind": "StringLiteral",
+      "offset": 497,
+      "length": 13,
+      "value": "\"info_filled\""
+    },
+    {
+      "filePath": "\/Users\/bigstep\/Documents\/Development\/Cpass_Development\/JioMeetNativeSDKiOS\/SPM_Builder\/CoreUI\/JioMeetUIFoundation\/JioMeetParticipantPanelSDK\/JMParticipantPanel+Icons.swift",
+      "kind": "StringLiteral",
+      "offset": 570,
+      "length": 17,
+      "value": "\"jm_arrow_expand\""
+    },
+    {
+      "filePath": "\/Users\/bigstep\/Documents\/Development\/Cpass_Development\/JioMeetNativeSDKiOS\/SPM_Builder\/CoreUI\/JioMeetUIFoundation\/JioMeetParticipantPanelSDK\/JMParticipantPanel+Icons.swift",
+      "kind": "StringLiteral",
+      "offset": 644,
+      "length": 20,
+      "value": "\"jm_hand_wave_emoji\""
+    },
+    {
+      "filePath": "\/Users\/bigstep\/Documents\/Development\/Cpass_Development\/JioMeetNativeSDKiOS\/SPM_Builder\/CoreUI\/JioMeetUIFoundation\/JioMeetParticipantPanelSDK\/JMParticipantPanel+Icons.swift",
+      "kind": "StringLiteral",
+      "offset": 719,
+      "length": 8,
+      "value": "\"jm_mic\""
+    },
+    {
+      "filePath": "\/Users\/bigstep\/Documents\/Development\/Cpass_Development\/JioMeetNativeSDKiOS\/SPM_Builder\/CoreUI\/JioMeetUIFoundation\/JioMeetParticipantPanelSDK\/JMParticipantPanel+Icons.swift",
+      "kind": "StringLiteral",
+      "offset": 787,
+      "length": 14,
+      "value": "\"jm_mic_slash\""
+    },
+    {
+      "filePath": "\/Users\/bigstep\/Documents\/Development\/Cpass_Development\/JioMeetNativeSDKiOS\/SPM_Builder\/CoreUI\/JioMeetUIFoundation\/JioMeetParticipantPanelSDK\/JMParticipantPanel+Icons.swift",
+      "kind": "StringLiteral",
+      "offset": 858,
+      "length": 11,
+      "value": "\"jm_camera\""
+    },
+    {
+      "filePath": "\/Users\/bigstep\/Documents\/Development\/Cpass_Development\/JioMeetNativeSDKiOS\/SPM_Builder\/CoreUI\/JioMeetUIFoundation\/JioMeetParticipantPanelSDK\/JMParticipantPanel+Icons.swift",
+      "kind": "StringLiteral",
+      "offset": 931,
+      "length": 17,
+      "value": "\"jm_camera_slash\""
+    },
+    {
+      "filePath": "\/Users\/bigstep\/Documents\/Development\/Cpass_Development\/JioMeetNativeSDKiOS\/SPM_Builder\/CoreUI\/JioMeetUIFoundation\/JioMeetParticipantPanelSDK\/JMParticipantPanel+Icons.swift",
+      "kind": "StringLiteral",
+      "offset": 1014,
+      "length": 24,
+      "value": "\"jm_ellipsis_horizontal\""
+    },
+    {
+      "filePath": "\/Users\/bigstep\/Documents\/Development\/Cpass_Development\/JioMeetNativeSDKiOS\/SPM_Builder\/CoreUI\/JioMeetUIFoundation\/JioMeetParticipantPanelSDK\/JMParticipantPanel+Icons.swift",
+      "kind": "StringLiteral",
+      "offset": 1103,
+      "length": 19,
+      "value": "\"jm_arrow_collapse\""
+    },
+    {
+      "filePath": "\/Users\/bigstep\/Documents\/Development\/Cpass_Development\/JioMeetNativeSDKiOS\/SPM_Builder\/CoreUI\/JioMeetUIFoundation\/JioMeetParticipantPanelSDK\/JMParticipantPanel+Icons.swift",
+      "kind": "StringLiteral",
+      "offset": 1185,
+      "length": 17,
+      "value": "\"jm_filterByName\""
+    },
+    {
+      "filePath": "\/Users\/bigstep\/Documents\/Development\/Cpass_Development\/JioMeetNativeSDKiOS\/SPM_Builder\/CoreUI\/JioMeetUIFoundation\/JioMeetParticipantPanelSDK\/JMParticipantPanel+Icons.swift",
+      "kind": "StringLiteral",
+      "offset": 1267,
+      "length": 19,
+      "value": "\"jm_sortByNameAtoZ\""
+    },
+    {
+      "filePath": "\/Users\/bigstep\/Documents\/Development\/Cpass_Development\/JioMeetNativeSDKiOS\/SPM_Builder\/CoreUI\/JioMeetUIFoundation\/JioMeetParticipantPanelSDK\/JMParticipantPanel+Icons.swift",
+      "kind": "StringLiteral",
+      "offset": 1351,
+      "length": 19,
+      "value": "\"jm_sortByNameZtoA\""
+    },
+    {
+      "filePath": "\/Users\/bigstep\/Documents\/Development\/Cpass_Development\/JioMeetNativeSDKiOS\/SPM_Builder\/CoreUI\/JioMeetUIFoundation\/JioMeetParticipantPanelSDK\/JMParticipantPanel+Icons.swift",
+      "kind": "StringLiteral",
+      "offset": 1438,
+      "length": 22,
+      "value": "\"jm_RemoveParticipant\""
+    },
+    {
+      "filePath": "\/Users\/bigstep\/Documents\/Development\/Cpass_Development\/JioMeetNativeSDKiOS\/SPM_Builder\/CoreUI\/JioMeetUIFoundation\/JioMeetParticipantPanelSDK\/JMParticipantPanel+Icons.swift",
+      "kind": "StringLiteral",
+      "offset": 1525,
+      "length": 19,
+      "value": "\"jm_moveToAudience\""
+    },
+    {
+      "filePath": "\/Users\/bigstep\/Documents\/Development\/Cpass_Development\/JioMeetNativeSDKiOS\/SPM_Builder\/CoreUI\/JioMeetUIFoundation\/JioMeetParticipantPanelSDK\/JMParticipantPanel+Icons.swift",
+      "kind": "StringLiteral",
+      "offset": 1612,
+      "length": 22,
+      "value": "\"jm_moveToParticipant\""
+    },
+    {
+      "filePath": "\/Users\/bigstep\/Documents\/Development\/Cpass_Development\/JioMeetNativeSDKiOS\/SPM_Builder\/CoreUI\/JioMeetUIFoundation\/JioMeetParticipantPanelSDK\/JMParticipantPanel+Icons.swift",
+      "kind": "StringLiteral",
+      "offset": 1694,
+      "length": 16,
+      "value": "\"jm_more_button\""
+    },
+    {
+      "filePath": "\/Users\/bigstep\/Documents\/Development\/Cpass_Development\/JioMeetNativeSDKiOS\/SPM_Builder\/CoreUI\/JioMeetUIFoundation\/JioMeetParticipantPanelSDK\/JMParticipantPanel+Icons.swift",
+      "kind": "StringLiteral",
+      "offset": 1776,
+      "length": 13,
+      "value": "\"make_coHost\""
+    },
+    {
+      "filePath": "\/Users\/bigstep\/Library\/Developer\/Xcode\/DerivedData\/JioMeetUIFoundation-hhqknxxbnryjknatndqmlkncncfv\/Build\/Intermediates.noindex\/ArchiveIntermediates\/JioMeetParticipantPanelSDK\/IntermediateBuildFilesPath\/JioMeetUIFoundation.build\/Release-iphonesimulator\/JioMeetParticipantPanelSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 721,
+      "length": 6,
+      "value": "\"hand\""
+    },
+    {
+      "filePath": "\/Users\/bigstep\/Library\/Developer\/Xcode\/DerivedData\/JioMeetUIFoundation-hhqknxxbnryjknatndqmlkncncfv\/Build\/Intermediates.noindex\/ArchiveIntermediates\/JioMeetParticipantPanelSDK\/IntermediateBuildFilesPath\/JioMeetUIFoundation.build\/Release-iphonesimulator\/JioMeetParticipantPanelSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 858,
+      "length": 13,
+      "value": "\"info_filled\""
+    },
+    {
+      "filePath": "\/Users\/bigstep\/Library\/Developer\/Xcode\/DerivedData\/JioMeetUIFoundation-hhqknxxbnryjknatndqmlkncncfv\/Build\/Intermediates.noindex\/ArchiveIntermediates\/JioMeetParticipantPanelSDK\/IntermediateBuildFilesPath\/JioMeetUIFoundation.build\/Release-iphonesimulator\/JioMeetParticipantPanelSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 1020,
+      "length": 22,
+      "value": "\"jm_RemoveParticipant\""
+    },
+    {
+      "filePath": "\/Users\/bigstep\/Library\/Developer\/Xcode\/DerivedData\/JioMeetUIFoundation-hhqknxxbnryjknatndqmlkncncfv\/Build\/Intermediates.noindex\/ArchiveIntermediates\/JioMeetParticipantPanelSDK\/IntermediateBuildFilesPath\/JioMeetUIFoundation.build\/Release-iphonesimulator\/JioMeetParticipantPanelSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 1184,
+      "length": 19,
+      "value": "\"jm_arrow_collapse\""
+    },
+    {
+      "filePath": "\/Users\/bigstep\/Library\/Developer\/Xcode\/DerivedData\/JioMeetUIFoundation-hhqknxxbnryjknatndqmlkncncfv\/Build\/Intermediates.noindex\/ArchiveIntermediates\/JioMeetParticipantPanelSDK\/IntermediateBuildFilesPath\/JioMeetUIFoundation.build\/Release-iphonesimulator\/JioMeetParticipantPanelSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 1341,
+      "length": 17,
+      "value": "\"jm_arrow_expand\""
+    },
+    {
+      "filePath": "\/Users\/bigstep\/Library\/Developer\/Xcode\/DerivedData\/JioMeetUIFoundation-hhqknxxbnryjknatndqmlkncncfv\/Build\/Intermediates.noindex\/ArchiveIntermediates\/JioMeetParticipantPanelSDK\/IntermediateBuildFilesPath\/JioMeetUIFoundation.build\/Release-iphonesimulator\/JioMeetParticipantPanelSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 1485,
+      "length": 11,
+      "value": "\"jm_camera\""
+    },
+    {
+      "filePath": "\/Users\/bigstep\/Library\/Developer\/Xcode\/DerivedData\/JioMeetUIFoundation-hhqknxxbnryjknatndqmlkncncfv\/Build\/Intermediates.noindex\/ArchiveIntermediates\/JioMeetParticipantPanelSDK\/IntermediateBuildFilesPath\/JioMeetUIFoundation.build\/Release-iphonesimulator\/JioMeetParticipantPanelSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 1634,
+      "length": 17,
+      "value": "\"jm_camera_slash\""
+    },
+    {
+      "filePath": "\/Users\/bigstep\/Library\/Developer\/Xcode\/DerivedData\/JioMeetUIFoundation-hhqknxxbnryjknatndqmlkncncfv\/Build\/Intermediates.noindex\/ArchiveIntermediates\/JioMeetParticipantPanelSDK\/IntermediateBuildFilesPath\/JioMeetUIFoundation.build\/Release-iphonesimulator\/JioMeetParticipantPanelSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 1803,
+      "length": 24,
+      "value": "\"jm_ellipsis_horizontal\""
+    },
+    {
+      "filePath": "\/Users\/bigstep\/Library\/Developer\/Xcode\/DerivedData\/JioMeetUIFoundation-hhqknxxbnryjknatndqmlkncncfv\/Build\/Intermediates.noindex\/ArchiveIntermediates\/JioMeetParticipantPanelSDK\/IntermediateBuildFilesPath\/JioMeetUIFoundation.build\/Release-iphonesimulator\/JioMeetParticipantPanelSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 1966,
+      "length": 17,
+      "value": "\"jm_filterByName\""
+    },
+    {
+      "filePath": "\/Users\/bigstep\/Library\/Developer\/Xcode\/DerivedData\/JioMeetUIFoundation-hhqknxxbnryjknatndqmlkncncfv\/Build\/Intermediates.noindex\/ArchiveIntermediates\/JioMeetParticipantPanelSDK\/IntermediateBuildFilesPath\/JioMeetUIFoundation.build\/Release-iphonesimulator\/JioMeetParticipantPanelSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 2126,
+      "length": 20,
+      "value": "\"jm_hand_wave_emoji\""
+    },
+    {
+      "filePath": "\/Users\/bigstep\/Library\/Developer\/Xcode\/DerivedData\/JioMeetUIFoundation-hhqknxxbnryjknatndqmlkncncfv\/Build\/Intermediates.noindex\/ArchiveIntermediates\/JioMeetParticipantPanelSDK\/IntermediateBuildFilesPath\/JioMeetUIFoundation.build\/Release-iphonesimulator\/JioMeetParticipantPanelSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 2267,
+      "length": 8,
+      "value": "\"jm_mic\""
+    },
+    {
+      "filePath": "\/Users\/bigstep\/Library\/Developer\/Xcode\/DerivedData\/JioMeetUIFoundation-hhqknxxbnryjknatndqmlkncncfv\/Build\/Intermediates.noindex\/ArchiveIntermediates\/JioMeetParticipantPanelSDK\/IntermediateBuildFilesPath\/JioMeetUIFoundation.build\/Release-iphonesimulator\/JioMeetParticipantPanelSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 2407,
+      "length": 14,
+      "value": "\"jm_mic_slash\""
+    },
+    {
+      "filePath": "\/Users\/bigstep\/Library\/Developer\/Xcode\/DerivedData\/JioMeetUIFoundation-hhqknxxbnryjknatndqmlkncncfv\/Build\/Intermediates.noindex\/ArchiveIntermediates\/JioMeetParticipantPanelSDK\/IntermediateBuildFilesPath\/JioMeetUIFoundation.build\/Release-iphonesimulator\/JioMeetParticipantPanelSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 2557,
+      "length": 16,
+      "value": "\"jm_more_button\""
+    },
+    {
+      "filePath": "\/Users\/bigstep\/Library\/Developer\/Xcode\/DerivedData\/JioMeetUIFoundation-hhqknxxbnryjknatndqmlkncncfv\/Build\/Intermediates.noindex\/ArchiveIntermediates\/JioMeetParticipantPanelSDK\/IntermediateBuildFilesPath\/JioMeetUIFoundation.build\/Release-iphonesimulator\/JioMeetParticipantPanelSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 2717,
+      "length": 20,
+      "value": "\"jm_more_horizontal\""
+    },
+    {
+      "filePath": "\/Users\/bigstep\/Library\/Developer\/Xcode\/DerivedData\/JioMeetUIFoundation-hhqknxxbnryjknatndqmlkncncfv\/Build\/Intermediates.noindex\/ArchiveIntermediates\/JioMeetParticipantPanelSDK\/IntermediateBuildFilesPath\/JioMeetUIFoundation.build\/Release-iphonesimulator\/JioMeetParticipantPanelSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 2880,
+      "length": 19,
+      "value": "\"jm_moveToAudience\""
+    },
+    {
+      "filePath": "\/Users\/bigstep\/Library\/Developer\/Xcode\/DerivedData\/JioMeetUIFoundation-hhqknxxbnryjknatndqmlkncncfv\/Build\/Intermediates.noindex\/ArchiveIntermediates\/JioMeetParticipantPanelSDK\/IntermediateBuildFilesPath\/JioMeetUIFoundation.build\/Release-iphonesimulator\/JioMeetParticipantPanelSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 3048,
+      "length": 22,
+      "value": "\"jm_moveToParticipant\""
+    },
+    {
+      "filePath": "\/Users\/bigstep\/Library\/Developer\/Xcode\/DerivedData\/JioMeetUIFoundation-hhqknxxbnryjknatndqmlkncncfv\/Build\/Intermediates.noindex\/ArchiveIntermediates\/JioMeetParticipantPanelSDK\/IntermediateBuildFilesPath\/JioMeetUIFoundation.build\/Release-iphonesimulator\/JioMeetParticipantPanelSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 3213,
+      "length": 19,
+      "value": "\"jm_sortByNameAtoZ\""
+    },
+    {
+      "filePath": "\/Users\/bigstep\/Library\/Developer\/Xcode\/DerivedData\/JioMeetUIFoundation-hhqknxxbnryjknatndqmlkncncfv\/Build\/Intermediates.noindex\/ArchiveIntermediates\/JioMeetParticipantPanelSDK\/IntermediateBuildFilesPath\/JioMeetUIFoundation.build\/Release-iphonesimulator\/JioMeetParticipantPanelSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 3375,
+      "length": 19,
+      "value": "\"jm_sortByNameZtoA\""
+    },
+    {
+      "filePath": "\/Users\/bigstep\/Library\/Developer\/Xcode\/DerivedData\/JioMeetUIFoundation-hhqknxxbnryjknatndqmlkncncfv\/Build\/Intermediates.noindex\/ArchiveIntermediates\/JioMeetParticipantPanelSDK\/IntermediateBuildFilesPath\/JioMeetUIFoundation.build\/Release-iphonesimulator\/JioMeetParticipantPanelSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 3525,
+      "length": 13,
+      "value": "\"make_coHost\""
+    },
+    {
+      "filePath": "\/Users\/bigstep\/Library\/Developer\/Xcode\/DerivedData\/JioMeetUIFoundation-hhqknxxbnryjknatndqmlkncncfv\/Build\/Intermediates.noindex\/ArchiveIntermediates\/JioMeetParticipantPanelSDK\/IntermediateBuildFilesPath\/JioMeetUIFoundation.build\/Release-iphonesimulator\/JioMeetParticipantPanelSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 3674,
+      "length": 16,
+      "value": "\"mic_mute_force\""
+    }
+  ]
+}
