@@ -1,6 +1,0 @@
-framework module JioMeetUIFoundation {
-  umbrella header "JioMeetUIFoundation.h"
-  export *
-
-  module * { export * }
-}
