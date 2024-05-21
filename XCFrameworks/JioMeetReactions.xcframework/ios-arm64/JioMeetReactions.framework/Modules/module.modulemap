@@ -1,6 +1,0 @@
-framework module JioMeetReactions {
-  umbrella header "JioMeetReactions.h"
-  export *
-
-  module * { export * }
-}
