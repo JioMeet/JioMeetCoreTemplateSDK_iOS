@@ -1,6 +1,0 @@
-framework module JioMeetChatUIKit {
-  umbrella header "JioMeetChatUIKit.h"
-  export *
-
-  module * { export * }
-}
