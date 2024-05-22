@@ -1,0 +1,6 @@
+framework module JioMeetVBGUIKit {
+  umbrella header "JioMeetVBGUIKit.h"
+  export *
+
+  module * { export * }
+}
