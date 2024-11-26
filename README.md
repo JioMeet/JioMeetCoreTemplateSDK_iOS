@@ -146,6 +146,20 @@ JMUIKit.isReactionsEnabled = true
 pod 'JioMeetReactions_iOS', '~>3.0.2'
 ```
 
+Note: Please add below post install script in podfile before installing pods
+
+```swift
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '13.0'
+      config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES'
+      config.build_settings['APPLICATION_EXTENSION_API_ONLY'] = 'No'
+    end
+  end
+end
+```
+
 JioMeetUIKit has many optional features which you can enable according to your requirement. Please check below snippet.
 
 ```swift
