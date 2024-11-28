@@ -113,7 +113,7 @@ Currently SDK support portarait orientation for the iPhone and landscape for the
 Please add below pod to your Podfile and run command `pod install --repo-update --verbose`.
 
 ```ruby
-pod 'JioMeetUIKit_iOS', '~>3.0.2'
+pod 'JioMeetUIKit_iOS', '~>4.0.5'
 ```
 
 Participant Panel, Chat View, Virtualbackground and Reactions are additional seperate frameworks. If you want to include them in your app, please enable below flags and add respective pods in podfile
@@ -122,28 +122,41 @@ For Participant Panel View
 
 ```swift
 JMUIKit.isParticipantPanelEnabled = true
-pod 'JioMeetParticipantPanelSDK_iOS', '~>3.0.2'
+pod 'JioMeetParticipantPanelSDK_iOS', '~>4.0.5'
 ```
 
 For Chat View
 
 ```swift
 JMUIKit.isChatViewEnabled = true
-pod 'JioMeetChatUIKit_iOS', '~>3.0.2'
+pod 'JioMeetChatUIKit_iOS', '~>4.0.5'
 ```
 
 For Virtual Background
 
 ```swift
 JMUIKit.isVirtualBackgroundEnabled = true
-pod 'JioMeetVBGUIKit_iOS', '~>3.0.2'
+pod 'JioMeetVBGUIKit_iOS', '~>4.0.5'
 ```
 
 For Reactions
 
 ```swift
 JMUIKit.isReactionsEnabled = true
-pod 'JioMeetReactions_iOS', '~>3.0.2'
+pod 'JioMeetReactions_iOS', '~>4.0.5'
+```
+
+Note: Please add below post install script in podfile before installing pods
+
+```swift
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '13.0'
+      config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES'
+    end
+  end
+end
 ```
 
 JioMeetUIKit has many optional features which you can enable according to your requirement. Please check below snippet.
@@ -409,7 +422,7 @@ Go to your Podfile. Add `JioMeetScreenShareSDK_iOS` pod for your newly created b
 ```ruby
 target 'ScreenShareExtension' do
     use_frameworks!
-    pod 'JioMeetScreenShareSDK_iOS', '~>3.0.2'
+    pod 'JioMeetScreenShareSDK_iOS', '~>4.0.5'
 end
 ```
 
